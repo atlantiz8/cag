@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SSO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SSO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sso.ascentis.com.sg/WebService/SSOSvc.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfAdministrator">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Administrator" nillable="true" type="tns:Administrator" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdministrator" nillable="true" type="tns:ArrayOfAdministrator" />
+  <xs:complexType name="Administrator">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DefaultTheme" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EntityCodeList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsAdministrator" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastLoginDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OuteletCodeList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Administrator" nillable="true" type="tns:Administrator" />
+  <xs:complexType name="ArrayOfMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Member" nillable="true" type="tns:Member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMember" nillable="true" type="tns:ArrayOfMember" />
+  <xs:complexType name="Member">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Block" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Building" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoAddress1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoAddress2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoAddress3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoBlock" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoBuilding" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoPostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoStreet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateofBirth" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DefaultPhoto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FacebookID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FacebookName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FacebookPhotoLink" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FacebookToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FacebookTokenExpiry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FailReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericDate1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate10" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate3" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate4" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate5" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate6" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate7" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate8" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericDate9" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GenericStr1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr21" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr22" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr23" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr24" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr25" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr26" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr27" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr28" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr29" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr30" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr31" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr32" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr33" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr34" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr35" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr36" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr37" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr38" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr39" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr40" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr41" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr42" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr43" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr44" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr45" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr46" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr47" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr48" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr49" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr50" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStr9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry17" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry19" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry20" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry21" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry22" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry23" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry24" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry25" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry26" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry27" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry28" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry29" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry30" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry31" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry32" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry33" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry34" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry35" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry36" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry37" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry38" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry39" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry40" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry41" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry42" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry43" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry44" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry45" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry46" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry47" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry48" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry49" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry50" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GenericStrAry9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncomeGroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IndustryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InvalidAddress" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsAllowPromotion" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastLoginDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Level" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaritalStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemberTag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NRIC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotifySMS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OccupationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfficeNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PassportNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PasswordSecurityAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PasswordSecurityQuestionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RaceCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferrerCardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferrerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferrerMemberID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResidenceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifiedEmailSentOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VerifiedOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Member" nillable="true" type="tns:Member" />
+  <xs:complexType name="ArrayOfApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Application" nillable="true" type="tns:Application" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplication" nillable="true" type="tns:ArrayOfApplication" />
+  <xs:complexType name="Application">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="AppDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AppID" type="xs:int" />
+          <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AppSite" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplicationUsers" nillable="true" type="tns:ArrayOfApplicationUser" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ForAdministrator" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SSOEnabled" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Application" nillable="true" type="tns:Application" />
+  <xs:complexType name="ArrayOfApplicationUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicationUser" nillable="true" type="tns:ApplicationUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicationUser" nillable="true" type="tns:ArrayOfApplicationUser" />
+  <xs:complexType name="ApplicationUser">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AppID" type="xs:int" />
+          <xs:element minOccurs="0" name="Application" nillable="true" type="tns:Application" />
+          <xs:element minOccurs="0" name="ApplicationReference" nillable="true" type="q4:EntityReferenceOfApplication9Yl2DHdf" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ApplicationUser" nillable="true" type="tns:ApplicationUser" />
+</xs:schema>

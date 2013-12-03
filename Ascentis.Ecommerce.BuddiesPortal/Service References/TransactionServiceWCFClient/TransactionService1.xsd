@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/TransactionService/TransactionService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+  <xs:element name="GetAllTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberAutoId" type="xs:long" />
+        <xs:element minOccurs="0" name="memberName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetAllTransactionsResult" nillable="true" type="q1:ArrayOfTransactionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="transactionEntity" nillable="true" type="q2:TransactionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReOrderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderStatusFromOfs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="transBatch" nillable="true" type="q3:ArrayOfTransactionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderStatusFromOfsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="UpdateOrderStatusFromOfsResult" nillable="true" type="q4:ArrayOfTransactionEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

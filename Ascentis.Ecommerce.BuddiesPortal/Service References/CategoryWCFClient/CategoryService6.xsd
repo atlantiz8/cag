@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/CategoryService/CategoryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/CategoryService/CategoryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+  <xs:element name="GetCategoryListAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isAll" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryListAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetCategoryListAllResult" nillable="true" type="q1:ArrayOfCategoryLangEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryListAllWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isAll" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryListAllWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryListAllWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryLangByCategoryTypeWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categorytype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryLangByCategoryTypeWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryLangByCategoryTypeWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryMenuSetByBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandAutoID" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryMenuSetByBrandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetCategoryMenuSetByBrandResult" nillable="true" type="q2:ArrayOfGetBrandNavigationSet_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesByParentIDsWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesByParentIDsWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoriesByParentIDsWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CAutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryByIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

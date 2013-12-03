@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+  <xs:element name="GetShoppingCartByMemberID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="needAttributeSet" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartByMemberIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetShoppingCartByMemberIDResult" nillable="true" type="q1:ArrayOfShoppingCartEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartItemByCartAutoID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShoppingCartAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="needAttributeSet" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartItemByCartAutoIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetShoppingCartItemByCartAutoIDResult" nillable="true" type="q2:ShoppingCartEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShoppingCartItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="ProductAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="MemberName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShoppingCartItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateShoppingCartItemResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShoppingCartItem2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LangType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RetailerAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="AttributeSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="MemberName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShoppingCartItem2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateShoppingCartItem2Result" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShoppingCartItem3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LangType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RetailerAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="AttributeSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="MemberName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FlightAutoID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="FlightDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FlightDest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShoppingCartItem3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateShoppingCartItem3Result" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateShoppingCartItemQuantity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShoppingCartAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="NewQuantity" type="xs:int" />
+        <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateShoppingCartItemQuantityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateShoppingCartItemQuantityResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteShoppingCartItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShoppingCartAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteShoppingCartItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteShoppingCartItemResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckoutUnpaidOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiscountAmt" type="xs:double" />
+        <xs:element minOccurs="0" name="PromotionCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsGuest" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckoutUnpaidOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckoutUnpaidOrderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartProductAvailableStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartProductAvailableStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetShoppingCartProductAvailableStockResult" nillable="true" type="q3:ArrayOfShoppingCartEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartValidationCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShoppingCartValidationCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetShoppingCartValidationCheckResult" nillable="true" type="q4:ArrayOfShoppingCartEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PaymentStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiscountAmt" type="xs:double" />
+        <xs:element minOccurs="0" name="PromotionCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePaymentResultResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="order_id" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStockInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetStockInformationResult" nillable="true" type="q5:ArrayOfCheckOut_GetStockInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReserveProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReserveProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReserveProductResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLAGLiquorMsgByAirportCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="airportCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLAGLiquorMsgByAirportCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLAGLiquorMsgByAirportCodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLAGLiquorMsgByCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLAGLiquorMsgByCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLAGLiquorMsgByCountryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PromoCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetPromotionCodeResult" nillable="true" type="q6:PromotionCodeEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReducePromotionCodeCountdown">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PromoCodeAutoID" type="xs:int" />
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReducePromotionCodeCountdownResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReducePromotionCodeCountdownResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsProductExceedsLimitedQty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LangType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RetailerAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="AttributeSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsProductExceedsLimitedQtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="IsProductExceedsLimitedQtyResult" nillable="true" type="q7:ShoppingCartEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionCodeByMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PromoCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionCodeByMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetPromotionCodeByMemberResult" nillable="true" type="q8:PromotionCodeEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductJSONInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="LangType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RetailerAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="AttributeSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductJSONInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductJSONInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceShoppingCartWishlist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FromGuestAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="ToMemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceShoppingCartWishlistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReplaceShoppingCartWishlistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

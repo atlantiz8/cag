@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EntityObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StructuralObject">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q1:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityObject" nillable="true" type="tns:EntityObject" />
+  <xs:complexType name="StructuralObject">
+    <xs:sequence />
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="StructuralObject" nillable="true" type="tns:StructuralObject" />
+  <xs:complexType name="EntityReferenceOfBrandIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Brand" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfBrandIBa1wbWV" nillable="true" type="tns:EntityReferenceOfBrandIBa1wbWV" />
+  <xs:complexType name="EntityReference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RelatedEnd">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q2:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReference" nillable="true" type="tns:EntityReference" />
+  <xs:complexType name="RelatedEnd">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RelatedEnd" nillable="true" type="tns:RelatedEnd" />
+  <xs:complexType name="EntityReferenceOfAttributeIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Attribute" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfAttributeIBa1wbWV" nillable="true" type="tns:EntityReferenceOfAttributeIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfAttributeValueIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AttributeValue" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfAttributeValueIBa1wbWV" nillable="true" type="tns:EntityReferenceOfAttributeValueIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfProductIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Product" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfProductIBa1wbWV" nillable="true" type="tns:EntityReferenceOfProductIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfModuleEntryIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ModuleEntry" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfModuleEntryIBa1wbWV" nillable="true" type="tns:EntityReferenceOfModuleEntryIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfRoleIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Role" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfRoleIBa1wbWV" nillable="true" type="tns:EntityReferenceOfRoleIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfConcessionaireIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Concessionaire" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfConcessionaireIBa1wbWV" nillable="true" type="tns:EntityReferenceOfConcessionaireIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfDiscountManageBatchIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DiscountManageBatch" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfDiscountManageBatchIBa1wbWV" nillable="true" type="tns:EntityReferenceOfDiscountManageBatchIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfDiscountTypeIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DiscountType" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfDiscountTypeIBa1wbWV" nillable="true" type="tns:EntityReferenceOfDiscountTypeIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfCurrencyIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Currency" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfCurrencyIBa1wbWV" nillable="true" type="tns:EntityReferenceOfCurrencyIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfMetricIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Metric" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfMetricIBa1wbWV" nillable="true" type="tns:EntityReferenceOfMetricIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfOrderIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Order" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfOrderIBa1wbWV" nillable="true" type="tns:EntityReferenceOfOrderIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfRegCountryCityAirportCodeIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RegCountryCityAirportCode" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfRegCountryCityAirportCodeIBa1wbWV" nillable="true" type="tns:EntityReferenceOfRegCountryCityAirportCodeIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfMemberIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Member" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfMemberIBa1wbWV" nillable="true" type="tns:EntityReferenceOfMemberIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfLanguageMasterIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LanguageMaster" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfLanguageMasterIBa1wbWV" nillable="true" type="tns:EntityReferenceOfLanguageMasterIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfBannerTypeIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BannerType" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfBannerTypeIBa1wbWV" nillable="true" type="tns:EntityReferenceOfBannerTypeIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfBannerIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Banner" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfBannerIBa1wbWV" nillable="true" type="tns:EntityReferenceOfBannerIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfCategoryIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Category" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfCategoryIBa1wbWV" nillable="true" type="tns:EntityReferenceOfCategoryIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfProductGroupIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ProductGroup" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfProductGroupIBa1wbWV" nillable="true" type="tns:EntityReferenceOfProductGroupIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfProductReviewIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ProductReview" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfProductReviewIBa1wbWV" nillable="true" type="tns:EntityReferenceOfProductReviewIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfShoppingCartIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ShoppingCart" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfShoppingCartIBa1wbWV" nillable="true" type="tns:EntityReferenceOfShoppingCartIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfOrderCancellationInfoIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="OrderCancellationInfo" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfOrderCancellationInfoIBa1wbWV" nillable="true" type="tns:EntityReferenceOfOrderCancellationInfoIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfOrderDetailIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="OrderDetail" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfOrderDetailIBa1wbWV" nillable="true" type="tns:EntityReferenceOfOrderDetailIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfPaymentStatuIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PaymentStatu" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfPaymentStatuIBa1wbWV" nillable="true" type="tns:EntityReferenceOfPaymentStatuIBa1wbWV" />
+  <xs:complexType name="EntityReferenceOfTaxIBa1wbWV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Tax" Namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTaxIBa1wbWV" nillable="true" type="tns:EntityReferenceOfTaxIBa1wbWV" />
+</xs:schema>

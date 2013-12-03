@@ -1,0 +1,100 @@
+/** ITEMS **/
+#container {width:100%; overflow:hidden; padding-bottom:30px;}
+/* NurSalikeen modified August 1 2013 */
+/*@media screen and (min-width:1000px) {*/
+    #container {min-width:1000px;}
+/*}
+
+@media screen and (max-width:999px) {
+    #wrapper {}
+}*/
+
+#container > .item.SplashBrand {padding-bottom:0;}
+#container > .item.SplashBrand > .SplashText {padding:10px; width:470px; height:60px; line-height:19px;}
+
+#container > .item {float:left; padding:0 0 30px 0; margin:0 8px 8px 0; border:1px solid #cccccc; height:auto;}
+#container > .item.topitem {border:none; padding:1px;}
+#container > .item > img {padding:0; border:0; margin:0; float:left; background-repeat:no-repeat; background-position:-900px -900px;}
+#container > .item .loader {display:none; position:absolute; top:50%; left:50%; /* -half,  -half -paddingOfLowerTab */ margin-left:-33px; margin-top:-50px; width:66px; height:66px;}
+#container > .item.loading img.pimg {visibility:hidden;}
+#container > .item.loading img.loader {display:block;}
+
+#container .topitem {width:980px;padding:0 0 8px 0;}
+
+#container > .product > .overlay.bake > .buttons {opacity:0; visibility:hidden; -moz-transition:opacity 1s; -webkit-transition:opacity 1s; -o-transition:opacity 1s; -ms-transition:opacity 1s; transition:opacity 1s; }
+#container > .product:hover > .overlay.bake.notouch > .buttons, #container > .product:hover > .overlay.bake .buttons { opacity:1;visibility:visible;  }
+#container > .product > .overlay.bake > .dummybg {opacity:0; visibility:hidden; -moz-transition:opacity 1s; -webkit-transition:opacity 1s; -o-transition:opacity 1s; -ms-transition:opacity 1s; transition:opacity 1s; }
+#container > .product:hover > .overlay.bake.notouch .dummybg, #container > .product > .overlay.bake:hover {visibility:visible; opacity:1;}
+
+#container > .product > .overlay  { width:100%; height:100%; font-size:10px;font-weight:bold;position:absolute;z-index:2;text-align:center; }
+#container > .product > .overlay > .dummybg {background:url(../img/bg/bg_overlay.png) repeat;width:100%;height:100%;position:absolute;z-index:1;} 
+
+#container > .product > .overlay > .buttons {bottom:75px; height:auto; width:240px; text-align:center; left:50%; margin-left:-120px; margin-top:0px; position:absolute; z-index:2; text-transform:uppercase; color:#FFFFFF; background:#191919;}/*set height to auto by ChenChi on Jun 18 2013*/
+#container > .product.larger > .overlay > .buttons {margin-top:-45px; top:50%;}
+#container > .product > .overlay > .buttons > ul > li.divider {background:url(../img/buttons/divider.png); width:2px; height:30px; float:left; } /* Merged with kilo by glaissa, aug 12 2013 */
+#container > .product > .overlay > .buttons > .primary {display:block; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
+#container > .product > .overlay > .buttons > .button {text-align:center; margin:0 auto;}
+#container > .product > .overlay > .buttons > ul > li > a.button > .text {padding:9px 0 8px;}
+
+#container > .item > .overlay > .dummybg > div.brand {float:left;margin-right: 10px;right: auto;}
+#container > .item > .overlay > .dummybg > div > .brandcode{ font-size:12px; text-decoration:none;margin-left: 5px;color:#FFFFFF;font-style:normal; font-weight:400;}
+#container > .product > .overlay > .buttons > ul > li {float:left; height:30px;} /* Merged with kilo by glaissa, aug 12 2013 */
+#container > .product > .overlay > .buttons > ul > li:hover {background:#323232;}
+#container > .product > .overlay > .buttons > ul > li:active {background:#434343;}
+#container > .product > .overlay > .buttons > ul > li > a {width:119px; float:left; height:30px; color:#FFFFFF;} /* Merged with kilo by glaissa, aug 12 2013 */
+
+#container > .product > .overlay > .buttons > ul > li > a.view > .text > .icon {margin:-3px 5px 0 0; float:none;}
+#container > .product > .overlay > .buttons > ul > li > a.share > .text > .icon {margin:-2px 5px 0 0; float:none;}
+#container > .product > .overlay > .buttons > .red img.icon {float:none; margin:-4px 5px 0 0;}
+#container > .product > .overlay > .buttons > .brown img.icon {float:none; margin:-2px 5px 0 0;}
+#container > .product > .overlay > .buttons > .soldout , .soldout.button .text {background:#4a4a4a; color:#c4c4c4; cursor:default;}
+
+#container > .product > .promo {color:#ffffff; font-size:10px; text-align:center; line-height:11px;}
+#container > .product > .badge {height:71px; width:71px; position:absolute;z-index:1; right:0; top:0; vertical-align:center;padding:0 0;}
+#container > .product > .badge.b {background:url(../img/promo/badge/bg_badge_1.png) no-repeat;}
+#container > .product > .badge.e {background:url(../img/promo/badge/bg_badge_2.png) no-repeat;}
+/* #container > .product > .badge.promotion {background:url(../img/promo/badge/bg_badge_3.png) no-repeat;} */
+
+#container > .product > .badge.n.p.ex {background:url(../img/promo/badge/rib_all.png) no-repeat;}
+#container > .product > .badge.n.p {background:url(../img/promo/badge/rib_new_promo.png) no-repeat;}
+#container > .product > .badge.n.ex {background:url(../img/promo/badge/rib_new_exclusive.png) no-repeat;}
+#container > .product > .badge.p.ex {background:url(../img/promo/badge/rib_promo_exclusive.png) no-repeat;}
+#container > .product > .badge.n {background:url(../img/promo/badge/rib_new.png) no-repeat;}
+#container > .product > .badge.p {background:url(../img/promo/badge/rib_promo.png) no-repeat;}
+#container > .product > .badge.ex {background:url(../img/promo/badge/rib_exclusive.png) no-repeat;}
+
+#container > .item .btn-close {top:4px; right:4px; background-color:#cccccc; cursor:pointer; width:10px; height:10px; z-index:4; position:absolute;}
+#container > .item.loading  {background-color:#DADADA;}
+#container > .item.fixed {padding:0 0 0 0;}
+
+#container > .item > .panel {position:absolute; bottom:0px; width:100%; background-image:url(../img/bg/bg_text.png); background-repeat:repeat; /**opacity:0.4; filter:alpha(opacity=40);**/ height:30px; color:#ffffff; z-index:3;}
+#container > .item > .panel > .name {font-size:12px; margin-top:8px; display:block; text-indent:8px;}
+#container > .item > .panel > .from {font-size:9px; float:right; text-align:right; margin-top:3px; text-transform:uppercase; margin-right:8px;}
+#container > .item > .panel > .from.nofrom > .price {margin-top:8px; }
+#container > .item > .panel > .price {font-size:12px; margin-top:12px; display:block; font-weight:bold; position:absolute; right:8px; top:0px;}
+#container .topitem img {padding:0 0 0 0;}
+
+#container .topitem img.alpha {padding:0 8px 0 0;}
+#container .topitem img.omega {padding:8px 0 0 0;}
+
+#container .promo {height:260px; width:390px; position:relative; float:left}
+
+/** PAGINATION **/
+
+#pagination {background:#e8e4dd; height:40px; display:block; width:100%;}
+
+#pagination > .holder {text-align:center; display:block; width:335px; margin:0 auto;}
+#pagination > .holder .holder {width:240px; overflow:hidden; display:block; margin-left:47px;}
+#pagination > .holder .holder .panel {float:left; position:relative; width:2000em; height:40px;}
+
+#pagination > .holder .holder .panel li > a {position:relative; float:left; min-width:45px; height:100%; padding:12px 0; border-left:1px solid #e8e4dd; border-right:1px solid #e8e4dd;}
+#pagination > .holder .holder .panel li > a:hover {background:#d4d0ca;}
+#pagination > .holder .holder .panel li > a.active, a:active {background:#c1b8ae; font-weight:700;}/*Modified by ChenChi on May 14 2013: active border will introduce break line*/
+
+#pagination > .holder .arrows {width:335px; margin:0 auto; position:absolute;}
+#pagination > .holder .arrows a {position:relative; float:left; min-width:45px; height:100%; padding:12px 0; border-left:1px solid #e8e4dd; border-right:1px solid #e8e4dd;}
+#pagination > .holder .arrows a.right {float:right;}
+#pagination > .holder .arrows .next {background:url(../img/icon/page_arrows.png) no-repeat; background-position:0 0; height:11px; width:9px; margin: 5px auto 0; }
+#pagination > .holder .arrows .prev {background:url(../img/icon/page_arrows.png) no-repeat; background-position:0 -13px; height:11px; width:9px; margin: 5px auto 0; }
+
+#pagination > .holder .arrows a:hover {background:#d4d0ca;}

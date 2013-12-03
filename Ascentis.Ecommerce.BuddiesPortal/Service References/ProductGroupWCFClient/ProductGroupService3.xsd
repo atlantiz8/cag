@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+  <xs:complexType name="ArrayOfBrandLangEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BrandLangEntity" nillable="true" type="tns:BrandLangEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBrandLangEntity" nillable="true" type="tns:ArrayOfBrandLangEntity" />
+  <xs:complexType name="BrandLangEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="HomePagePath" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BrandLangEntity" nillable="true" type="tns:BrandLangEntity" />
+  <xs:complexType name="ArrayOfConcessionaireEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConcessionaireEntity" nillable="true" type="tns:ConcessionaireEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConcessionaireEntity" nillable="true" type="tns:ArrayOfConcessionaireEntity" />
+  <xs:complexType name="ConcessionaireEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConcessionaireEntity" nillable="true" type="tns:ConcessionaireEntity" />
+  <xs:complexType name="ProductGroupEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllCount" type="xs:int" />
+      <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="BrandDetailsUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="CategoryHierarchy" nillable="true" type="q1:ArrayOfGetCategoriesByProductGroupID_Result" />
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBestSeller" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDisplayToHomePage" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEditorsPick" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsExclusiveProduct" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNewProduct" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPromotion" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSoldOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MetaDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MetaKeywords" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoOfOrdered" type="xs:long" />
+      <xs:element minOccurs="0" name="Overview" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="tns:ProductGroupEntity.ProductEntity" />
+      <xs:element minOccurs="0" name="Rank" type="xs:long" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="orderBy" type="xs:int" />
+      <xs:element minOccurs="0" name="wishlistID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductGroupEntity" nillable="true" type="tns:ProductGroupEntity" />
+  <xs:complexType name="ProductGroupEntity.ProductEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandAutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandDetailURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConcessionaireAutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="ConcessionaireName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayDowntownPrice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DowntownPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="IsAgeLimit" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAlcohol" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLAG" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LimitedQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="LowestPricProductID" type="xs:long" />
+      <xs:element minOccurs="0" name="LowestPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="LowestPriceProductSKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginalPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="OtherCategory1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherCategory2" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherCategory3" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PromoPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="RecommendedGroupCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RewardsPoints" type="xs:double" />
+      <xs:element minOccurs="0" name="Savings" type="xs:double" />
+      <xs:element minOccurs="0" name="SetComponent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Skeleton_image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkinType" type="xs:int" />
+      <xs:element minOccurs="0" name="Stock" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TravelExclusives" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductGroupEntity.ProductEntity" nillable="true" type="tns:ProductGroupEntity.ProductEntity" />
+</xs:schema>

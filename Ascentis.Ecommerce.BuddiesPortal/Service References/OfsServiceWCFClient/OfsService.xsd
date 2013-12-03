@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="NewOrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreditCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditCardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemberEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemberName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderCreateDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PickUpLocation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="SalesOrderNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TerminalNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewOrderDetail" nillable="true" type="tns:NewOrderDetail" />
+</xs:schema>

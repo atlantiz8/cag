@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.CRMService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.CRMService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CRMMemberRegistrationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CardInfo" nillable="true" type="tns:CRMCardResponseInfo" />
+          <xs:element minOccurs="0" name="MemberInfo" nillable="true" type="tns:ArrayOfCRMMemberResponseInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CRMMemberRegistrationResponse" nillable="true" type="tns:CRMMemberRegistrationResponse" />
+  <xs:complexType name="ResponseParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseParam" nillable="true" type="tns:ResponseParam" />
+  <xs:complexType name="CRMCardResponseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemberID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MembershipStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MembershipTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PointsBAL" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalPointsBAL" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRMCardResponseInfo" nillable="true" type="tns:CRMCardResponseInfo" />
+  <xs:complexType name="ArrayOfCRMMemberResponseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CRMMemberResponseInfo" nillable="true" type="tns:CRMMemberResponseInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCRMMemberResponseInfo" nillable="true" type="tns:ArrayOfCRMMemberResponseInfo" />
+  <xs:complexType name="CRMMemberResponseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Base64PhotoString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Block" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Building" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacebookID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacebookName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacebookPhotoLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacebookToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacebookTokenExpiry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaxNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullPhotoName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Level" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailingLists" nillable="true" type="tns:ArrayOfMailingLists" />
+      <xs:element minOccurs="0" name="MemberID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Passport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhotoLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferrerCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRMMemberResponseInfo" nillable="true" type="tns:CRMMemberResponseInfo" />
+  <xs:complexType name="ArrayOfMailingLists">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailingLists" nillable="true" type="tns:MailingLists" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailingLists" nillable="true" type="tns:ArrayOfMailingLists" />
+  <xs:complexType name="MailingLists">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailingLists" nillable="true" type="tns:MailingLists" />
+  <xs:complexType name="CRMCardEnquiryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CardInfo" nillable="true" type="tns:CRMCardResponseInfo" />
+          <xs:element minOccurs="0" name="MemberInfo" nillable="true" type="tns:CRMMemberResponseInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CRMCardEnquiryResponse" nillable="true" type="tns:CRMCardEnquiryResponse" />
+  <xs:complexType name="CRMUpdateProfileResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MemberLists" nillable="true" type="tns:ArrayOfCRMMemberResponseInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CRMUpdateProfileResponse" nillable="true" type="tns:CRMUpdateProfileResponse" />
+</xs:schema>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WishlistService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/WishlistService/WishlistService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/WishlistService/WishlistService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/WishlistService/WishlistService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWishlistService_AddToWishlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWishlist" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_AddToWishlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWishlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_WishlistIsExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:WishlistIsExist" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_WishlistIsExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WishlistIsExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_DeleteWishlistByMemberIDAndIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWishlistByMemberIDAndIndex" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_DeleteWishlistByMemberIDAndIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWishlistByMemberIDAndIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_DeleteWishlistByGroupID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWishlistByGroupID" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_DeleteWishlistByGroupID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWishlistByGroupIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_GetWishesUrlByMemberID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWishesUrlByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="IWishlistService_GetWishesUrlByMemberID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWishesUrlByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWishlistService">
+    <wsdl:operation name="AddToWishlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWishlistService/AddToWishlist" message="tns:IWishlistService_AddToWishlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWishlistService/AddToWishlistResponse" message="tns:IWishlistService_AddToWishlist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WishlistIsExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWishlistService/WishlistIsExist" message="tns:IWishlistService_WishlistIsExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWishlistService/WishlistIsExistResponse" message="tns:IWishlistService_WishlistIsExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWishlistByMemberIDAndIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWishlistService/DeleteWishlistByMemberIDAndIndex" message="tns:IWishlistService_DeleteWishlistByMemberIDAndIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWishlistService/DeleteWishlistByMemberIDAndIndexResponse" message="tns:IWishlistService_DeleteWishlistByMemberIDAndIndex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWishlistByGroupID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWishlistService/DeleteWishlistByGroupID" message="tns:IWishlistService_DeleteWishlistByGroupID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWishlistService/DeleteWishlistByGroupIDResponse" message="tns:IWishlistService_DeleteWishlistByGroupID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWishesUrlByMemberID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWishlistService/GetWishesUrlByMemberID" message="tns:IWishlistService_GetWishesUrlByMemberID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWishlistService/GetWishesUrlByMemberIDResponse" message="tns:IWishlistService_GetWishesUrlByMemberID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWishlistService" type="tns:IWishlistService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddToWishlist">
+      <soap:operation soapAction="http://tempuri.org/IWishlistService/AddToWishlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WishlistIsExist">
+      <soap:operation soapAction="http://tempuri.org/IWishlistService/WishlistIsExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWishlistByMemberIDAndIndex">
+      <soap:operation soapAction="http://tempuri.org/IWishlistService/DeleteWishlistByMemberIDAndIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWishlistByGroupID">
+      <soap:operation soapAction="http://tempuri.org/IWishlistService/DeleteWishlistByGroupID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWishesUrlByMemberID">
+      <soap:operation soapAction="http://tempuri.org/IWishlistService/GetWishesUrlByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WishlistService">
+    <wsdl:port name="BasicHttpBinding_IWishlistService" binding="tns:BasicHttpBinding_IWishlistService">
+      <soap:address location="http://localhost/Ascentis.Ecommerce.Services/EcommService/WishlistService/WishlistService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

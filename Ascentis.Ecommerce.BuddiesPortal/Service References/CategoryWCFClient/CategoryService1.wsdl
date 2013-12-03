@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CategoryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/CategoryService/CategoryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/CategoryService/CategoryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/CategoryService/CategoryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/CategoryService/CategoryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/CategoryService/CategoryService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICategoryService_GetCategoryListAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListAll" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryListAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryListAllWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListAllWithJson" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryListAllWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListAllWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryLangByCategoryTypeWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryLangByCategoryTypeWithJson" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryLangByCategoryTypeWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryLangByCategoryTypeWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryMenuSetByBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryMenuSetByBrand" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryMenuSetByBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryMenuSetByBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoriesByParentIDsWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesByParentIDsWithJson" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoriesByParentIDsWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesByParentIDsWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryByID" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryService_GetCategoryByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryByIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICategoryService">
+    <wsdl:operation name="GetCategoryListAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryListAll" message="tns:ICategoryService_GetCategoryListAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryListAllResponse" message="tns:ICategoryService_GetCategoryListAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryListAllWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryListAllWithJson" message="tns:ICategoryService_GetCategoryListAllWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryListAllWithJsonResponse" message="tns:ICategoryService_GetCategoryListAllWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryLangByCategoryTypeWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryLangByCategoryTypeWithJson" message="tns:ICategoryService_GetCategoryLangByCategoryTypeWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryLangByCategoryTypeWithJsonResponse" message="tns:ICategoryService_GetCategoryLangByCategoryTypeWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryMenuSetByBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryMenuSetByBrand" message="tns:ICategoryService_GetCategoryMenuSetByBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryMenuSetByBrandResponse" message="tns:ICategoryService_GetCategoryMenuSetByBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesByParentIDsWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategoriesByParentIDsWithJson" message="tns:ICategoryService_GetCategoriesByParentIDsWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoriesByParentIDsWithJsonResponse" message="tns:ICategoryService_GetCategoriesByParentIDsWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryByID" message="tns:ICategoryService_GetCategoryByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryService/GetCategoryByIDResponse" message="tns:ICategoryService_GetCategoryByID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICategoryService" type="tns:ICategoryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCategoryListAll">
+      <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategoryListAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryListAllWithJson">
+      <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategoryListAllWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryLangByCategoryTypeWithJson">
+      <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategoryLangByCategoryTypeWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryMenuSetByBrand">
+      <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategoryMenuSetByBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesByParentIDsWithJson">
+      <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategoriesByParentIDsWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByID">
+      <soap:operation soapAction="http://tempuri.org/ICategoryService/GetCategoryByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CategoryService">
+    <wsdl:port name="BasicHttpBinding_ICategoryService" binding="tns:BasicHttpBinding_ICategoryService">
+      <soap:address location="http://localhost/Ascentis.Ecommerce.Services/EcommService/CategoryService/CategoryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

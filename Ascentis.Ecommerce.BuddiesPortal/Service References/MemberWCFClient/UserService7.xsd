@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.CRMService" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="UpdateUserByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="sUser" nillable="true" type="q1:Member" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserByUserIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberProfileByGuestToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GuestAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberProfileByGuestTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetMemberProfileByGuestTokenResult" nillable="true" type="q2:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterMemberToCRM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="NewMember" nillable="true" type="q3:Member" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterMemberToCRMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.CRMService" minOccurs="0" name="RegisterMemberToCRMResult" nillable="true" type="q4:CRMMemberRegistrationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnquireCRMCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CRMCardNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnquireCRMCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.CRMService" minOccurs="0" name="EnquireCRMCardResult" nillable="true" type="q5:CRMCardEnquiryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCRMProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="member" nillable="true" type="q6:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCRMProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.CRMService" minOccurs="0" name="UpdateCRMProfileResult" nillable="true" type="q7:CRMUpdateProfileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateCRMMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateCRMMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateCRMMemberResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetMemberListResult" nillable="true" type="q8:ArrayOfMember" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetAdministratorListResult" nillable="true" type="q9:ArrayOfAdministrator" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetMemberProfileResult" nillable="true" type="q10:Member" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberEntityProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberEntityProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetMemberEntityProfileResult" nillable="true" type="q11:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetAdministratorProfileResult" nillable="true" type="q12:Administrator" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetAdminProfileResult" nillable="true" type="q13:AdministratorEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorProfileByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorProfileByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetAdministratorProfileByIDResult" nillable="true" type="q14:AdministratorEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorRoleListByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roleID" type="xs:int" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorRoleListByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetAdministratorRoleListByUserIDResult" nillable="true" type="q15:ArrayOfAdministratorEntity" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorRoleList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorRoleListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetAdministratorRoleListResult" nillable="true" type="q16:ArrayOfAdministratorEntity" />
+        <xs:element minOccurs="0" name="recordCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="member" nillable="true" type="q17:Member" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddMemberResult" type="xs:boolean" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="member" nillable="true" type="q18:Member" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="member" nillable="true" type="q19:Member" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMemberResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdministrator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="admin" nillable="true" type="q20:Administrator" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdministratorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddAdministratorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministrator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="admin" nillable="true" type="q21:Administrator" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministratorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAdministratorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministratorRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+        <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+        <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ModifiedOn" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministratorRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAdministratorRoleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministratorLoginDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministratorLoginDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAdministratorLoginDateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteMemberResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="member" nillable="true" type="q22:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMemberProfileResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberCRMCardNoMemberID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="EcommCardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CRMCardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CRMMemberID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberCRMCardNoMemberIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMemberCRMCardNoMemberIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorEmailList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AutoID" nillable="true" type="q23:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorEmailListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetAdministratorEmailListResult" nillable="true" type="q24:ArrayOfAdministratorEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCagEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCagEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetCagEmailResult" nillable="true" type="q25:ArrayOfAdministratorEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberLoginAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LoginSuccess" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MaxLoginAttempt" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberLoginAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="UpdateMemberLoginAttemptResult" nillable="true" type="q26:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberProfileByAutoID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberProfileByAutoIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetMemberProfileByAutoIDResult" nillable="true" type="q27:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberEmailByPassportBirthDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Passport" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SecurityQuestionId" type="xs:int" />
+        <xs:element minOccurs="0" name="SecurityAnswer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberEmailByPassportBirthDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetMemberEmailByPassportBirthDateResult" nillable="true" type="q28:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberEmailID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CurrentEmail" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="member" nillable="true" type="q29:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMemberEmailIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMemberEmailIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivateMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivateMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActivateMemberResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministratorLoginAttempt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adminID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LoginSuccess" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MaxLoginAttempt" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdministratorLoginAttemptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="UpdateAdministratorLoginAttemptResult" nillable="true" type="q30:AdministratorEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsCRCardUsed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsCRCardUsedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsCRCardUsedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMemberSalesTxnToCRM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="orderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="salesAmt" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMemberSalesTxnToCRMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMemberSalesTxnToCRMResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGuestAccount">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGuestAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="CreateGuestAccountResult" nillable="true" type="q31:MemberEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGuestDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuestAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Passport" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FlightAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="FlightDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="NewsLetter" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGuestDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateGuestDetailsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGuestDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuestAutoID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGuestDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetGuestDetailsResult" nillable="true" type="q32:GuestEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGuestUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuestAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGuestUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateGuestUserIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertGuestCheckoutOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="guestMemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="newMemberAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="sendSalesToCRM" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertGuestCheckoutOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConvertGuestCheckoutOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorEntityList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+        <xs:element minOccurs="0" name="pagetotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorEntityListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetAdministratorEntityListResult" nillable="true" type="q33:ArrayOfAdministratorEntity" />
+        <xs:element minOccurs="0" name="pagetotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminInfoByAutoID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AdminAutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminInfoByAutoIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetAdminInfoByAutoIDResult" nillable="true" type="q34:AdministratorForUI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAdministrationCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="Admin" nillable="true" type="q35:Administrator" />
+        <xs:element minOccurs="0" name="ConcessionaireAutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAdministrationCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertAdministrationCodeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdministratorByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdministratorByUserIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdminByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="admin" nillable="true" type="q36:Administrator" />
+        <xs:element minOccurs="0" name="ConcessionaireAutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAdminByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAdminByUserIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAdministrator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAdministratorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAdministratorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserMemberEntityList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PassportNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="skip" type="xs:int" />
+        <xs:element minOccurs="0" name="take" type="xs:int" />
+        <xs:element minOccurs="0" name="pagetotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserMemberEntityListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetUserMemberEntityListResult" nillable="true" type="q37:ArrayOfUserMemberEntity" />
+        <xs:element minOccurs="0" name="pagetotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoByAutoID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserAutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoByAutoIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetUserInfoByAutoIDResult" nillable="true" type="q38:UserMemberEntityForUI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserByUserIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

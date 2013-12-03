@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="185fcb29-a56c-4b23-808e-4c2505fbb7f6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/AdminService/UserService/UserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="31cadc4b-dc01-47df-bff4-ab700d6c3d92" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="fe450d27-7cbb-42af-a470-af48e389864c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd8" />
+    <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="7c5b21dc-8ced-486e-ae75-e46b5579d361" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?disco" />
+    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="3224c2e4-44ca-43e9-b6a0-0f9fdc5ac6d9" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?wsdl" />
+    <MetadataFile FileName="UserService2.xsd" MetadataType="Schema" ID="f54246c4-d9fa-45ad-8379-08d5f91eab4c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd5" />
+    <MetadataFile FileName="UserService3.xsd" MetadataType="Schema" ID="73bb3f95-0c91-4049-9d5b-a3e003c84f7e" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd4" />
+    <MetadataFile FileName="UserService4.xsd" MetadataType="Schema" ID="dcbb536f-badd-43fc-bbc3-87cd299bd432" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd7" />
+    <MetadataFile FileName="UserService5.xsd" MetadataType="Schema" ID="da66113c-8e19-40ee-90ae-6a54441fbf41" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd6" />
+    <MetadataFile FileName="UserService6.xsd" MetadataType="Schema" ID="550ab078-eecd-4c4c-ad43-c3041d956e22" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserService7.xsd" MetadataType="Schema" ID="4c5596d9-e3a1-4976-ac4f-071a74f94f1f" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserService8.xsd" MetadataType="Schema" ID="3747d765-30ba-4f0d-a9a2-f94d7fc3446a" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

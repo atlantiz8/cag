@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6a96eb7b-275d-4f3c-b2ae-739ed89a3a7a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/ConcessionaireService/ConcessionaireService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConcessionaireService.xsd" MetadataType="Schema" ID="1e4247ae-16be-4fd6-8e51-d5fe502dcea9" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConcessionaireService1.xsd" MetadataType="Schema" ID="5aca8825-ec70-4376-9d75-e60ace5a4a5b" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ConcessionaireService.wsdl" MetadataType="Wsdl" ID="3e6fccd4-704f-4165-b3b8-684bb97eb44c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?wsdl" />
+    <MetadataFile FileName="ConcessionaireService.disco" MetadataType="Disco" ID="f552d6b0-7c2a-474f-a92a-5514b6b2f6bb" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?disco" />
+    <MetadataFile FileName="ConcessionaireService2.xsd" MetadataType="Schema" ID="cfcf3748-c828-432a-b880-3d52c6b12e6f" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ConcessionaireService3.xsd" MetadataType="Schema" ID="66bdc13e-1353-41de-8490-d7f7f5dbddec" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ConcessionaireService4.xsd" MetadataType="Schema" ID="b64f7df0-8169-44dc-8591-50567fa78bb4" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

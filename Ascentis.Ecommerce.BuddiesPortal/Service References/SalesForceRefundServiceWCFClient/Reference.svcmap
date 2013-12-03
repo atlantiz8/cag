@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b5752392-6fa7-48f8-9508-a753d94a4a0e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/SalesForce/RefundService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RefundService.disco" MetadataType="Disco" ID="8eab3d17-c5f6-4fc9-8972-62716b4bb9bb" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?disco" />
+    <MetadataFile FileName="RefundService.xsd" MetadataType="Schema" ID="86c57314-7ced-4b76-a624-8a274cf85d85" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RefundService.wsdl" MetadataType="Wsdl" ID="bf36cf01-ae29-4c35-ba73-de03725f44f2" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?wsdl" />
+    <MetadataFile FileName="RefundService1.xsd" MetadataType="Schema" ID="81c5cf73-64c3-4d8c-bf61-730939d8cbfb" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RefundService2.xsd" MetadataType="Schema" ID="fe0f193b-31bf-4782-b84e-37210f8be36a" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RefundService3.xsd" MetadataType="Schema" ID="04aa94d4-5b37-4eff-9cfb-03981cad4b05" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

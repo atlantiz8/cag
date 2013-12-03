@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.CRMService" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserService_UpdateUserByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateUserByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberProfileByGuestToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfileByGuestToken" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberProfileByGuestToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfileByGuestTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_RegisterMemberToCRM_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterMemberToCRM" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_RegisterMemberToCRM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterMemberToCRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_EnquireCRMCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnquireCRMCard" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_EnquireCRMCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnquireCRMCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateCRMProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCRMProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateCRMProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCRMProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_AuthenticateCRMMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateCRMMember" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_AuthenticateCRMMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateCRMMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberList" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorList" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberEntityProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberEntityProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberEntityProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberEntityProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdminProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdminProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdminProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdminProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorProfileByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorProfileByID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorProfileByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorProfileByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorRoleListByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorRoleListByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorRoleListByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorRoleListByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorRoleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorRoleList" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorRoleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorRoleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMember" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMember" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministratorRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorRole" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministratorRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministratorLoginDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorLoginDate" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministratorLoginDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorLoginDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMember" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberCRMCardNoMemberID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberCRMCardNoMemberID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberCRMCardNoMemberID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberCRMCardNoMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorEmailList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorEmailList" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorEmailList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorEmailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetCagEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCagEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetCagEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCagEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberLoginAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberLoginAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberLoginAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberLoginAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberProfileByAutoID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfileByAutoID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberProfileByAutoID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfileByAutoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberEmailByPassportBirthDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberEmailByPassportBirthDate" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetMemberEmailByPassportBirthDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberEmailByPassportBirthDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberEmailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberEmailID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateMemberEmailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberEmailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ActivateMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateMember" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ActivateMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministratorLoginAttempt_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorLoginAttempt" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdministratorLoginAttempt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorLoginAttemptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_IsCRCardUsed_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsCRCardUsed" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_IsCRCardUsed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsCRCardUsedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_SendMemberSalesTxnToCRM_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMemberSalesTxnToCRM" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_SendMemberSalesTxnToCRM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMemberSalesTxnToCRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_CreateGuestAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGuestAccount" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_CreateGuestAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGuestAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateGuestDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuestDetails" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateGuestDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuestDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetGuestDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGuestDetails" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetGuestDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGuestDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateGuestUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuestUserID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateGuestUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGuestUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ConvertGuestCheckoutOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertGuestCheckoutOrder" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ConvertGuestCheckoutOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertGuestCheckoutOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorEntityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorEntityList" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorEntityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorEntityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdminInfoByAutoID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdminInfoByAutoID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdminInfoByAutoID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdminInfoByAutoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_InsertAdministrationCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdministrationCode" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_InsertAdministrationCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAdministrationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetAdministratorByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdminByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdminByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateAdminByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdminByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserMemberEntityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMemberEntityList" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserMemberEntityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMemberEntityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserInfoByAutoID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByAutoID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserInfoByAutoID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByAutoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUserByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserService">
+    <wsdl:operation name="UpdateUserByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateUserByUserID" message="tns:IUserService_UpdateUserByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateUserByUserIDResponse" message="tns:IUserService_UpdateUserByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfileByGuestToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetMemberProfileByGuestToken" message="tns:IUserService_GetMemberProfileByGuestToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetMemberProfileByGuestTokenResponse" message="tns:IUserService_GetMemberProfileByGuestToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterMemberToCRM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/RegisterMemberToCRM" message="tns:IUserService_RegisterMemberToCRM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/RegisterMemberToCRMResponse" message="tns:IUserService_RegisterMemberToCRM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnquireCRMCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/EnquireCRMCard" message="tns:IUserService_EnquireCRMCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/EnquireCRMCardResponse" message="tns:IUserService_EnquireCRMCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCRMProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateCRMProfile" message="tns:IUserService_UpdateCRMProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateCRMProfileResponse" message="tns:IUserService_UpdateCRMProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateCRMMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/AuthenticateCRMMember" message="tns:IUserService_AuthenticateCRMMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/AuthenticateCRMMemberResponse" message="tns:IUserService_AuthenticateCRMMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetMemberList" message="tns:IUserService_GetMemberList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetMemberListResponse" message="tns:IUserService_GetMemberList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorList" message="tns:IUserService_GetAdministratorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorListResponse" message="tns:IUserService_GetAdministratorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetMemberProfile" message="tns:IUserService_GetMemberProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetMemberProfileResponse" message="tns:IUserService_GetMemberProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberEntityProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetMemberEntityProfile" message="tns:IUserService_GetMemberEntityProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetMemberEntityProfileResponse" message="tns:IUserService_GetMemberEntityProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorProfile" message="tns:IUserService_GetAdministratorProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorProfileResponse" message="tns:IUserService_GetAdministratorProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdminProfile" message="tns:IUserService_GetAdminProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdminProfileResponse" message="tns:IUserService_GetAdminProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorProfileByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorProfileByID" message="tns:IUserService_GetAdministratorProfileByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorProfileByIDResponse" message="tns:IUserService_GetAdministratorProfileByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorRoleListByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorRoleListByUserID" message="tns:IUserService_GetAdministratorRoleListByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorRoleListByUserIDResponse" message="tns:IUserService_GetAdministratorRoleListByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorRoleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorRoleList" message="tns:IUserService_GetAdministratorRoleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorRoleListResponse" message="tns:IUserService_GetAdministratorRoleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/AddMember" message="tns:IUserService_AddMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/AddMemberResponse" message="tns:IUserService_AddMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateMember" message="tns:IUserService_UpdateMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateMemberResponse" message="tns:IUserService_UpdateMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/AddAdministrator" message="tns:IUserService_AddAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/AddAdministratorResponse" message="tns:IUserService_AddAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateAdministrator" message="tns:IUserService_UpdateAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateAdministratorResponse" message="tns:IUserService_UpdateAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministratorRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateAdministratorRole" message="tns:IUserService_UpdateAdministratorRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateAdministratorRoleResponse" message="tns:IUserService_UpdateAdministratorRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministratorLoginDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateAdministratorLoginDate" message="tns:IUserService_UpdateAdministratorLoginDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateAdministratorLoginDateResponse" message="tns:IUserService_UpdateAdministratorLoginDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/DeleteMember" message="tns:IUserService_DeleteMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/DeleteMemberResponse" message="tns:IUserService_DeleteMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateMemberProfile" message="tns:IUserService_UpdateMemberProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateMemberProfileResponse" message="tns:IUserService_UpdateMemberProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberCRMCardNoMemberID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateMemberCRMCardNoMemberID" message="tns:IUserService_UpdateMemberCRMCardNoMemberID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateMemberCRMCardNoMemberIDResponse" message="tns:IUserService_UpdateMemberCRMCardNoMemberID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorEmailList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorEmailList" message="tns:IUserService_GetAdministratorEmailList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorEmailListResponse" message="tns:IUserService_GetAdministratorEmailList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCagEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetCagEmail" message="tns:IUserService_GetCagEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetCagEmailResponse" message="tns:IUserService_GetCagEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberLoginAttempt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateMemberLoginAttempt" message="tns:IUserService_UpdateMemberLoginAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateMemberLoginAttemptResponse" message="tns:IUserService_UpdateMemberLoginAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfileByAutoID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetMemberProfileByAutoID" message="tns:IUserService_GetMemberProfileByAutoID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetMemberProfileByAutoIDResponse" message="tns:IUserService_GetMemberProfileByAutoID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberEmailByPassportBirthDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetMemberEmailByPassportBirthDate" message="tns:IUserService_GetMemberEmailByPassportBirthDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetMemberEmailByPassportBirthDateResponse" message="tns:IUserService_GetMemberEmailByPassportBirthDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberEmailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateMemberEmailID" message="tns:IUserService_UpdateMemberEmailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateMemberEmailIDResponse" message="tns:IUserService_UpdateMemberEmailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ActivateMember" message="tns:IUserService_ActivateMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ActivateMemberResponse" message="tns:IUserService_ActivateMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministratorLoginAttempt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateAdministratorLoginAttempt" message="tns:IUserService_UpdateAdministratorLoginAttempt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateAdministratorLoginAttemptResponse" message="tns:IUserService_UpdateAdministratorLoginAttempt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCRCardUsed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/IsCRCardUsed" message="tns:IUserService_IsCRCardUsed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/IsCRCardUsedResponse" message="tns:IUserService_IsCRCardUsed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMemberSalesTxnToCRM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/SendMemberSalesTxnToCRM" message="tns:IUserService_SendMemberSalesTxnToCRM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/SendMemberSalesTxnToCRMResponse" message="tns:IUserService_SendMemberSalesTxnToCRM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGuestAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/CreateGuestAccount" message="tns:IUserService_CreateGuestAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/CreateGuestAccountResponse" message="tns:IUserService_CreateGuestAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGuestDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateGuestDetails" message="tns:IUserService_UpdateGuestDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateGuestDetailsResponse" message="tns:IUserService_UpdateGuestDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGuestDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetGuestDetails" message="tns:IUserService_GetGuestDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetGuestDetailsResponse" message="tns:IUserService_GetGuestDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGuestUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateGuestUserID" message="tns:IUserService_UpdateGuestUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateGuestUserIDResponse" message="tns:IUserService_UpdateGuestUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertGuestCheckoutOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ConvertGuestCheckoutOrder" message="tns:IUserService_ConvertGuestCheckoutOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ConvertGuestCheckoutOrderResponse" message="tns:IUserService_ConvertGuestCheckoutOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorEntityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorEntityList" message="tns:IUserService_GetAdministratorEntityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorEntityListResponse" message="tns:IUserService_GetAdministratorEntityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminInfoByAutoID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdminInfoByAutoID" message="tns:IUserService_GetAdminInfoByAutoID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdminInfoByAutoIDResponse" message="tns:IUserService_GetAdminInfoByAutoID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdministrationCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/InsertAdministrationCode" message="tns:IUserService_InsertAdministrationCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/InsertAdministrationCodeResponse" message="tns:IUserService_InsertAdministrationCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetAdministratorByUserID" message="tns:IUserService_GetAdministratorByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetAdministratorByUserIDResponse" message="tns:IUserService_GetAdministratorByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdminByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateAdminByUserID" message="tns:IUserService_UpdateAdminByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateAdminByUserIDResponse" message="tns:IUserService_UpdateAdminByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/DeleteAdministrator" message="tns:IUserService_DeleteAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/DeleteAdministratorResponse" message="tns:IUserService_DeleteAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMemberEntityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUserMemberEntityList" message="tns:IUserService_GetUserMemberEntityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUserMemberEntityListResponse" message="tns:IUserService_GetUserMemberEntityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoByAutoID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUserInfoByAutoID" message="tns:IUserService_GetUserInfoByAutoID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUserInfoByAutoIDResponse" message="tns:IUserService_GetUserInfoByAutoID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUserByUserID" message="tns:IUserService_GetUserByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUserByUserIDResponse" message="tns:IUserService_GetUserByUserID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateUserByUserID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateUserByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfileByGuestToken">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetMemberProfileByGuestToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterMemberToCRM">
+      <soap:operation soapAction="http://tempuri.org/IUserService/RegisterMemberToCRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnquireCRMCard">
+      <soap:operation soapAction="http://tempuri.org/IUserService/EnquireCRMCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCRMProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateCRMProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateCRMMember">
+      <soap:operation soapAction="http://tempuri.org/IUserService/AuthenticateCRMMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetMemberList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorList">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetMemberProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberEntityProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetMemberEntityProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdminProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorProfileByID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorProfileByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorRoleListByUserID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorRoleListByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorRoleList">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorRoleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMember">
+      <soap:operation soapAction="http://tempuri.org/IUserService/AddMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdministrator">
+      <soap:operation soapAction="http://tempuri.org/IUserService/AddAdministrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministrator">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateAdministrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministratorRole">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateAdministratorRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministratorLoginDate">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateAdministratorLoginDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMember">
+      <soap:operation soapAction="http://tempuri.org/IUserService/DeleteMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateMemberProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberCRMCardNoMemberID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateMemberCRMCardNoMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorEmailList">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorEmailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCagEmail">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetCagEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberLoginAttempt">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateMemberLoginAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfileByAutoID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetMemberProfileByAutoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberEmailByPassportBirthDate">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetMemberEmailByPassportBirthDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberEmailID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateMemberEmailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateMember">
+      <soap:operation soapAction="http://tempuri.org/IUserService/ActivateMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministratorLoginAttempt">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateAdministratorLoginAttempt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCRCardUsed">
+      <soap:operation soapAction="http://tempuri.org/IUserService/IsCRCardUsed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMemberSalesTxnToCRM">
+      <soap:operation soapAction="http://tempuri.org/IUserService/SendMemberSalesTxnToCRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGuestAccount">
+      <soap:operation soapAction="http://tempuri.org/IUserService/CreateGuestAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGuestDetails">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateGuestDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGuestDetails">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetGuestDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGuestUserID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateGuestUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertGuestCheckoutOrder">
+      <soap:operation soapAction="http://tempuri.org/IUserService/ConvertGuestCheckoutOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorEntityList">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorEntityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminInfoByAutoID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdminInfoByAutoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdministrationCode">
+      <soap:operation soapAction="http://tempuri.org/IUserService/InsertAdministrationCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorByUserID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetAdministratorByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdminByUserID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateAdminByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdministrator">
+      <soap:operation soapAction="http://tempuri.org/IUserService/DeleteAdministrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMemberEntityList">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUserMemberEntityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoByAutoID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUserInfoByAutoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUserByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="BasicHttpBinding_IUserService" binding="tns:BasicHttpBinding_IUserService">
+      <soap:address location="http://localhost/ascentis.ecommerce.services/AdminService/UserService/UserService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

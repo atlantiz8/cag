@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="624ab7f6-7b36-441f-afb8-8b8075e4d1fc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/TransactionReceiptService/TransactionReceiptService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TransactionReceiptService.xsd" MetadataType="Schema" ID="2c52ecbf-73e6-43e7-bd99-17180464ca07" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TransactionReceiptService1.xsd" MetadataType="Schema" ID="b1816dce-6287-442d-bf6d-237ada7c1491" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TransactionReceiptService2.xsd" MetadataType="Schema" ID="754bb099-0c31-41b0-ad59-0ae4f75bbd98" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?xsd=xsd4" />
+    <MetadataFile FileName="TransactionReceiptService.wsdl" MetadataType="Wsdl" ID="7433e8bd-e2c2-40aa-abe7-0c45dc65924a" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?wsdl" />
+    <MetadataFile FileName="TransactionReceiptService.disco" MetadataType="Disco" ID="f0330275-4284-43cc-ac37-43e6cf212e0a" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?disco" />
+    <MetadataFile FileName="TransactionReceiptService3.xsd" MetadataType="Schema" ID="e64770ae-fa2d-4880-8e09-0dcb7d4fb8bc" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TransactionReceiptService4.xsd" MetadataType="Schema" ID="15670ff6-9252-4ac5-b9e0-ee2f2584886f" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

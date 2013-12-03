@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfShoppingCartEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShoppingCartEntity" nillable="true" type="tns:ShoppingCartEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShoppingCartEntity" nillable="true" type="tns:ArrayOfShoppingCartEntity" />
+  <xs:complexType name="ShoppingCartEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeLimit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AlcoholVolumeForCurrentItem" type="xs:double" />
+      <xs:element minOccurs="0" name="Attributes" nillable="true" type="tns:ArrayOfShoppingCartEntity.AttributeName_AttributeValueSet" />
+      <xs:element minOccurs="0" name="BrandAutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandDetailUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateofBirth" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DowntownPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="FlightAirportCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightDestination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAlcohol" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLAG" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LAGMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LimitedQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="MemberAge" type="xs:int" />
+      <xs:element minOccurs="0" name="Member_AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="OriginPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="OutOfStockQuantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Retailer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Retailer_AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Savings" type="xs:double" />
+      <xs:element minOccurs="0" name="ShoppingCartItem_AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="StockQuantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalAlcoholVolumeInCart" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalLAGItemsInCart" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShoppingCartEntity" nillable="true" type="tns:ShoppingCartEntity" />
+  <xs:complexType name="ArrayOfShoppingCartEntity.AttributeName_AttributeValueSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShoppingCartEntity.AttributeName_AttributeValueSet" nillable="true" type="tns:ShoppingCartEntity.AttributeName_AttributeValueSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShoppingCartEntity.AttributeName_AttributeValueSet" nillable="true" type="tns:ArrayOfShoppingCartEntity.AttributeName_AttributeValueSet" />
+  <xs:complexType name="ShoppingCartEntity.AttributeName_AttributeValueSet">
+    <xs:sequence>
+      <xs:element name="_x003C_AttributeAutoID_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_AttributeNameTranslateAutoID_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_AttributeName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AttributeValue_AutoID_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_AttributeValue_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShoppingCartEntity.AttributeName_AttributeValueSet" nillable="true" type="tns:ShoppingCartEntity.AttributeName_AttributeValueSet" />
+  <xs:complexType name="PromotionCodeEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="CountDown" type="xs:long" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Discount" type="xs:double" />
+      <xs:element minOccurs="0" name="EndDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsRedeemed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSingleRedemption" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PromotionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PromotionCodeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpendAmtToRedeem" type="xs:double" />
+      <xs:element minOccurs="0" name="StartDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TotalTimes" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PromotionCodeEntity" nillable="true" type="tns:PromotionCodeEntity" />
+</xs:schema>

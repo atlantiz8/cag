@@ -1,0 +1,799 @@
+﻿<asp:ContentPlaceHolder ID="_ContentPlaceHolder001_" runat="server">
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LaunchingPageCB.master.cs"
+    Inherits="Ascentis.Ecommerce.BuddiesPortal.MasterPage.LaunchingPageCB" %>
+</asp:ContentPlaceHolder>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js" lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        <asp:ContentPlaceHolder ID="_ContentPlaceHolder003_" runat="server">
+            <asp:Localize ID="lclTitle" runat="server" Text="<%$Resources:lang,Changi %>"></asp:Localize>
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="_ContentPlaceHolder004_" runat="server">
+        
+        <link rel="stylesheet" href="../CSS/main.css" />
+        <link rel="stylesheet" href="../CSS/home.css" />
+        <link href="../CSS/print.css" rel="stylesheet" type="text/css"  media="print"/>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/css/jquery-ui.css") %>" />
+        <link href="<%=ResolveClientUrl("~/CSS/jselectBox/jquery.selectbox.css") %>" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="<%=ResolveClientUrl("~/favicon.ico") %>" type="image/x-icon" />
+        <script type="text/javascript">
+            var wishlistAllCount = <%=System.Configuration.ConfigurationManager.AppSettings["WishList_Limit"] %>;
+            var wsHubPath = "<%=System.Configuration.ConfigurationManager.AppSettings["VPC_PaymentReturnURL"] %>";
+            wsHubPath = wsHubPath.replace("Checkout/CitibankGateway.aspx", "");
+
+            var displayAlcoholDowntownPrice = <%=System.Configuration.ConfigurationManager.AppSettings["DisplayAlcoholDowntownPrice"] %>;
+            var isPassportMandatory = <%=System.Configuration.ConfigurationManager.AppSettings["PassportMandatory"] %>;
+        
+        </script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/jquery-1.8.3.min.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/jquery.easing.1.3.js") %>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/jquery-ui-1.9.1.custom.min.js") %>"></script>
+        <script src="<%=ResolveClientUrl("~/JS/libs/jquery-sha256.js") %>" type="text/javascript"></script>
+        <script src="<%=ResolveClientUrl("~/JS/libs/jquery.selectbox.js")%>" type="text/javascript"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/jquery-scrolltofixed-min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/plugins/CSSPlugin.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/easing/EasePack.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/TweenMax.min.js")%>"></script>
+        <script type="text/javascript">
+            var LAG_AgeLimit = "<%= System.Configuration.ConfigurationManager.AppSettings["LAG_AgeLimit"].ToString() %>";
+            var LAG_ProhibitedCountry = "<%= System.Configuration.ConfigurationManager.AppSettings["LAG_ProhibitedCountry"].ToString() %>";
+        </script>
+
+        <script type="text/javascript">
+            var isIE = $.browser.msie;
+            var version = 0;
+            if (isIE != undefined && isIE == true) { version = $.browser.version; }
+
+            if (isIE == true && (version < 8)) {
+                alert("The website is best viewed on Google Chrome, Mozilla Firefox, and Internet Explorer 9.");
+            }
+
+        </script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/libs/jquery-cookie.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/JS/modal.js")%>" type="text/javascript"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/rng.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/main.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/productoptions.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/request-animframe.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/masonary.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/APIservice.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/JS/ascentis/LanguageEN_US.js")%>" type="text/javascript"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/overlay.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/home.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/products.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/cartpanel.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/wishlist.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/login.js")%>"></script>
+        <script type="text/javascript" src="//use.typekit.net/nvd5naw.js"></script>
+        <script type="text/javascript">        try { Typekit.load(); } catch (e) { }</script>                
+        <script src="<%=ResolveClientUrl("~/JS/libs/jquery.jsoncookie.js")%>" type="text/javascript"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/ParamService.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/CartService.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/WishlistService.js")%>"></script>
+
+        <script>
+            $(function () {
+                $(document).tooltip({
+                    position: {
+                        my: "center bottom-20",
+                        at: "center top",
+                        using: function (position, feedback) {
+                            $(this).css(position);
+                            $("<div>")
+            .addClass("arrow")
+            .addClass(feedback.vertical)
+            .addClass(feedback.horizontal)
+            .appendTo(this);
+                        }
+                    }
+                });
+            });
+
+        </script>
+        <!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	    <![endif]-->
+        <script type="text/javascript">
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-40318175-1', 'ishopchangi.com');
+            ga('send', 'pageview');
+        
+        </script>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/ascentis/LaunchingPage.js")%>"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <div id="fb-root"></div>
+     <!--<asp:ContentPlaceHolder ID="FBInit" runat="server">
+     <script>
+         window.fbAsyncInit = function () {
+             // init the FB JS SDK
+             FB.init({
+                 appId: GetFBAppID(), //GetFBAppID(),                        
+             });
+         };
+
+         // Load the SDK asynchronously
+         (function (d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) { return; }
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/all.js";
+             fjs.parentNode.insertBefore(js, fjs);
+         } (document, 'script', 'facebook-jssdk'));
+    </script>
+    </asp:ContentPlaceHolder>-->
+
+    <form id="form1" runat="server">
+    <input id="hdEmail" type="text" runat="server" style="display: none" />
+    <input id="hdPwd" type="text" runat="server" style="display: none" />
+    <input id="hdRemember" type="text" runat="server" style="display: none" />
+    <input id="hdReplaceCart" type="text" runat="server" style="display: none" /> 
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    <div id="overlay-container">
+        <div class="quicklook">
+            <div class="header">
+                <h1>
+                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder005_" runat="server">
+                        <asp:Localize ID="lclQuicklookCart" runat="server" Text="<%$Resources:lang,AddToCart %>"></asp:Localize>
+                    </asp:ContentPlaceHolder>
+                </h1>
+                <a href="#" class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="product-image">
+                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder006_" runat="server">
+                        <img src="<%=ResolveClientUrl("~/img/ajax-loader.gif")%>" />
+                    </asp:ContentPlaceHolder>
+            </div>
+            <div class="content">
+                <h1>
+                    Title</h1>
+                <div class="price">
+                    $</div>
+                <div class="clear">
+                </div>
+                <div class="divider">
+                </div>
+                <div class="clear">
+                </div>
+                <div class="optionsHolder">
+                </div>
+                <div class="template" style="display: none;">
+                    <ul class="options retailers">
+                        <h1>
+                            Retailers</h1>
+                        <div class="list">
+                            <li></li>
+                        </div>
+                    </ul>
+                    <div class="clear">
+                    </div>
+                    <ul class="options radio">
+                        <h1>
+                            Size</h1>
+                        <div class="list">
+                            <li>1.0oz</li>
+                        </div>
+                    </ul>
+                    <div class="clear">
+                    </div>
+                    <ul class="options input">
+                        <h1>
+                            <asp:ContentPlaceHolder ID="_ContentPlaceHolder007_" runat="server">
+                                <asp:Localize ID="lclTemplateQuantity" runat="server" Text="<%$Resources:lang,Quantity %>"></asp:Localize>
+                            </asp:ContentPlaceHolder>
+                        </h1>
+                        <input name="quantity" class="quantity" type="text" value="1" readonly></input>
+                        <span class="stocktext">&nbsp;&nbsp;
+                            <asp:ContentPlaceHolder ID="_ContentPlaceHolder008_" runat="server">
+                                <asp:Localize ID="lclInStock" runat="server" Text="<%$Resources:lang,InStock %>"></asp:Localize>:
+                            </asp:ContentPlaceHolder>
+                            <span class="stocklabel">20</span></span>
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="buttons">
+                    <a href="#" class="button red ui-submit">
+                        <div class="text">
+                            <asp:ContentPlaceHolder ID="_ContentPlaceHolder009_" runat="server">
+                                <img class="icon" src="<%=ResolveClientUrl("~/img/icon/cart.png")%>">
+                                <asp:Localize ID="lclButtonCart" runat="server" Text="<%$Resources:lang,AddToCart %>"></asp:Localize>
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button white ui-wishlist">
+                        <div class="text">
+                            <asp:ContentPlaceHolder ID="_ContentPlaceHolder010_" runat="server">
+                                <img class="icon" src="<%=ResolveClientUrl("~/img/icon/wishlist_brown.png")%>">
+                                <asp:Localize ID="lclButtonWishlist" runat="server" Text="<%$Resources:lang,AddToWishlist %>"></asp:Localize>
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="loader">
+                        </div>
+                    </a>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="flight" id="FlightDetails" data-flightid="0">
+            <div class="header">
+                <h1>
+                    Please enter your flight details before proceeding:</h1>
+                <a href="#" class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="msg">
+            </div>
+            <ul class="fieldtitle">
+                <li>Flight No.</li>
+                <li>Date of Travel</li>
+                <li>Destination</li>
+            </ul>
+
+            <ul class="fields">
+                <li>
+                    <input type="text" name="flight" id="flightNo" class="flights" data-default="Enter Flight Number"></input></li>
+                <li>
+                    <input type="text" name="date" id="flightDate" class="datepicker" />
+                </li>
+                <li>
+                    <input type="text" name="destination" id="flightDest" class="destination" readonly></input>
+                </li>
+            </ul>
+            <div class="clear">
+            </div>
+            <div class="buttons">
+                <a class="button white ui-clear">
+                    <div class="text">
+                        Clear</div>
+                    <div class="loader">
+                    </div>
+                </a><a href="#" class="button brown ui-submit disabled">
+                    <div class="text noselect">
+                        Submit</div>
+                    <div class="loader">
+                    </div>
+                    <asp:HiddenField ID="hfCurrentPage" runat="server" />
+                </a>
+            </div>
+
+        </div>
+        
+        <div class="checkout" style="display:none">
+            <div class="header">
+                <h1>
+                    Checkout</h1>
+                <a class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="content">
+                <div class="msg">
+                    To help us serve you better, please provide the information as required below.
+                </div>
+                <div class="clear"></div>
+                <div class="inputs">                    
+                    <div class="boxLeft personalinfo">            
+                        <h4 class="subheader">Personal Information</h4>            
+                        <div class="fields name">
+                            <div class="title">Name *</div>
+                            <input type="text" name="name" maxlength="150" autocomplete="off" tabindex="1" />
+                            <div class="innermsg">(as in passport)</div>
+                        </div>
+                        <div class="fields email">
+                            <div class="title">Email Address *</div>
+                            <input type="text" name="email" maxlength="50" autocomplete="off" tabindex="2" />
+                        </div>
+                        <div class="fields verifyemail">
+                            <div class="title">Verify Email *</div>
+                            <input type="text" name="verifyemail" maxlength="50" autocomplete="off" tabindex="3" />
+                        </div>
+                        <div class="fields bday">
+                            <div class="title">Date of Birth *</div>
+                            <select class="bdayfield dayPicker" tabindex="4"></select>
+                            <select class="bdayfield mthPicker" tabindex="5"></select>
+                            <select class="bdayfield yearPicker" tabindex="6"></select>
+                        </div>         
+                        <div class="fields passport">
+                            <div class="title">Passport No.</div>
+                            <input type="text" name="passport" maxlength="50" autocomplete="off" tabindex="7" />                            
+                            <span class="origpassport" style="display:none" ></span>
+                            
+                        </div>              
+                    </div>                    
+                    <div class="boxRight flightdtls">
+                        <h4 class="subheader">Flight Details</h4> 
+                        <div class="fields flightno">
+                            <div class="title">Flight No. *</div>
+                            <input type="text" name="flightno" tabindex="8" />                        
+                        </div>
+                        <div class="fields flightdate">
+                            <div class="title">Date of Travel *</div>
+                            <input type="text" name="flightdate" class="datepicker" tabindex="9" />                        
+                        </div>
+                        <div class="fields dest">
+                            <div class="title">Flight Destination *</div>
+                            <input type="text" name="flightdest" readonly/>      
+                        </div>
+                        <div class="fields editPassport">
+                            <div class="title"><a class="editPassport">Edit</a></div>
+                                 
+                        </div>
+                    </div>
+                    <input class="newsletter" type="checkbox" id="checkoutNewsletter" tabindex="10" ><label for="checkoutNewsletter" class="newsletterlabel">&nbsp;Yes, I would like to receive the iShopChangi eNewsletter and promotions from iShopChangi.</label></input>
+                </div>  
+
+                <div class="buttons">
+                    <a class="button white left button1">
+                        <div class="text">
+                            Proceed to Pay</div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button brown button2">
+                        <div class="text noselect">
+                            Save & Continue Later</div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button white button3">
+                        <div class="text noselect">
+                            Cancel</div>
+                        <div class="loader">
+                        </div>
+                    </a>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="savecartwishlist">
+            <div class="header">
+                <h1>
+                    Save Wishlist / Cart</h1>
+                <a class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="content">
+                <div class="msg">
+                    To help us serve you better, please provide your email address. A unique link will be sent to you, for you to continue shopping with us another time.</div>
+                <div class="clear"></div>       
+                <div class="inputs verifyemail">
+                    <div class="fields email">
+                        <div class="title">Email Address *</div>
+                        <input type="text" name="emailaddress" maxlength="50" tabindex="1" />
+                    </div>
+                    <div class="fields verifyemail">
+                        <div class="title">Verify Email *</div>
+                        <input type="text" name="verifyemail" maxlength="50" tabindex="2" />
+                    </div>
+                </div>                     
+                <div class="buttons">
+                    <a class="button brown left confirmbt">
+                        <div class="text">
+                            Continue</div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button white cancelbt">
+                        <div class="text noselect">
+                            Cancel</div>
+                        <div class="loader">
+                        </div>
+                    </a>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div>
+
+    <div id="overlay-container2">
+        <div class="quicklook loading">
+            <div class="content">
+                <div class="loader">
+                </div>
+                <div class="clear">
+                </div>
+                <p>
+                    Loading...</p>
+            </div>
+        </div>
+        <div class="quicklook confirm">
+            <div class="header">
+                <h1>
+                    Confirmation</h1>
+                <a class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="content">
+                <div class="msg">
+                    Are you sure you want to cancel the order?</div>
+                <div class="buttons">
+                    <a class="button brown left confirmbt">
+                        <div class="text">
+                            Confirm</div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button white cancelbt">
+                        <div class="text noselect">
+                            Cancel</div>
+                        <div class="loader">
+                        </div>
+                    </a>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quicklook default">
+            <div class="header">
+                <h1>
+                    Max. 85 characters here</h1>
+                <a class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="countdown" style="display: none">
+            </div>
+            <div class="content">
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="quicklook threeButtons">
+            <div class="header">
+                <h1>
+                    Login required</h1>
+                <a class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="content">
+                <div class="msg">
+                    Please login or signup to proceed.<br />Or you may wish to continue shopping as a guest user.
+                </div>
+                <div class="clear"></div>
+                <div class="buttons">
+                    <a class="button white left button1">
+                        <div class="text">
+                            Register as member</div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button brown button2">
+                        <div class="text noselect">
+                            Login to your account</div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button white button3">
+                        <div class="text noselect">
+                            Continue as guest</div>
+                        <div class="loader">
+                        </div>
+                    </a>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quicklook withInputs">
+            <div class="header">
+                <h1>
+                    Alcohol Item</h1>
+                <a class="close closing"></a>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="content">
+                <div class="msg">
+                    Please enter your date of birth and country of destination.</div>
+                <div class="clear"></div>
+                <div class="inputs bday">                    
+                    <div class="fields bday">
+                        <div class="title">Date of Birth *</div>
+                        <select class="bdayfield dayPicker" tabindex="1"></select>
+                        <select class="bdayfield mthPicker" tabindex="2"></select>
+                        <select class="bdayfield yearPicker" tabindex="3"></select>
+                    </div>
+                    <div class="fields destination">
+                        <div class="title">Destination *</div>
+                        <select class="country" tabindex="4"></select>
+                    </div>
+                </div>
+                <div class="inputs destination">
+                    <div class="fields destination">
+                        <div class="title">Destination *</div>
+                        <select class="country"></select>
+                    </div>
+                </div>                                           
+                <div class="buttons">
+                    <a class="button brown left confirmbt disabled">
+                        <div class="text">
+                            Continue</div>
+                        <div class="loader">
+                        </div>
+                    </a><a class="button white cancelbt">
+                        <div class="text noselect">
+                            Cancel</div>
+                        <div class="loader">
+                        </div>
+                    </a>
+                    <div class="clear">
+                    </div>                    
+                </div>    
+                <span class="required">* Required fields</span>             
+            </div>
+        </div>
+    </div>
+    
+    </form>
+    <div id="wrapper">
+        <!-- @ASC: item fixed splashholder -->
+        <asp:ContentPlaceHolder ID="ItemFixedSplashholer" runat="Server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="_ContentPlaceHolder014_" runat="server">
+            <%--<asp:ContentPlaceHolder ID="ItemFixedSplashholer"  Runat="Server"></asp:ContentPlaceHolder>--%>
+        </asp:ContentPlaceHolder>
+        <!-- @ASC: each product be presented in launching page -->
+        <asp:ContentPlaceHolder ID="ItemProductPresentHolder" runat="Server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!-- end wrapper -->
+    <!--<div id="filter">
+        
+        <div class="divider">
+        </div>
+        <div class="right">
+            <div class="button">
+                <div class="holder cart-btn">
+                    <div class="link">
+                        <a href="#">
+                            <div class="text">
+                                <asp:ContentPlaceHolder ID="_ContentPlaceHolder031_" runat="server">
+                                    <img class="icon" src="<%=ResolveClientUrl("~/img/icon/cart.png")%>" />
+                                </asp:ContentPlaceHolder>
+                                (&nbsp;<div class="count">0</div>&nbsp;)</div>
+                            <div class="loader">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown">
+                        <ul class="headers">
+                            <li class="item">
+                                <asp:ContentPlaceHolder ID="_ContentPlaceHolder032_" runat="server">
+                                    <asp:Localize ID="lclItemsInCart" runat="server" Text="<%$Resources:lang,ItemsInCart %>"></asp:Localize>
+                                </asp:ContentPlaceHolder>
+                            </li>
+                            <li class="qty">
+                                <asp:ContentPlaceHolder ID="_ContentPlaceHolder033_" runat="server">
+                                    <asp:Localize ID="lclQty" runat="server" Text="<%$Resources:lang,Qty %>"></asp:Localize>
+                                </asp:ContentPlaceHolder>
+                            </li>
+                            <div class="clear">
+                            </div>
+                        </ul>
+                        <div class="items">
+                        </div>
+                        <div class="template">
+                            <ul class="item">
+                                <a href="#">
+                                    <li class="item">
+                                        <img height="40px" width="40px;" src=""><span class="name"></span></li>
+                                    <li class="qty"></li>
+                                    <div class="clear">
+                                    </div>
+                                </a>
+                                <div class="clear">
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button white left close closing" style="display: none">
+                                <div class="text closing">
+                                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder034_" runat="server">
+                                        <asp:Localize ID="lclContineShopp" runat="server" Text="<%$Resources:lang,ContinueShopping %>"></asp:Localize>
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </a><a class="button brown right view">
+                                <div class="text">
+                                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder035_" runat="server">
+                                        <asp:Localize ID="lclViewA" runat="server" Text="<%$Resources:lang,ViewAll %>"></asp:Localize>(<span
+                                            class="quantity">0</span>)
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                                <div class="loader">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div id="footer">
+        <div class="content">
+            <ul class="payment">
+                <li class="header">Secured Payment</li>
+                <li>
+                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder039_" runat="server">
+                        <img src="<%= ResolveClientUrl("~/IMG/footer/master.jpg") %>" style="width: 35px;height: 26px;padding-right:10px" />
+                        <img src="<%= ResolveClientUrl("~/IMG/footer/visa.jpg") %>" style="width: 35px;height: 26px;" />
+                    </asp:ContentPlaceHolder>
+                    <div class="clear"></div>
+                </li>
+                <div class="clear"></div>
+                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder040_" runat="server">
+<%--                <li class="header" style="margin-bottom:15px; margin-top:15px">Security</li>
+                <li><img src="<%= ResolveClientUrl("~/IMG/footer/entrust_site_seal.png") %>" style="width: 35px;height: 26px;" /></li>--%>
+                    </asp:ContentPlaceHolder>
+
+            </ul>
+        </div>
+        <div class="right">
+            <div class="text" style="color:#aba39e;font-size:11px">
+                &copy; 2013 Changi Airport Group. All Rights Reserved.<br />
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <!-- TEMPLATES -->
+    <!-- @basic template per item. Please see comments on possible variations -->
+    <div class="item product notouch" data-id="1234asd123" style="display: none" id="ProductTemplate">
+		<asp:ContentPlaceHolder ID="_ContentPlaceHolder041_" runat="server">
+            <img class="pimg" src="<%=ResolveClientUrl("~/img/products/bb_190x190.jpg") %>" width="190" height="190" />
+		</asp:ContentPlaceHolder>
+        <div class="panel">
+            <div class="from nofrom">
+                <br />
+                <span class="price">$20</span></div>
+            <!-- if no 'From<br/>' is used, than there should be <div class="from nofrom">....</div> to correct margins -->
+            <div class="name">
+                Title</div>
+        </div>
+        <div class="overlay bake">
+            <div class="dummybg">
+                <div><span class="label">Save</span><span class="amount"></span></div>
+                <div class="brand"><span class="brandcode"></span></div>
+            </div>
+            <div class="buttons">
+                <a href="#product" class="button red primary">
+                    <!-- if product is "Sold Out", do NOT include a href attribute!" -->
+                    <div class="text">
+                        <asp:ContentPlaceHolder ID="_ContentPlaceHolder042_" runat="server">
+                            <img class="icon" src="<%=ResolveClientUrl("~/img/icon/cart.png")%>" />
+                            <asp:Localize ID="lclTemplateCart" runat="server" Text="<%$Resources:lang,AddToCart %>"></asp:Localize>
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!--  or inside the text div: "Sold Out", if product is sold out -->
+                    <div class="loader">
+                    </div>
+                </a><a class="button brown primary">
+                    <div class="text">
+                        <asp:ContentPlaceHolder ID="_ContentPlaceHolder044_" runat="server">
+                            <img class="icon" src="<%=ResolveClientUrl("~/img/icon/wishlist.png")%>">
+                            <asp:Localize ID="lclTemplateWishlist" runat="server" Text="<%$Resources:lang,AddToWishlist %>"></asp:Localize>
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="loader">
+                    </div>
+                </a>
+                <ul>
+                    <li><a href="#" class="button black view">
+                        <div class="text">
+                            <asp:ContentPlaceHolder ID="_ContentPlaceHolder045_" runat="server">
+                                <img class="icon" src="<%=ResolveClientUrl("~/img/icon/view.png")%>">
+                                <asp:Localize ID="lclTemplateView" runat="server" Text="<%$Resources:lang,View %>"></asp:Localize>
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="loader">
+                        </div>
+                    </a></li>
+                    <li class="divider"></li>
+                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder046_" runat="server">
+                        <li><a href="#" class="button black share">
+                            <div class="text">
+                                <img class="icon" src="<%=ResolveClientUrl("~/img/icon/share.png")%>">
+                                <asp:Localize ID="lclTemplateShare" runat="server" Text="<%$Resources:lang,Share %>"></asp:Localize>
+                            </div>
+                            <div class="loader">
+                            </div>
+                            </a></li>
+                    </asp:ContentPlaceHolder>
+                </ul>
+            </div>
+        </div>
+        <div class="badge editorpick">
+        </div>
+    </div>
+    <!-- @asc: Promo Item - Start  -->
+    <div class="item promo product" style="display: none" id="PromoTemplate">
+        <a href="#abd">
+            <asp:ContentPlaceHolder ID="_ContentPlaceHolder047_" runat="server">
+                <img src="<%=ResolveClientUrl("~/img/promo/promo_3.jpg")%>" width="390" />
+            </asp:ContentPlaceHolder>
+        </a>
+    </div>
+    <!-- @asc: Promo Item - end  -->
+
+    <asp:ContentPlaceHolder ID="_ContentPlaceHolder048_" runat="server">
+    
+    <script type="text/javascript">
+        
+        <% =JsEvalString2 %>
+        <% =JsEvalString %>
+
+    </script>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="_GetFBAppID_" runat="server">
+    <script type="text/javascript">
+        function GetFBAppID() {
+            var myAppID = '<%=System.Configuration.ConfigurationManager.AppSettings["FBAppID"]%>';
+            if ((myAppID  == null) || (myAppID == "")) {
+                myAppID = "154932474709711";
+            }
+            return myAppID;
+        }
+    </script>
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="_GetChannelURL_" runat="server">
+    <script type="text/javascript">
+        function GetChannelURL() {
+            var myChannelURL= '<%=System.Configuration.ConfigurationManager.AppSettings["FBChannelURL"]%>';
+            if ((myChannelURL == null) || (myChannelURL == "")) {
+                myChannelURL = "http://ascentis.com";
+            }
+            return myChannelURL;
+        }
+    </script>
+    </asp:ContentPlaceHolder>
+
+
+</body>
+</html>

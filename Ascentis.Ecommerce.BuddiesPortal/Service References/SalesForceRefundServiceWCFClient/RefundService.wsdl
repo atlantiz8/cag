@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RefundService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRefundService_OpenRefundCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:OpenRefundCase" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_OpenRefundCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OpenRefundCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_OpenRefundCaseByOrderID_InputMessage">
+    <wsdl:part name="parameters" element="tns:OpenRefundCaseByOrderID" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_OpenRefundCaseByOrderID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OpenRefundCaseByOrderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_GetRefundDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefundDetail" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_GetRefundDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefundDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_CloseRefundCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseRefundCase" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_CloseRefundCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseRefundCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_UpdateRefundCaseByScheldueJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRefundCaseByScheldueJob" />
+  </wsdl:message>
+  <wsdl:message name="IRefundService_UpdateRefundCaseByScheldueJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRefundCaseByScheldueJobResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRefundService">
+    <wsdl:operation name="OpenRefundCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRefundService/OpenRefundCase" message="tns:IRefundService_OpenRefundCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRefundService/OpenRefundCaseResponse" message="tns:IRefundService_OpenRefundCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenRefundCaseByOrderID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRefundService/OpenRefundCaseByOrderID" message="tns:IRefundService_OpenRefundCaseByOrderID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRefundService/OpenRefundCaseByOrderIDResponse" message="tns:IRefundService_OpenRefundCaseByOrderID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefundDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRefundService/GetRefundDetail" message="tns:IRefundService_GetRefundDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRefundService/GetRefundDetailResponse" message="tns:IRefundService_GetRefundDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseRefundCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRefundService/CloseRefundCase" message="tns:IRefundService_CloseRefundCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRefundService/CloseRefundCaseResponse" message="tns:IRefundService_CloseRefundCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRefundCaseByScheldueJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRefundService/UpdateRefundCaseByScheldueJob" message="tns:IRefundService_UpdateRefundCaseByScheldueJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRefundService/UpdateRefundCaseByScheldueJobResponse" message="tns:IRefundService_UpdateRefundCaseByScheldueJob_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRefundService" type="tns:IRefundService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OpenRefundCase">
+      <soap:operation soapAction="http://tempuri.org/IRefundService/OpenRefundCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenRefundCaseByOrderID">
+      <soap:operation soapAction="http://tempuri.org/IRefundService/OpenRefundCaseByOrderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefundDetail">
+      <soap:operation soapAction="http://tempuri.org/IRefundService/GetRefundDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseRefundCase">
+      <soap:operation soapAction="http://tempuri.org/IRefundService/CloseRefundCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRefundCaseByScheldueJob">
+      <soap:operation soapAction="http://tempuri.org/IRefundService/UpdateRefundCaseByScheldueJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RefundService">
+    <wsdl:port name="BasicHttpBinding_IRefundService" binding="tns:BasicHttpBinding_IRefundService">
+      <soap:address location="http://localhost/ascentis.ecommerce.services/EcommService/SalesForce/RefundService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

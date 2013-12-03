@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AdministratorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="Concessionaire" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEnable" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLocked" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LockedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoginFailedAttempt" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdministratorEntity" nillable="true" type="tns:AdministratorEntity" />
+  <xs:complexType name="ArrayOfAdministratorEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdministratorEntity" nillable="true" type="tns:AdministratorEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdministratorEntity" nillable="true" type="tns:ArrayOfAdministratorEntity" />
+  <xs:complexType name="AdministratorForUI">
+    <xs:sequence>
+      <xs:element name="_x003C_AdminAutoID_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_AdminConcessionaire_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AdminEmail_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AdminIsEnable_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_AdminName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AdminPassword_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AdminRoleID_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_AdminRoleName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AdminUserID_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdministratorForUI" nillable="true" type="tns:AdministratorForUI" />
+  <xs:complexType name="ArrayOfUserMemberEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserMemberEntity" nillable="true" type="tns:UserMemberEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserMemberEntity" nillable="true" type="tns:ArrayOfUserMemberEntity" />
+  <xs:complexType name="UserMemberEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="CRMCardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CRMMemberID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateofBirth" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EcommCardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAllowPromotion" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGuest" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLocked" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LockedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoginFailedAttempt" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassportNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PasswordSecurityAnswer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PasswordSecurityQuestionId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserMemberEntity" nillable="true" type="tns:UserMemberEntity" />
+  <xs:complexType name="UserMemberEntityForUI">
+    <xs:sequence>
+      <xs:element name="_x003C_AddedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AddedOn_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_Address1_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Address2_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AutoID_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_CRMCardNo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CRMMemberID_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_City_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ContactNo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Country_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DateofBirth_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_DeletedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DeletedOn_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_EcommCardNo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Gender_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsActive_x003E_k__BackingField" nillable="true" type="xs:boolean" />
+      <xs:element name="_x003C_IsAllowPromotion_x003E_k__BackingField" nillable="true" type="xs:boolean" />
+      <xs:element name="_x003C_IsGuest_x003E_k__BackingField" nillable="true" type="xs:boolean" />
+      <xs:element name="_x003C_IsLocked_x003E_k__BackingField" nillable="true" type="xs:boolean" />
+      <xs:element name="_x003C_LockedDateTime_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_LoginFailedAttempt_x003E_k__BackingField" nillable="true" type="xs:short" />
+      <xs:element name="_x003C_MobileNo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ModifiedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ModifiedOn_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Nationality_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PassportNumber_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PasswordSecurityAnswer_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PasswordSecurityQuestionId_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_Password_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PostalCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Salutation_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UserID_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserMemberEntityForUI" nillable="true" type="tns:UserMemberEntityForUI" />
+</xs:schema>

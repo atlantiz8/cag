@@ -1,0 +1,1913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ConcessionaireService/ConcessionaireService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="Concessionaire">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Administrators" nillable="true" type="tns:ArrayOfAdministrator" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConcessionType_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConcessionaireCentralStores" nillable="true" type="tns:ArrayOfConcessionaireCentralStore" />
+          <xs:element minOccurs="0" name="ContactPerson2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactPerson2ContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactPerson2Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiscountManageBatches" nillable="true" type="tns:ArrayOfDiscountManageBatch" />
+          <xs:element minOccurs="0" name="DiscountPrices" nillable="true" type="tns:ArrayOfDiscountPrice" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfficeContactNo1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfficeContactNo2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaymentGatewayMID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfProduct" />
+          <xs:element minOccurs="0" name="Rating" nillable="true" type="xs:unsignedByte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Concessionaire" nillable="true" type="tns:Concessionaire" />
+  <xs:complexType name="ArrayOfAdministrator">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Administrator" nillable="true" type="tns:Administrator" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdministrator" nillable="true" type="tns:ArrayOfAdministrator" />
+  <xs:complexType name="Administrator">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Concessionaires" nillable="true" type="tns:ArrayOfConcessionaire" />
+          <xs:element minOccurs="0" name="DefaultTheme" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLocked" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastLoginDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LockedDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LoginFailedAttempt" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="tns:Role" />
+          <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RoleReference" nillable="true" type="q2:EntityReferenceOfRoleIBa1wbWV" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Administrator" nillable="true" type="tns:Administrator" />
+  <xs:complexType name="ArrayOfConcessionaire">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Concessionaire" nillable="true" type="tns:Concessionaire" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConcessionaire" nillable="true" type="tns:ArrayOfConcessionaire" />
+  <xs:complexType name="Role">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Administrators" nillable="true" type="tns:ArrayOfAdministrator" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="RoleAccessControls" nillable="true" type="tns:ArrayOfRoleAccessControl" />
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="ArrayOfRoleAccessControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleAccessControl" nillable="true" type="tns:RoleAccessControl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleAccessControl" nillable="true" type="tns:ArrayOfRoleAccessControl" />
+  <xs:complexType name="RoleAccessControl">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Access" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:short" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EditedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EditedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GrantStatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModuleEntry" nillable="true" type="tns:ModuleEntry" />
+          <xs:element minOccurs="0" name="ModuleEntryReference" nillable="true" type="q4:EntityReferenceOfModuleEntryIBa1wbWV" />
+          <xs:element minOccurs="0" name="ModuleEntry_AutoID" type="xs:short" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="tns:Role" />
+          <xs:element minOccurs="0" name="RoleReference" nillable="true" type="q4:EntityReferenceOfRoleIBa1wbWV" />
+          <xs:element minOccurs="0" name="Role_AutoID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleAccessControl" nillable="true" type="tns:RoleAccessControl" />
+  <xs:complexType name="ModuleEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:short" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EditedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EditedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSystem" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModuleEntryPriority" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="ModuleGroup_CV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Path" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleAccessControls" nillable="true" type="tns:ArrayOfRoleAccessControl" />
+          <xs:element minOccurs="0" name="SystemCode_CV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModuleEntry" nillable="true" type="tns:ModuleEntry" />
+  <xs:complexType name="ArrayOfConcessionaireCentralStore">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConcessionaireCentralStore" nillable="true" type="tns:ConcessionaireCentralStore" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConcessionaireCentralStore" nillable="true" type="tns:ArrayOfConcessionaireCentralStore" />
+  <xs:complexType name="ConcessionaireCentralStore">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Concessionaire" nillable="true" type="tns:Concessionaire" />
+          <xs:element minOccurs="0" name="ConcessionaireReference" nillable="true" type="q6:EntityReferenceOfConcessionaireIBa1wbWV" />
+          <xs:element minOccurs="0" name="Concessionaire_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Outlet_AutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Terminal_Code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConcessionaireCentralStore" nillable="true" type="tns:ConcessionaireCentralStore" />
+  <xs:complexType name="ArrayOfDiscountManageBatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiscountManageBatch" nillable="true" type="tns:DiscountManageBatch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiscountManageBatch" nillable="true" type="tns:ArrayOfDiscountManageBatch" />
+  <xs:complexType name="DiscountManageBatch">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Concessionaire" nillable="true" type="tns:Concessionaire" />
+          <xs:element minOccurs="0" name="ConcessionaireReference" nillable="true" type="q7:EntityReferenceOfConcessionaireIBa1wbWV" />
+          <xs:element minOccurs="0" name="Concessionaire_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountPrices" nillable="true" type="tns:ArrayOfDiscountPrice" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DiscountManageBatch" nillable="true" type="tns:DiscountManageBatch" />
+  <xs:complexType name="ArrayOfDiscountPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiscountPrice" nillable="true" type="tns:DiscountPrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiscountPrice" nillable="true" type="tns:ArrayOfDiscountPrice" />
+  <xs:complexType name="DiscountPrice">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Concessionaire" nillable="true" type="tns:Concessionaire" />
+          <xs:element minOccurs="0" name="ConcessionaireReference" nillable="true" type="q8:EntityReferenceOfConcessionaireIBa1wbWV" />
+          <xs:element minOccurs="0" name="Concessionaire_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountManageBatch" nillable="true" type="tns:DiscountManageBatch" />
+          <xs:element minOccurs="0" name="DiscountManageBatchReference" nillable="true" type="q8:EntityReferenceOfDiscountManageBatchIBa1wbWV" />
+          <xs:element minOccurs="0" name="DiscountManageBatch_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DiscountType" nillable="true" type="tns:DiscountType" />
+          <xs:element minOccurs="0" name="DiscountTypeReference" nillable="true" type="q8:EntityReferenceOfDiscountTypeIBa1wbWV" />
+          <xs:element minOccurs="0" name="DiscountType_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="EndedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MaxSpent" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="MinSpent" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="StartedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TargetType" type="xs:int" />
+          <xs:element minOccurs="0" name="Target_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Value" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DiscountPrice" nillable="true" type="tns:DiscountPrice" />
+  <xs:complexType name="DiscountType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountPrices" nillable="true" type="tns:ArrayOfDiscountPrice" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DiscountType" nillable="true" type="tns:DiscountType" />
+  <xs:complexType name="ArrayOfProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product" nillable="true" type="tns:Product" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct" nillable="true" type="tns:ArrayOfProduct" />
+  <xs:complexType name="Product">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AgeLimit" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Brand" nillable="true" type="tns:Brand" />
+          <xs:element minOccurs="0" name="BrandReference" nillable="true" type="q10:EntityReferenceOfBrandIBa1wbWV" />
+          <xs:element minOccurs="0" name="Brand_AutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BundleProducts" nillable="true" type="tns:ArrayOfBundleProduct" />
+          <xs:element minOccurs="0" name="Category_AutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Concessionaire" nillable="true" type="tns:Concessionaire" />
+          <xs:element minOccurs="0" name="ConcessionaireReference" nillable="true" type="q10:EntityReferenceOfConcessionaireIBa1wbWV" />
+          <xs:element minOccurs="0" name="Concessionaire_AutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="tns:Currency" />
+          <xs:element minOccurs="0" name="CurrencyReference" nillable="true" type="q10:EntityReferenceOfCurrencyIBa1wbWV" />
+          <xs:element minOccurs="0" name="Currency_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountPercentage" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="DowntownPrice" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="GiftWrapServiceFee" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsAlcohol" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsBundleProduct" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsGiftWrapServiceAvailable" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLAG" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPublished" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LAGVolume" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LimitedQuantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Metric" nillable="true" type="tns:Metric" />
+          <xs:element minOccurs="0" name="MetricReference" nillable="true" type="q10:EntityReferenceOfMetricIBa1wbWV" />
+          <xs:element minOccurs="0" name="Metric_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderDetails" nillable="true" type="tns:ArrayOfOrderDetail" />
+          <xs:element minOccurs="0" name="OutOfStockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PendingAgeLimit" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="PendingBrand_AutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PendingCurrency_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PendingGiftWrapServiceFee" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="PendingImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PendingIsGiftWrapServiceAvailable" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PendingMetric_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PendingModel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PendingProductGroup_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PendingProduct_Name_Translate" nillable="true" type="tns:ArrayOfPendingProduct_Name_Translate" />
+          <xs:element minOccurs="0" name="PendingRemark1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PendingRemark2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PendingURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pending_Description_Translate" nillable="true" type="tns:ArrayOfPending_Description_Translate" />
+          <xs:element minOccurs="0" name="Pending_MetaDescription_Translate" nillable="true" type="tns:ArrayOfPending_MetaDescription_Translate" />
+          <xs:element minOccurs="0" name="Pending_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfPending_MetaKeywords_Translate" />
+          <xs:element minOccurs="0" name="Pending_Name_Translate" nillable="true" type="tns:ArrayOfPending_Name_Translate" />
+          <xs:element minOccurs="0" name="Pending_SubDescription_Translate" nillable="true" type="tns:ArrayOfPending_SubDescription_Translate" />
+          <xs:element minOccurs="0" name="Price" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ProductApproveLogs" nillable="true" type="tns:ArrayOfProductApproveLog" />
+          <xs:element minOccurs="0" name="ProductAttributeValueMaps" nillable="true" type="tns:ArrayOfProductAttributeValueMap" />
+          <xs:element minOccurs="0" name="ProductDiscount" nillable="true" type="tns:ArrayOfProductDiscount" />
+          <xs:element minOccurs="0" name="ProductDiscountArchive" nillable="true" type="tns:ArrayOfProductDiscountArchive" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q10:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductPrices" nillable="true" type="tns:ArrayOfProductPrice" />
+          <xs:element minOccurs="0" name="ProductReviews" nillable="true" type="tns:ArrayOfProductReview" />
+          <xs:element minOccurs="0" name="ProductStockLogs" nillable="true" type="tns:ArrayOfProductStockLog" />
+          <xs:element minOccurs="0" name="ProductStockManages" nillable="true" type="tns:ArrayOfProductStockManage" />
+          <xs:element minOccurs="0" name="Product_Description_Translate" nillable="true" type="tns:ArrayOfProduct_Description_Translate" />
+          <xs:element minOccurs="0" name="Product_MetaDescription_Translate" nillable="true" type="tns:ArrayOfProduct_MetaDescription_Translate" />
+          <xs:element minOccurs="0" name="Product_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfProduct_MetaKeywords_Translate" />
+          <xs:element minOccurs="0" name="Product_Name_Translate" nillable="true" type="tns:ArrayOfProduct_Name_Translate" />
+          <xs:element minOccurs="0" name="Product_Reservation" nillable="true" type="tns:ArrayOfProduct_Reservation" />
+          <xs:element minOccurs="0" name="Product_SubDescription_Translate" nillable="true" type="tns:ArrayOfProduct_SubDescription_Translate" />
+          <xs:element minOccurs="0" name="PublishEndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PublishStartDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Rating" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="Remark1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RestockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShoppingCartItems" nillable="true" type="tns:ArrayOfShoppingCartItem" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product" nillable="true" type="tns:Product" />
+  <xs:complexType name="Brand">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="BrandCategoryMaps" nillable="true" type="tns:ArrayOfBrandCategoryMap" />
+          <xs:element minOccurs="0" name="BrandCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Brand_Name_Translate" nillable="true" type="tns:ArrayOfBrand_Name_Translate" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HomePagePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfProduct" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Brand" nillable="true" type="tns:Brand" />
+  <xs:complexType name="ArrayOfBrandCategoryMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BrandCategoryMap" nillable="true" type="tns:BrandCategoryMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBrandCategoryMap" nillable="true" type="tns:ArrayOfBrandCategoryMap" />
+  <xs:complexType name="BrandCategoryMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Brand" nillable="true" type="tns:Brand" />
+          <xs:element minOccurs="0" name="BrandReference" nillable="true" type="q12:EntityReferenceOfBrandIBa1wbWV" />
+          <xs:element minOccurs="0" name="Brand_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+          <xs:element minOccurs="0" name="CategoryReference" nillable="true" type="q12:EntityReferenceOfCategoryIBa1wbWV" />
+          <xs:element minOccurs="0" name="Category_AutoID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BrandCategoryMap" nillable="true" type="tns:BrandCategoryMap" />
+  <xs:complexType name="Category">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AttributeCategoryMaps" nillable="true" type="tns:ArrayOfAttributeCategoryMap" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="BrandCategoryMaps" nillable="true" type="tns:ArrayOfBrandCategoryMap" />
+          <xs:element minOccurs="0" name="CategoryType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Category_Description_Translate" nillable="true" type="tns:ArrayOfCategory_Description_Translate" />
+          <xs:element minOccurs="0" name="Category_Supplement" nillable="true" type="tns:ArrayOfCategory_Supplement" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsPublished" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Main_MicroSiteCategoryMap" nillable="true" type="tns:ArrayOfMain_MicroSiteCategoryMap" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ParentAutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProductGroups" nillable="true" type="tns:ArrayOfProductGroup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="ArrayOfAttributeCategoryMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttributeCategoryMap" nillable="true" type="tns:AttributeCategoryMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttributeCategoryMap" nillable="true" type="tns:ArrayOfAttributeCategoryMap" />
+  <xs:complexType name="AttributeCategoryMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q14:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Attribute" nillable="true" type="tns:Attribute" />
+          <xs:element minOccurs="0" name="AttributeReference" nillable="true" type="q14:EntityReferenceOfAttributeIBa1wbWV" />
+          <xs:element minOccurs="0" name="Attribute_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+          <xs:element minOccurs="0" name="CategoryReference" nillable="true" type="q14:EntityReferenceOfCategoryIBa1wbWV" />
+          <xs:element minOccurs="0" name="Category_AutoID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeCategoryMap" nillable="true" type="tns:AttributeCategoryMap" />
+  <xs:complexType name="Attribute">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q15:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AttributeCategoryMaps" nillable="true" type="tns:ArrayOfAttributeCategoryMap" />
+          <xs:element minOccurs="0" name="AttributeValues" nillable="true" type="tns:ArrayOfAttributeValue" />
+          <xs:element minOccurs="0" name="Attribute_Name_Translate" nillable="true" type="tns:ArrayOfAttribute_Name_Translate" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="BrandCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductAttributeValueMaps" nillable="true" type="tns:ArrayOfProductAttributeValueMap" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Attribute" nillable="true" type="tns:Attribute" />
+  <xs:complexType name="ArrayOfAttributeValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttributeValue" nillable="true" type="tns:AttributeValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttributeValue" nillable="true" type="tns:ArrayOfAttributeValue" />
+  <xs:complexType name="AttributeValue">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q16:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Attribute" nillable="true" type="tns:Attribute" />
+          <xs:element minOccurs="0" name="AttributeReference" nillable="true" type="q16:EntityReferenceOfAttributeIBa1wbWV" />
+          <xs:element minOccurs="0" name="Attribute_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProductAttributeValueMaps" nillable="true" type="tns:ArrayOfProductAttributeValueMap" />
+          <xs:element minOccurs="0" name="ProductAttribute_Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeValue" nillable="true" type="tns:AttributeValue" />
+  <xs:complexType name="ArrayOfProductAttributeValueMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductAttributeValueMap" nillable="true" type="tns:ProductAttributeValueMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductAttributeValueMap" nillable="true" type="tns:ArrayOfProductAttributeValueMap" />
+  <xs:complexType name="ProductAttributeValueMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q17:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Attribute" nillable="true" type="tns:Attribute" />
+          <xs:element minOccurs="0" name="AttributeReference" nillable="true" type="q17:EntityReferenceOfAttributeIBa1wbWV" />
+          <xs:element minOccurs="0" name="AttributeValue" nillable="true" type="tns:AttributeValue" />
+          <xs:element minOccurs="0" name="AttributeValueReference" nillable="true" type="q17:EntityReferenceOfAttributeValueIBa1wbWV" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductAttributeVAlue_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductAttribute_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q17:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductAttributeValueMap" nillable="true" type="tns:ProductAttributeValueMap" />
+  <xs:complexType name="ArrayOfAttribute_Name_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attribute_Name_Translate" nillable="true" type="tns:Attribute_Name_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttribute_Name_Translate" nillable="true" type="tns:ArrayOfAttribute_Name_Translate" />
+  <xs:complexType name="Attribute_Name_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q18:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Attribute" nillable="true" type="tns:Attribute" />
+          <xs:element minOccurs="0" name="AttributeReference" nillable="true" type="q18:EntityReferenceOfAttributeIBa1wbWV" />
+          <xs:element minOccurs="0" name="Attribute_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q18:EntityReferenceOfLanguageMasterIBa1wbWV" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Attribute_Name_Translate" nillable="true" type="tns:Attribute_Name_Translate" />
+  <xs:complexType name="LanguageMaster">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q19:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Attribute_Name_Translate" nillable="true" type="tns:ArrayOfAttribute_Name_Translate" />
+          <xs:element minOccurs="0" name="BannerInfoTranslates" nillable="true" type="tns:ArrayOfBannerInfoTranslate" />
+          <xs:element minOccurs="0" name="Brand_Name_Translate" nillable="true" type="tns:ArrayOfBrand_Name_Translate" />
+          <xs:element minOccurs="0" name="Category_Description_Translate" nillable="true" type="tns:ArrayOfCategory_Description_Translate" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsActivated" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageID" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PendingProduct_Name_Translate" nillable="true" type="tns:ArrayOfPendingProduct_Name_Translate" />
+          <xs:element minOccurs="0" name="Pending_Description_Translate" nillable="true" type="tns:ArrayOfPending_Description_Translate" />
+          <xs:element minOccurs="0" name="Pending_MetaDescription_Translate" nillable="true" type="tns:ArrayOfPending_MetaDescription_Translate" />
+          <xs:element minOccurs="0" name="Pending_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfPending_MetaKeywords_Translate" />
+          <xs:element minOccurs="0" name="Pending_Name_Translate" nillable="true" type="tns:ArrayOfPending_Name_Translate" />
+          <xs:element minOccurs="0" name="Pending_SubDescription_Translate" nillable="true" type="tns:ArrayOfPending_SubDescription_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_Description_Translate" nillable="true" type="tns:ArrayOfProductGroup_Description_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_MetaDescription_Translate" nillable="true" type="tns:ArrayOfProductGroup_MetaDescription_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfProductGroup_MetaKeywords_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_Overview_Translate" nillable="true" type="tns:ArrayOfProductGroup_Overview_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_Title_Translate" nillable="true" type="tns:ArrayOfProductGroup_Title_Translate" />
+          <xs:element minOccurs="0" name="ProductReview_Feedback_Translate" nillable="true" type="tns:ArrayOfProductReview_Feedback_Translate" />
+          <xs:element minOccurs="0" name="Product_Description_Translate" nillable="true" type="tns:ArrayOfProduct_Description_Translate" />
+          <xs:element minOccurs="0" name="Product_MetaDescription_Translate" nillable="true" type="tns:ArrayOfProduct_MetaDescription_Translate" />
+          <xs:element minOccurs="0" name="Product_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfProduct_MetaKeywords_Translate" />
+          <xs:element minOccurs="0" name="Product_Name_Translate" nillable="true" type="tns:ArrayOfProduct_Name_Translate" />
+          <xs:element minOccurs="0" name="Product_SubDescription_Translate" nillable="true" type="tns:ArrayOfProduct_SubDescription_Translate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+  <xs:complexType name="ArrayOfBannerInfoTranslate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BannerInfoTranslate" nillable="true" type="tns:BannerInfoTranslate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBannerInfoTranslate" nillable="true" type="tns:ArrayOfBannerInfoTranslate" />
+  <xs:complexType name="BannerInfoTranslate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q20:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Banner" nillable="true" type="tns:Banner" />
+          <xs:element minOccurs="0" name="BannerAutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="BannerReference" nillable="true" type="q20:EntityReferenceOfBannerIBa1wbWV" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HTMLBody" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q20:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BannerInfoTranslate" nillable="true" type="tns:BannerInfoTranslate" />
+  <xs:complexType name="Banner">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q21:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="BannerInfoTranslates" nillable="true" type="tns:ArrayOfBannerInfoTranslate" />
+          <xs:element minOccurs="0" name="BannerType" nillable="true" type="tns:BannerType" />
+          <xs:element minOccurs="0" name="BannerTypeAutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="BannerTypeReference" nillable="true" type="q21:EntityReferenceOfBannerTypeIBa1wbWV" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsPublished" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Sort" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Banner" nillable="true" type="tns:Banner" />
+  <xs:complexType name="BannerType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q22:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Banners" nillable="true" type="tns:ArrayOfBanner" />
+          <xs:element minOccurs="0" name="DemoURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BannerType" nillable="true" type="tns:BannerType" />
+  <xs:complexType name="ArrayOfBanner">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Banner" nillable="true" type="tns:Banner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBanner" nillable="true" type="tns:ArrayOfBanner" />
+  <xs:complexType name="ArrayOfBrand_Name_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Brand_Name_Translate" nillable="true" type="tns:Brand_Name_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBrand_Name_Translate" nillable="true" type="tns:ArrayOfBrand_Name_Translate" />
+  <xs:complexType name="Brand_Name_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q23:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Brand" nillable="true" type="tns:Brand" />
+          <xs:element minOccurs="0" name="BrandReference" nillable="true" type="q23:EntityReferenceOfBrandIBa1wbWV" />
+          <xs:element minOccurs="0" name="Brand_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q23:EntityReferenceOfLanguageMasterIBa1wbWV" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Brand_Name_Translate" nillable="true" type="tns:Brand_Name_Translate" />
+  <xs:complexType name="ArrayOfCategory_Description_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category_Description_Translate" nillable="true" type="tns:Category_Description_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategory_Description_Translate" nillable="true" type="tns:ArrayOfCategory_Description_Translate" />
+  <xs:complexType name="Category_Description_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q24:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+          <xs:element minOccurs="0" name="CategoryReference" nillable="true" type="q24:EntityReferenceOfCategoryIBa1wbWV" />
+          <xs:element minOccurs="0" name="Category_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q24:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category_Description_Translate" nillable="true" type="tns:Category_Description_Translate" />
+  <xs:complexType name="ArrayOfPendingProduct_Name_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PendingProduct_Name_Translate" nillable="true" type="tns:PendingProduct_Name_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPendingProduct_Name_Translate" nillable="true" type="tns:ArrayOfPendingProduct_Name_Translate" />
+  <xs:complexType name="PendingProduct_Name_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q25:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q25:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q25:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PendingProduct_Name_Translate" nillable="true" type="tns:PendingProduct_Name_Translate" />
+  <xs:complexType name="ArrayOfPending_Description_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pending_Description_Translate" nillable="true" type="tns:Pending_Description_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPending_Description_Translate" nillable="true" type="tns:ArrayOfPending_Description_Translate" />
+  <xs:complexType name="Pending_Description_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q26:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q26:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q26:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Pending_Description_Translate" nillable="true" type="tns:Pending_Description_Translate" />
+  <xs:complexType name="ArrayOfPending_MetaDescription_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pending_MetaDescription_Translate" nillable="true" type="tns:Pending_MetaDescription_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPending_MetaDescription_Translate" nillable="true" type="tns:ArrayOfPending_MetaDescription_Translate" />
+  <xs:complexType name="Pending_MetaDescription_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q27:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q27:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q27:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Pending_MetaDescription_Translate" nillable="true" type="tns:Pending_MetaDescription_Translate" />
+  <xs:complexType name="ArrayOfPending_MetaKeywords_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pending_MetaKeywords_Translate" nillable="true" type="tns:Pending_MetaKeywords_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPending_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfPending_MetaKeywords_Translate" />
+  <xs:complexType name="Pending_MetaKeywords_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q28:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q28:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q28:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Pending_MetaKeywords_Translate" nillable="true" type="tns:Pending_MetaKeywords_Translate" />
+  <xs:complexType name="ArrayOfPending_Name_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pending_Name_Translate" nillable="true" type="tns:Pending_Name_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPending_Name_Translate" nillable="true" type="tns:ArrayOfPending_Name_Translate" />
+  <xs:complexType name="Pending_Name_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q29:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q29:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q29:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Pending_Name_Translate" nillable="true" type="tns:Pending_Name_Translate" />
+  <xs:complexType name="ArrayOfPending_SubDescription_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pending_SubDescription_Translate" nillable="true" type="tns:Pending_SubDescription_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPending_SubDescription_Translate" nillable="true" type="tns:ArrayOfPending_SubDescription_Translate" />
+  <xs:complexType name="Pending_SubDescription_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q30:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q30:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q30:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Pending_SubDescription_Translate" nillable="true" type="tns:Pending_SubDescription_Translate" />
+  <xs:complexType name="ArrayOfProductGroup_Description_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductGroup_Description_Translate" nillable="true" type="tns:ProductGroup_Description_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductGroup_Description_Translate" nillable="true" type="tns:ArrayOfProductGroup_Description_Translate" />
+  <xs:complexType name="ProductGroup_Description_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q31:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q31:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q31:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductGroup_Description_Translate" nillable="true" type="tns:ProductGroup_Description_Translate" />
+  <xs:complexType name="ProductGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q32:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+          <xs:element minOccurs="0" name="CategoryReference" nillable="true" type="q32:EntityReferenceOfCategoryIBa1wbWV" />
+          <xs:element minOccurs="0" name="Category_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Group_image" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEditorsPick" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NoOfOrdered" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductGroup_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductGroup_Description_Translate" nillable="true" type="tns:ArrayOfProductGroup_Description_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_MetaDescription_Translate" nillable="true" type="tns:ArrayOfProductGroup_MetaDescription_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfProductGroup_MetaKeywords_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_Overview_Translate" nillable="true" type="tns:ArrayOfProductGroup_Overview_Translate" />
+          <xs:element minOccurs="0" name="ProductGroup_Supplement" nillable="true" type="tns:ArrayOfProductGroup_Supplement" />
+          <xs:element minOccurs="0" name="ProductGroup_Title_Translate" nillable="true" type="tns:ArrayOfProductGroup_Title_Translate" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfProduct" />
+          <xs:element minOccurs="0" name="PromotionTagFromJob" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="QtyOfOrdered" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="WishLists" nillable="true" type="tns:ArrayOfWishList" />
+          <xs:element minOccurs="0" name="isDisplayToHomePage" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isExclusiveProduct" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isNewProduct" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="isPromotion" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+  <xs:complexType name="ArrayOfProductGroup_MetaDescription_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductGroup_MetaDescription_Translate" nillable="true" type="tns:ProductGroup_MetaDescription_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductGroup_MetaDescription_Translate" nillable="true" type="tns:ArrayOfProductGroup_MetaDescription_Translate" />
+  <xs:complexType name="ProductGroup_MetaDescription_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q33:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q33:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q33:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductGroup_MetaDescription_Translate" nillable="true" type="tns:ProductGroup_MetaDescription_Translate" />
+  <xs:complexType name="ArrayOfProductGroup_MetaKeywords_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductGroup_MetaKeywords_Translate" nillable="true" type="tns:ProductGroup_MetaKeywords_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductGroup_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfProductGroup_MetaKeywords_Translate" />
+  <xs:complexType name="ProductGroup_MetaKeywords_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q34:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q34:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q34:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductGroup_MetaKeywords_Translate" nillable="true" type="tns:ProductGroup_MetaKeywords_Translate" />
+  <xs:complexType name="ArrayOfProductGroup_Overview_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductGroup_Overview_Translate" nillable="true" type="tns:ProductGroup_Overview_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductGroup_Overview_Translate" nillable="true" type="tns:ArrayOfProductGroup_Overview_Translate" />
+  <xs:complexType name="ProductGroup_Overview_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q35:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q35:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q35:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductGroup_Overview_Translate" nillable="true" type="tns:ProductGroup_Overview_Translate" />
+  <xs:complexType name="ArrayOfProductGroup_Supplement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductGroup_Supplement" nillable="true" type="tns:ProductGroup_Supplement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductGroup_Supplement" nillable="true" type="tns:ArrayOfProductGroup_Supplement" />
+  <xs:complexType name="ProductGroup_Supplement">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q36:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="BrandDetailURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherCategory1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OtherCategory2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OtherCategory3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q36:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="RecommendedGroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SetComponents" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Skeleton_image" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SkinType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelExclusives" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductGroup_Supplement" nillable="true" type="tns:ProductGroup_Supplement" />
+  <xs:complexType name="ArrayOfProductGroup_Title_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductGroup_Title_Translate" nillable="true" type="tns:ProductGroup_Title_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductGroup_Title_Translate" nillable="true" type="tns:ArrayOfProductGroup_Title_Translate" />
+  <xs:complexType name="ProductGroup_Title_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q37:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q37:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q37:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductGroup_Title_Translate" nillable="true" type="tns:ProductGroup_Title_Translate" />
+  <xs:complexType name="ArrayOfWishList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WishList" nillable="true" type="tns:WishList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWishList" nillable="true" type="tns:ArrayOfWishList" />
+  <xs:complexType name="WishList">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q38:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:Member" />
+          <xs:element minOccurs="0" name="MemberReference" nillable="true" type="q38:EntityReferenceOfMemberIBa1wbWV" />
+          <xs:element minOccurs="0" name="Member_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="ProductGroupReference" nillable="true" type="q38:EntityReferenceOfProductGroupIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductGroup_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WishList" nillable="true" type="tns:WishList" />
+  <xs:complexType name="Member">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q39:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="CRMCardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CRMMemberID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateofBirth" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EcommCardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsAllowPromotion" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsGuest" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLocked" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockedDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LoginFailedAttempt" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+          <xs:element minOccurs="0" name="PassportNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PasswordSecurityAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PasswordSecurityQuestionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductReviews" nillable="true" type="tns:ArrayOfProductReview" />
+          <xs:element minOccurs="0" name="Product_Reservation" nillable="true" type="tns:ArrayOfProduct_Reservation" />
+          <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShoppingCart" nillable="true" type="tns:ArrayOfShoppingCart" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WishLists" nillable="true" type="tns:ArrayOfWishList" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Member" nillable="true" type="tns:Member" />
+  <xs:complexType name="ArrayOfOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrder" nillable="true" type="tns:ArrayOfOrder" />
+  <xs:complexType name="Order">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q40:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="FlightInfo" nillable="true" type="tns:ArrayOfFlightInfo" />
+          <xs:element minOccurs="0" name="HasLAGItems" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastSalesOrderNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:Member" />
+          <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="MemberReference" nillable="true" type="q40:EntityReferenceOfMemberIBa1wbWV" />
+          <xs:element minOccurs="0" name="OrderCancellationInfoes" nillable="true" type="tns:ArrayOfOrderCancellationInfo" />
+          <xs:element minOccurs="0" name="OrderCreateDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderDetails" nillable="true" type="tns:ArrayOfOrderDetail" />
+          <xs:element minOccurs="0" name="OrderLevelCouponCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderLevelDiscount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="OrderRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaymentInfoes" nillable="true" type="tns:ArrayOfPaymentInfo" />
+          <xs:element minOccurs="0" name="PromotionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="SalesOrderNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SendToOFSCount" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="SendToOFSDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TotalLines" type="xs:short" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+  <xs:complexType name="ArrayOfFlightInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightInfo" nillable="true" type="tns:FlightInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightInfo" nillable="true" type="tns:ArrayOfFlightInfo" />
+  <xs:complexType name="FlightInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q41:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DepartureDatetime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DestinationCountry_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GateNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order" />
+          <xs:element minOccurs="0" name="OrderReference" nillable="true" type="q41:EntityReferenceOfOrderIBa1wbWV" />
+          <xs:element minOccurs="0" name="RegCountryCityAirportCode" nillable="true" type="tns:RegCountryCityAirportCode" />
+          <xs:element minOccurs="0" name="RegCountryCityAirportCodeReference" nillable="true" type="q41:EntityReferenceOfRegCountryCityAirportCodeIBa1wbWV" />
+          <xs:element minOccurs="0" name="TerminalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FlightInfo" nillable="true" type="tns:FlightInfo" />
+  <xs:complexType name="RegCountryCityAirportCode">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q42:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AirportCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlightInfo" nillable="true" type="tns:ArrayOfFlightInfo" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegCountryCityAirportCode" nillable="true" type="tns:RegCountryCityAirportCode" />
+  <xs:complexType name="ArrayOfOrderCancellationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderCancellationInfo" nillable="true" type="tns:OrderCancellationInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderCancellationInfo" nillable="true" type="tns:ArrayOfOrderCancellationInfo" />
+  <xs:complexType name="OrderCancellationInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q43:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="DeleteBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFullCancellation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order" />
+          <xs:element minOccurs="0" name="OrderAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="OrderCancellationDetails" nillable="true" type="tns:ArrayOfOrderCancellationDetail" />
+          <xs:element minOccurs="0" name="OrderReference" nillable="true" type="q43:EntityReferenceOfOrderIBa1wbWV" />
+          <xs:element minOccurs="0" name="RefundCompleted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TotalRefundAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderCancellationInfo" nillable="true" type="tns:OrderCancellationInfo" />
+  <xs:complexType name="ArrayOfOrderCancellationDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderCancellationDetail" nillable="true" type="tns:OrderCancellationDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderCancellationDetail" nillable="true" type="tns:ArrayOfOrderCancellationDetail" />
+  <xs:complexType name="OrderCancellationDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q44:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="CancellationQuantity" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="ConfirmRefundAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="DeleteOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineLvlStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderCancellationAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="OrderCancellationInfo" nillable="true" type="tns:OrderCancellationInfo" />
+          <xs:element minOccurs="0" name="OrderCancellationInfoReference" nillable="true" type="q44:EntityReferenceOfOrderCancellationInfoIBa1wbWV" />
+          <xs:element minOccurs="0" name="OrderDetail" nillable="true" type="tns:OrderDetail" />
+          <xs:element minOccurs="0" name="OrderDetailReference" nillable="true" type="q44:EntityReferenceOfOrderDetailIBa1wbWV" />
+          <xs:element minOccurs="0" name="OrderDetailsAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="RefundAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="RefundCompleted" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RefundRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SFCaseNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SeqNum" type="xs:short" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderCancellationDetail" nillable="true" type="tns:OrderCancellationDetail" />
+  <xs:complexType name="OrderDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q45="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q45:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="BundleSKUNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CentralStoreID" type="xs:int" />
+          <xs:element minOccurs="0" name="CentralStoreName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConcessionaireCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConcessionareName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="GiftWrapFee" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="IsLAGItem" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LineAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="LineNumber" type="xs:short" />
+          <xs:element minOccurs="0" name="LineRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order" />
+          <xs:element minOccurs="0" name="OrderAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="OrderCancellationDetails" nillable="true" type="tns:ArrayOfOrderCancellationDetail" />
+          <xs:element minOccurs="0" name="OrderReference" nillable="true" type="q45:EntityReferenceOfOrderIBa1wbWV" />
+          <xs:element minOccurs="0" name="OrderStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q45:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:short" />
+          <xs:element minOccurs="0" name="RequireGiftWrap" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SKUName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tax" nillable="true" type="tns:Tax" />
+          <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TaxRate" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="TaxReference" nillable="true" type="q45:EntityReferenceOfTaxIBa1wbWV" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:double" />
+          <xs:element minOccurs="0" name="UpdatedBY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="eCouponCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderDetail" nillable="true" type="tns:OrderDetail" />
+  <xs:complexType name="Tax">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q46="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q46:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="OrderDetails" nillable="true" type="tns:ArrayOfOrderDetail" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Tax" nillable="true" type="tns:Tax" />
+  <xs:complexType name="ArrayOfOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderDetail" nillable="true" type="tns:OrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderDetail" nillable="true" type="tns:ArrayOfOrderDetail" />
+  <xs:complexType name="ArrayOfPaymentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentInfo" nillable="true" type="tns:PaymentInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaymentInfo" nillable="true" type="tns:ArrayOfPaymentInfo" />
+  <xs:complexType name="PaymentInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q47:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExchangeRate" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order" />
+          <xs:element minOccurs="0" name="OrderReference" nillable="true" type="q47:EntityReferenceOfOrderIBa1wbWV" />
+          <xs:element minOccurs="0" name="Order_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PaymentDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PaymentGatewayNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PaymentStatu" nillable="true" type="tns:PaymentStatu" />
+          <xs:element minOccurs="0" name="PaymentStatuReference" nillable="true" type="q47:EntityReferenceOfPaymentStatuIBa1wbWV" />
+          <xs:element minOccurs="0" name="PaymentStatus" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaymentInfo" nillable="true" type="tns:PaymentInfo" />
+  <xs:complexType name="PaymentStatu">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q48="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q48:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PaymentInfoes" nillable="true" type="tns:ArrayOfPaymentInfo" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaymentStatu" nillable="true" type="tns:PaymentStatu" />
+  <xs:complexType name="ArrayOfProductReview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductReview" nillable="true" type="tns:ProductReview" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductReview" nillable="true" type="tns:ArrayOfProductReview" />
+  <xs:complexType name="ProductReview">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q49="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q49:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="IsLike" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:Member" />
+          <xs:element minOccurs="0" name="MemberReference" nillable="true" type="q49:EntityReferenceOfMemberIBa1wbWV" />
+          <xs:element minOccurs="0" name="Member_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Member_Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q49:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductReview_Feedback_Translate" nillable="true" type="tns:ArrayOfProductReview_Feedback_Translate" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Rating" nillable="true" type="xs:unsignedByte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductReview" nillable="true" type="tns:ProductReview" />
+  <xs:complexType name="ArrayOfProductReview_Feedback_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductReview_Feedback_Translate" nillable="true" type="tns:ProductReview_Feedback_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductReview_Feedback_Translate" nillable="true" type="tns:ArrayOfProductReview_Feedback_Translate" />
+  <xs:complexType name="ProductReview_Feedback_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q50="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q50:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q50:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductReview" nillable="true" type="tns:ProductReview" />
+          <xs:element minOccurs="0" name="ProductReviewReference" nillable="true" type="q50:EntityReferenceOfProductReviewIBa1wbWV" />
+          <xs:element minOccurs="0" name="ProductReview_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductReview_Feedback_Translate" nillable="true" type="tns:ProductReview_Feedback_Translate" />
+  <xs:complexType name="ArrayOfProduct_Reservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product_Reservation" nillable="true" type="tns:Product_Reservation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct_Reservation" nillable="true" type="tns:ArrayOfProduct_Reservation" />
+  <xs:complexType name="Product_Reservation">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q51="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q51:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="EndDatetime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:Member" />
+          <xs:element minOccurs="0" name="MemberAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="MemberReference" nillable="true" type="q51:EntityReferenceOfMemberIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q51:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="StartDatetime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product_Reservation" nillable="true" type="tns:Product_Reservation" />
+  <xs:complexType name="ArrayOfShoppingCart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShoppingCart" nillable="true" type="tns:ShoppingCart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShoppingCart" nillable="true" type="tns:ArrayOfShoppingCart" />
+  <xs:complexType name="ShoppingCart">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q52="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q52:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AirportCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="DepartureDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DestinationCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Member" nillable="true" type="tns:Member" />
+          <xs:element minOccurs="0" name="MemberReference" nillable="true" type="q52:EntityReferenceOfMemberIBa1wbWV" />
+          <xs:element minOccurs="0" name="Member_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ShoppingCartItem" nillable="true" type="tns:ArrayOfShoppingCartItem" />
+          <xs:element minOccurs="0" name="TerminalNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShoppingCart" nillable="true" type="tns:ShoppingCart" />
+  <xs:complexType name="ArrayOfShoppingCartItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShoppingCartItem" nillable="true" type="tns:ShoppingCartItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShoppingCartItem" nillable="true" type="tns:ArrayOfShoppingCartItem" />
+  <xs:complexType name="ShoppingCartItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q53="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q53:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q53:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="ShoppingCart" nillable="true" type="tns:ShoppingCart" />
+          <xs:element minOccurs="0" name="ShoppingCartReference" nillable="true" type="q53:EntityReferenceOfShoppingCartIBa1wbWV" />
+          <xs:element minOccurs="0" name="ShoppingCart_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShoppingCartItem" nillable="true" type="tns:ShoppingCartItem" />
+  <xs:complexType name="ArrayOfProduct_Description_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product_Description_Translate" nillable="true" type="tns:Product_Description_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct_Description_Translate" nillable="true" type="tns:ArrayOfProduct_Description_Translate" />
+  <xs:complexType name="Product_Description_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q54="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q54:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q54:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q54:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product_Description_Translate" nillable="true" type="tns:Product_Description_Translate" />
+  <xs:complexType name="ArrayOfProduct_MetaDescription_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product_MetaDescription_Translate" nillable="true" type="tns:Product_MetaDescription_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct_MetaDescription_Translate" nillable="true" type="tns:ArrayOfProduct_MetaDescription_Translate" />
+  <xs:complexType name="Product_MetaDescription_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q55="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q55:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q55:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q55:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product_MetaDescription_Translate" nillable="true" type="tns:Product_MetaDescription_Translate" />
+  <xs:complexType name="ArrayOfProduct_MetaKeywords_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product_MetaKeywords_Translate" nillable="true" type="tns:Product_MetaKeywords_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct_MetaKeywords_Translate" nillable="true" type="tns:ArrayOfProduct_MetaKeywords_Translate" />
+  <xs:complexType name="Product_MetaKeywords_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q56="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q56:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q56:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q56:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product_MetaKeywords_Translate" nillable="true" type="tns:Product_MetaKeywords_Translate" />
+  <xs:complexType name="ArrayOfProduct_Name_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product_Name_Translate" nillable="true" type="tns:Product_Name_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct_Name_Translate" nillable="true" type="tns:ArrayOfProduct_Name_Translate" />
+  <xs:complexType name="Product_Name_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q57="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q57:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q57:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q57:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product_Name_Translate" nillable="true" type="tns:Product_Name_Translate" />
+  <xs:complexType name="ArrayOfProduct_SubDescription_Translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product_SubDescription_Translate" nillable="true" type="tns:Product_SubDescription_Translate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduct_SubDescription_Translate" nillable="true" type="tns:ArrayOfProduct_SubDescription_Translate" />
+  <xs:complexType name="Product_SubDescription_Translate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q58="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q58:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageMaster" nillable="true" type="tns:LanguageMaster" />
+          <xs:element minOccurs="0" name="LanguageMasterReference" nillable="true" type="q58:EntityReferenceOfLanguageMasterIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q58:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product_SubDescription_Translate" nillable="true" type="tns:Product_SubDescription_Translate" />
+  <xs:complexType name="ArrayOfCategory_Supplement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category_Supplement" nillable="true" type="tns:Category_Supplement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategory_Supplement" nillable="true" type="tns:ArrayOfCategory_Supplement" />
+  <xs:complexType name="Category_Supplement">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q59="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q59:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Auto_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="BrandCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+          <xs:element minOccurs="0" name="CategoryReference" nillable="true" type="q59:EntityReferenceOfCategoryIBa1wbWV" />
+          <xs:element minOccurs="0" name="Clickable" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Concessionaire_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MastheadName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NavigationURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Template" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category_Supplement" nillable="true" type="tns:Category_Supplement" />
+  <xs:complexType name="ArrayOfMain_MicroSiteCategoryMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Main_MicroSiteCategoryMap" nillable="true" type="tns:Main_MicroSiteCategoryMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMain_MicroSiteCategoryMap" nillable="true" type="tns:ArrayOfMain_MicroSiteCategoryMap" />
+  <xs:complexType name="Main_MicroSiteCategoryMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q60="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q60:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+          <xs:element minOccurs="0" name="CategoryReference" nillable="true" type="q60:EntityReferenceOfCategoryIBa1wbWV" />
+          <xs:element minOccurs="0" name="MainCategoryType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MainSiteCategoryID" type="xs:int" />
+          <xs:element minOccurs="0" name="MicroSiteCategoryID" type="xs:int" />
+          <xs:element minOccurs="0" name="MicrositeCategoryType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Main_MicroSiteCategoryMap" nillable="true" type="tns:Main_MicroSiteCategoryMap" />
+  <xs:complexType name="ArrayOfProductGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductGroup" nillable="true" type="tns:ArrayOfProductGroup" />
+  <xs:complexType name="ArrayOfBundleProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BundleProduct" nillable="true" type="tns:BundleProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBundleProduct" nillable="true" type="tns:ArrayOfBundleProduct" />
+  <xs:complexType name="BundleProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q61="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q61:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="BundleProduct_AutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q61:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BundleProduct" nillable="true" type="tns:BundleProduct" />
+  <xs:complexType name="Currency">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q62="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q62:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfProduct" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Currency" nillable="true" type="tns:Currency" />
+  <xs:complexType name="Metric">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q63="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q63:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfProduct" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Metric" nillable="true" type="tns:Metric" />
+  <xs:complexType name="ArrayOfProductApproveLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductApproveLog" nillable="true" type="tns:ProductApproveLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductApproveLog" nillable="true" type="tns:ArrayOfProductApproveLog" />
+  <xs:complexType name="ProductApproveLog">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q64="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q64:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApproveOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ApprovedMemo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApprovedResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Approver" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q64:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductApproveLog" nillable="true" type="tns:ProductApproveLog" />
+  <xs:complexType name="ArrayOfProductDiscount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductDiscount" nillable="true" type="tns:ProductDiscount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductDiscount" nillable="true" type="tns:ArrayOfProductDiscount" />
+  <xs:complexType name="ProductDiscount">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q65="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q65:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountPercentage" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="EditedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EditedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q65:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StartOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductDiscount" nillable="true" type="tns:ProductDiscount" />
+  <xs:complexType name="ArrayOfProductDiscountArchive">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductDiscountArchive" nillable="true" type="tns:ProductDiscountArchive" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductDiscountArchive" nillable="true" type="tns:ArrayOfProductDiscountArchive" />
+  <xs:complexType name="ProductDiscountArchive">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q66="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q66:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiscountPercentage" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="EditedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EditedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q66:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StartOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductDiscountArchive" nillable="true" type="tns:ProductDiscountArchive" />
+  <xs:complexType name="ArrayOfProductPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductPrice" nillable="true" type="tns:ProductPrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductPrice" nillable="true" type="tns:ArrayOfProductPrice" />
+  <xs:complexType name="ProductPrice">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q67="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q67:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NewPrice" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="OldPrice" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q67:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StartOn" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductPrice" nillable="true" type="tns:ProductPrice" />
+  <xs:complexType name="ArrayOfProductStockLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductStockLog" nillable="true" type="tns:ProductStockLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductStockLog" nillable="true" type="tns:ArrayOfProductStockLog" />
+  <xs:complexType name="ProductStockLog">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q68="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q68:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ChangeType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChangedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NewStockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OldStockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q68:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelatedOrderNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StockChangeQuantity" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductStockLog" nillable="true" type="tns:ProductStockLog" />
+  <xs:complexType name="ArrayOfProductStockManage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductStockManage" nillable="true" type="tns:ProductStockManage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductStockManage" nillable="true" type="tns:ArrayOfProductStockManage" />
+  <xs:complexType name="ProductStockManage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q69="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q69:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NewOutOfStockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NewRestockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NewStockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OldOutOfStockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OldRestockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="OldStockQuantity" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+          <xs:element minOccurs="0" name="ProductReference" nillable="true" type="q69:EntityReferenceOfProductIBa1wbWV" />
+          <xs:element minOccurs="0" name="Product_AutoID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="StockChangeQuantity" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductStockManage" nillable="true" type="tns:ProductStockManage" />
+</xs:schema>

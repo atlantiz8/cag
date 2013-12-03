@@ -1,0 +1,987 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20F653CB-98DD-4749-9358-86659F63050C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ascentis.Ecommerce.BuddiesPortal</RootNamespace>
+    <AssemblyName>Ascentis.Ecommerce.BuddiesPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.6.4.2\lib\net40-client\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Cart\ShoppingCart.aspx" />
+    <Content Include="Checkout\CitibankGateway.aspx" />
+    <Content Include="Checkout\Confirmation.aspx" />
+    <Content Include="CSS\404.css" />
+    <Content Include="CSS\960.css" />
+    <Content Include="CSS\home.css" />
+    <Content Include="CSS\jquery-ui.css" />
+    <Content Include="CSS\jselectBox\jquery.selectbox-arrow.gif" />
+    <Content Include="CSS\jselectBox\jquery.selectbox.css" />
+    <Content Include="CSS\main.css" />
+    <Content Include="CSS\print.css" />
+    <Content Include="CSS\productlistings.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="IMG\ajax-loader.gif" />
+    <Content Include="IMG\footer\entrust_site_seal.png" />
+    <Content Include="IMG\footer\logo.png" />
+    <Content Include="IMG\footer\master.jpg" />
+    <Content Include="IMG\footer\secured.png" />
+    <Content Include="IMG\footer\visa.jpg" />
+    <Content Include="IMG\icon\alert.png" />
+    <Content Include="IMG\icon\arrow_down_black.png" />
+    <Content Include="IMG\icon\arrow_down_white.png" />
+    <Content Include="IMG\icon\arrow_right_white.png" />
+    <Content Include="IMG\icon\banner_expand.png" />
+    <Content Include="IMG\icon\banner_steps.png" />
+    <Content Include="IMG\icon\cal.png" />
+    <Content Include="IMG\icon\cart.png" />
+    <Content Include="IMG\icon\close.png" />
+    <Content Include="IMG\icon\close_white.png" />
+    <Content Include="IMG\icon\controls.png" />
+    <Content Include="IMG\icon\extras_arrows.png" />
+    <Content Include="IMG\icon\extras_arrows_active.png" />
+    <Content Include="IMG\icon\flight.png" />
+    <Content Include="IMG\icon\info.png" />
+    <Content Include="IMG\icon\info_steps.png" />
+    <Content Include="IMG\icon\notification.png" />
+    <Content Include="IMG\icon\page_arrows.png" />
+    <Content Include="IMG\icon\reload.png" />
+    <Content Include="IMG\icon\reorder.png" />
+    <Content Include="IMG\icon\search.png" />
+    <Content Include="IMG\icon\share.png" />
+    <Content Include="IMG\icon\steps.png" />
+    <Content Include="IMG\icon\view.png" />
+    <Content Include="IMG\icon\wishlist.png" />
+    <Content Include="IMG\icon\wishlist_brown.png" />
+    <Content Include="IMG\icon\zoom.png" />
+    <Content Include="IMG\products\bb_190x190.jpg" />
+    <Content Include="IMG\promo\01.jpg" />
+    <Content Include="IMG\promo\02.jpg" />
+    <Content Include="IMG\promo\03.jpg" />
+    <Content Include="IMG\promo\04.jpg" />
+    <Content Include="IMG\promo\05.jpg" />
+    <Content Include="IMG\promo\badge\bg_badge_1.png" />
+    <Content Include="IMG\promo\badge\bg_badge_2.png" />
+    <Content Include="IMG\promo\badge\bg_badge_3.png" />
+    <Content Include="IMG\promo\badge\rib_all.png" />
+    <Content Include="IMG\promo\badge\rib_exclusive.png" />
+    <Content Include="IMG\promo\badge\rib_new.png" />
+    <Content Include="IMG\promo\badge\rib_new_exclusive.png" />
+    <Content Include="IMG\promo\badge\rib_new_promo.png" />
+    <Content Include="IMG\promo\badge\rib_promo.png" />
+    <Content Include="IMG\promo\badge\rib_promo_exclusive.png" />
+    <Content Include="IMG\promo\intro_1.jpg" />
+    <Content Include="IMG\promo\intro_2.jpg" />
+    <Content Include="IMG\promo\intro_bg.png" />
+    <Content Include="IMG\promo\intro_bg1.png" />
+    <Content Include="IMG\promo\promo_1.jpg" />
+    <Content Include="IMG\promo\promo_2.jpg" />
+    <Content Include="IMG\promo\promo_3.jpg" />
+    <Content Include="IMG\promo\promo_4.jpg" />
+    <Content Include="IMG\promo\splash_1.jpg" />
+    <Content Include="IMG\promo\text_bg.png" />
+    <Content Include="JS\libs\jquery-cookie.js" />
+    <Content Include="JS\APIservice.js" />
+    <Content Include="JS\ascentis\LanguageEN_US.js" />
+    <Content Include="JS\ascentis\LaunchingPage.js" />
+    <Content Include="JS\ascentis\ProductListings.js" />
+    <Content Include="JS\cartpanel.js" />
+    <Content Include="JS\CartService.js" />
+    <Content Include="JS\checkout.js" />
+    <Content Include="JS\collection.js" />
+    <Content Include="JS\extraspanel.js" />
+    <Content Include="JS\faq.js" />
+    <Content Include="JS\home.js" />
+    <Content Include="JS\home1.js" />
+    <Content Include="JS\home1a.js" />
+    <Content Include="JS\init_fb.js" />
+    <Content Include="JS\libs\easing\EasePack.min.js" />
+    <Content Include="JS\libs\jquery-1.8.3.min.js" />
+    <Content Include="JS\libs\jquery-scrolltofixed-min.js" />
+    <Content Include="JS\libs\jquery-sha256.js" />
+    <Content Include="JS\libs\jquery-ui-1.9.1.custom.min.js" />
+    <Content Include="JS\libs\jquery.easing.1.3.js" />
+    <Content Include="JS\libs\jquery.jsoncookie.js" />
+    <Content Include="JS\libs\jquery.selectbox.js" />
+    <Content Include="JS\libs\plugins\CSSPlugin.min.js" />
+    <Content Include="JS\libs\TweenMax.min.js" />
+    <Content Include="JS\login.js" />
+    <Content Include="JS\main.js" />
+    <Content Include="JS\masonary.js" />
+    <Content Include="JS\modal.js" />
+    <Content Include="JS\onmediaquery.min.js" />
+    <Content Include="JS\overlay.js" />
+    <Content Include="JS\pagination.js" />
+    <Content Include="JS\ParamService.js" />
+    <Content Include="JS\productdetails.js" />
+    <Content Include="JS\productoptions.js" />
+    <Content Include="JS\products.js" />
+    <Content Include="JS\register.js" />
+    <Content Include="JS\request-animframe.js" />
+    <Content Include="JS\rng.js" />
+    <Content Include="JS\shoppingcart.js" />
+    <Content Include="JS\transactions.js" />
+    <Content Include="JS\wishlist.js" />
+    <Content Include="JS\WishlistService.js" />
+    <Content Include="Product\Product.aspx" />
+    <Content Include="Product\ProductListings.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="packages.config" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.AdministratorEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.AdministratorForUI.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.AttributeAndValueEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.Attribute_Values.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.CategoryLangsEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.UserMemberEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.UserMemberEntityForUI.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.Administrator.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.Brand.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.Category.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.CheckOut_GetStockInformation.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.GenericProductGroup_Result.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.GetBannerInfoByPage_Result.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.GetBrandNavigationSet_Result.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.Member.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.NewOrderDetail.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.OrderDetails.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DTO.BannerTypeDTO.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DTO.LanguageMasterDTO.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DTO.VBannerInfoDTO.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.BrandLangEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.CategoryLangEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.ConcessionaireEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.FlightDetailEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.GuestEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.MemberEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.OrderShortInfo.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.PromotionCodeEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.RefundStatus.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.ShoppingCartEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.TransactionEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.EcommPortal.SSOWCFClient.Administrator.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.EcommPortal.SSOWCFClient.Application.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.EcommPortal.SSOWCFClient.Entity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.EcommPortal.SSOWCFClient.Member.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.Services.EcommService.CRMService.CRMCardEnquiryResponse.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.Services.EcommService.CRMService.CRMMemberRegistrationResponse.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.Services.EcommService.CRMService.CRMUpdateProfileResponse.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.Services.EcommService.OfsService.EcommResult.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.Services.EcommService.OfsService.OfsResult.datasource" />
+    <None Include="Service References\AttributeWCFClient\AttributeService.wsdl" />
+    <None Include="Service References\AttributeWCFClient\AttributeService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AttributeWCFClient\AttributeService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AttributeWCFClient\AttributeService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AttributeWCFClient\AttributeService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BannerWCFClient\BannerService1.wsdl" />
+    <None Include="Service References\BannerWCFClient\BannerService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BannerWCFClient\BannerService71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BannerWCFClient\BannerService72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandWCFClient\BrandService.wsdl" />
+    <None Include="Service References\BrandWCFClient\BrandService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandWCFClient\BrandService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandWCFClient\BrandService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandWCFClient\BrandService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandWCFClient\BrandService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BrandWCFClient\BrandService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryWCFClient\CategoryService1.wsdl" />
+    <None Include="Service References\CategoryWCFClient\CategoryService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryWCFClient\CategoryService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryWCFClient\CategoryService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryWCFClient\CategoryService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryWCFClient\CategoryService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CategoryWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\CategoryWCFClient\configuration.svcinfo" />
+    <None Include="Service References\CategoryWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BannerWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\BannerWCFClient\configuration.svcinfo" />
+    <None Include="Service References\BannerWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ConcessionaireWCFClient\ConcessionaireService.wsdl" />
+    <None Include="Service References\ConcessionaireWCFClient\ConcessionaireService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConcessionaireWCFClient\ConcessionaireService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConcessionaireWCFClient\ConcessionaireService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConcessionaireWCFClient\ConcessionaireService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConcessionaireWCFClient\ConcessionaireService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FlightWCFClient\FlightService.wsdl" />
+    <None Include="Service References\FlightWCFClient\FlightService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FlightWCFClient\FlightService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FlightWCFClient\FlightService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FlightWCFClient\FlightService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FlightWCFClient\FlightService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LanguageMasterWCFClient\LanguageMasterService.wsdl" />
+    <None Include="Service References\LanguageMasterWCFClient\LanguageMasterService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LanguageMasterWCFClient\LanguageMasterService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LanguageMasterWCFClient\LanguageMasterService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService.wsdl" />
+    <None Include="Service References\MemberWCFClient\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfsServiceWCFClient\OfsService.wsdl" />
+    <None Include="Service References\OfsServiceWCFClient\OfsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfsServiceWCFClient\OfsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfsServiceWCFClient\OfsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfsServiceWCFClient\OfsService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfsServiceWCFClient\OfsService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfsServiceWCFClient\OfsService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService.wsdl" />
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesForceRefundServiceWCFClient\RefundService.wsdl" />
+    <None Include="Service References\SalesForceRefundServiceWCFClient\RefundService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesForceRefundServiceWCFClient\RefundService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesForceRefundServiceWCFClient\RefundService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesForceRefundServiceWCFClient\RefundService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShoppingCartWCFClient\ShoppingCartService.disco" />
+    <None Include="Service References\ShoppingCartWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\ShoppingCartWCFClient\configuration.svcinfo" />
+    <None Include="Service References\ShoppingCartWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BannerWCFClient\BannerService1.disco" />
+    <None Include="Service References\CategoryWCFClient\CategoryService1.disco" />
+    <None Include="Service References\FlightWCFClient\FlightService.disco" />
+    <None Include="Service References\FlightWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\FlightWCFClient\configuration.svcinfo" />
+    <None Include="Service References\FlightWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProductGroupWCFClient\ProductGroupService.disco" />
+    <None Include="Service References\ProductGroupWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\ProductGroupWCFClient\configuration.svcinfo" />
+    <None Include="Service References\ProductGroupWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SSOWCFClient\SSOService.wsdl" />
+    <None Include="Service References\SSOWCFClient\SSOSvc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOWCFClient\SSOSvc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOWCFClient\SSOSvc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOWCFClient\SSOSvc3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SSOWCFClient\SSOSvc4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionReceiptServiceWCFClient\TransactionReceiptService.wsdl" />
+    <None Include="Service References\TransactionReceiptServiceWCFClient\TransactionReceiptService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionReceiptServiceWCFClient\TransactionReceiptService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionReceiptServiceWCFClient\TransactionReceiptService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionReceiptServiceWCFClient\TransactionReceiptService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionReceiptServiceWCFClient\TransactionReceiptService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionServiceWCFClient\TransactionService.disco" />
+    <None Include="Service References\TransactionServiceWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\TransactionServiceWCFClient\configuration.svcinfo" />
+    <None Include="Service References\TransactionServiceWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BrandWCFClient\BrandService.disco" />
+    <None Include="Service References\BrandWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\BrandWCFClient\configuration.svcinfo" />
+    <None Include="Service References\BrandWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TransactionReceiptServiceWCFClient\TransactionReceiptService.disco" />
+    <None Include="Service References\TransactionReceiptServiceWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\TransactionReceiptServiceWCFClient\configuration.svcinfo" />
+    <None Include="Service References\TransactionReceiptServiceWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\OfsServiceWCFClient\OfsService.disco" />
+    <None Include="Service References\OfsServiceWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\OfsServiceWCFClient\configuration.svcinfo" />
+    <None Include="Service References\OfsServiceWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ConcessionaireWCFClient\ConcessionaireService.disco" />
+    <None Include="Service References\ConcessionaireWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\ConcessionaireWCFClient\configuration.svcinfo" />
+    <None Include="Service References\ConcessionaireWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LanguageMasterWCFClient\LanguageMasterService.disco" />
+    <None Include="Service References\LanguageMasterWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\LanguageMasterWCFClient\configuration.svcinfo" />
+    <None Include="Service References\LanguageMasterWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SalesForceRefundServiceWCFClient\RefundService.disco" />
+    <None Include="Service References\SalesForceRefundServiceWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\SalesForceRefundServiceWCFClient\configuration.svcinfo" />
+    <None Include="Service References\SalesForceRefundServiceWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SSOWCFClient\SSOSvc.disco" />
+    <None Include="Service References\SSOWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\SSOWCFClient\configuration.svcinfo" />
+    <None Include="Service References\SSOWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AttributeWCFClient\AttributeService.disco" />
+    <None Include="Service References\AttributeWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\AttributeWCFClient\configuration.svcinfo" />
+    <None Include="Service References\AttributeWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MemberWCFClient\UserService.disco" />
+    <None Include="Service References\MemberWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\MemberWCFClient\configuration.svcinfo" />
+    <None Include="Service References\MemberWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Redirect.aspx" />
+    <Content Include="WSHub\nwCategory.asmx" />
+    <Content Include="WSHub\wsBanner.asmx" />
+    <Content Include="WSHub\wsFlight.asmx" />
+    <Content Include="WSHub\wsHub.asmx" />
+    <Content Include="WSHub\wsMember.asmx" />
+    <Content Include="WSHub\wsProduct.asmx" />
+    <Content Include="WSHub\wsShoppingCart.asmx" />
+    <Content Include="WSHub\wsTransactionReceipt.asmx" />
+    <Content Include="WSHub\wsTransactions.asmx" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.ProductGroupDetailsEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.AdminEntity.ProductGroupEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DataEntity.ProductGroup.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.DTO.ProductGroupInfoForUI.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.ProductGroupAttributeValuesEntity.datasource" />
+    <None Include="Properties\DataSources\Ascentis.Ecommerce.DataEntity.WebUIEntity.ProductGroupEntity.datasource" />
+    <None Include="Service References\ShoppingCartWCFClient\ShoppingCartService.wsdl" />
+    <None Include="Service References\ShoppingCartWCFClient\ShoppingCartService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShoppingCartWCFClient\ShoppingCartService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShoppingCartWCFClient\ShoppingCartService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShoppingCartWCFClient\ShoppingCartService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShoppingCartWCFClient\ShoppingCartService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionServiceWCFClient\TransactionService.wsdl" />
+    <None Include="Service References\TransactionServiceWCFClient\TransactionService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionServiceWCFClient\TransactionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionServiceWCFClient\TransactionService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WishlistWCFClient\WishlistService.disco" />
+    <None Include="Service References\WishlistWCFClient\configuration91.svcinfo" />
+    <None Include="Service References\WishlistWCFClient\configuration.svcinfo" />
+    <None Include="Service References\WishlistWCFClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Wishlist\Wish.aspx" />
+    <Content Include="Wishlist\Wishlist.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\WishlistWCFClient\WishlistService.wsdl" />
+    <None Include="Service References\WishlistWCFClient\WishlistService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WishlistWCFClient\WishlistService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WishlistWCFClient\WishlistService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang.zh-CN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseClass\PublicLanguageAttribute.cs" />
+    <Compile Include="Cart\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CitibankGateway.aspx.cs">
+      <DependentUpon>CitibankGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\CitibankGateway.aspx.designer.cs">
+      <DependentUpon>CitibankGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\LandingPage.Master.cs">
+      <DependentUpon>LandingPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\LandingPage.Master.designer.cs">
+      <DependentUpon>LandingPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\LaunchingPageCB.Master.cs">
+      <DependentUpon>LaunchingPageCB.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\LaunchingPageCB.Master.designer.cs">
+      <DependentUpon>LaunchingPageCB.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductListings.aspx.cs">
+      <DependentUpon>ProductListings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductListings.aspx.designer.cs">
+      <DependentUpon>ProductListings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AttributeWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BannerWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BrandWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CategoryWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ConcessionaireWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FlightWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LanguageMasterWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MemberWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OfsServiceWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductGroupWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalesForceRefundServiceWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShoppingCartWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SSOWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransactionReceiptServiceWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransactionServiceWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WishlistWCFClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Wishlist\Wish.aspx.cs">
+      <DependentUpon>Wish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wishlist\Wish.aspx.designer.cs">
+      <DependentUpon>Wish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wishlist\Wishlist.aspx.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wishlist\Wishlist.aspx.designer.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WSHub\nwCategory.asmx.cs">
+      <DependentUpon>nwCategory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsBanner.asmx.cs">
+      <DependentUpon>wsBanner.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsFlight.asmx.cs">
+      <DependentUpon>wsFlight.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsHub.asmx.cs">
+      <DependentUpon>wsHub.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsMember.asmx.cs">
+      <DependentUpon>wsMember.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsProduct.asmx.cs">
+      <DependentUpon>wsProduct.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsShoppingCart.asmx.cs">
+      <DependentUpon>wsShoppingCart.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsTransactionReceipt.asmx.cs">
+      <DependentUpon>wsTransactionReceipt.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\wsTransactions.asmx.cs">
+      <DependentUpon>wsTransactions.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSHub\WsValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage\LaunchingPageCB.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ascentis.Ecommerce.BLL\Ascentis.Ecommerce.BLL.csproj">
+      <Project>{7351194D-483A-4C02-9EE3-C3222AB31CA7}</Project>
+      <Name>Ascentis.Ecommerce.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ascentis.Ecommerce.CommonLib\Ascentis.Ecommerce.CommonLib.csproj">
+      <Project>{45930FC5-A1EB-40EF-A007-CA9CABECBE89}</Project>
+      <Name>Ascentis.Ecommerce.CommonLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ascentis.Ecommerce.DataAccess\Ascentis.Ecommerce.DataAccess.csproj">
+      <Project>{11FF3A1B-D565-42D7-BA5A-0140EE52802A}</Project>
+      <Name>Ascentis.Ecommerce.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ascentis.Ecommerce.DataEntity\Ascentis.Ecommerce.DataEntity.csproj">
+      <Project>{592F653C-8F8D-43AA-93CA-289C909AE58B}</Project>
+      <Name>Ascentis.Ecommerce.DataEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ascentis.Ecommerce.EcommPortal\Ascentis.Ecommerce.EcommPortal.csproj">
+      <Project>{3E5F87EF-3159-4D70-9976-7FA31402F636}</Project>
+      <Name>Ascentis.Ecommerce.EcommPortal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ascentis.Ecommerce.Services\Ascentis.Ecommerce.Services.csproj">
+      <Project>{57327E70-31D6-451F-A5C8-B3A2DE44558E}</Project>
+      <Name>Ascentis.Ecommerce.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\lang.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>lang.en-US.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\lang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>lang.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\lang.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>lang.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage\LandingPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AttributeWCFClient\" />
+    <WCFMetadataStorage Include="Service References\BannerWCFClient\" />
+    <WCFMetadataStorage Include="Service References\BrandWCFClient\" />
+    <WCFMetadataStorage Include="Service References\CategoryWCFClient\" />
+    <WCFMetadataStorage Include="Service References\ConcessionaireWCFClient\" />
+    <WCFMetadataStorage Include="Service References\FlightWCFClient\" />
+    <WCFMetadataStorage Include="Service References\LanguageMasterWCFClient\" />
+    <WCFMetadataStorage Include="Service References\MemberWCFClient\" />
+    <WCFMetadataStorage Include="Service References\OfsServiceWCFClient\" />
+    <WCFMetadataStorage Include="Service References\ProductGroupWCFClient\" />
+    <WCFMetadataStorage Include="Service References\SalesForceRefundServiceWCFClient\" />
+    <WCFMetadataStorage Include="Service References\ShoppingCartWCFClient\" />
+    <WCFMetadataStorage Include="Service References\SSOWCFClient\" />
+    <WCFMetadataStorage Include="Service References\TransactionReceiptServiceWCFClient\" />
+    <WCFMetadataStorage Include="Service References\TransactionServiceWCFClient\" />
+    <WCFMetadataStorage Include="Service References\WishlistWCFClient\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5725</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

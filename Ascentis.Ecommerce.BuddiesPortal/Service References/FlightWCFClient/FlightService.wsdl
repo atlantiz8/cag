@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FlightService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFlightService_GetFlightInfoByMemberID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightInfoByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_GetFlightInfoByMemberID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightInfoByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_GetFlightInfoByOrderId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightInfoByOrderId" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_GetFlightInfoByOrderId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightInfoByOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_GetFlightInfoByFlightNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightInfoByFlightNo" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_GetFlightInfoByFlightNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightInfoByFlightNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_UpdateFlightDetailsByMemberID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlightDetailsByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_UpdateFlightDetailsByMemberID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlightDetailsByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_UpdateFlightInfoByOrderId_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlightInfoByOrderId" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_UpdateFlightInfoByOrderId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlightInfoByOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_IsOperationHourValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsOperationHourValid" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_IsOperationHourValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsOperationHourValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_GetFlightDestinationCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightDestinationCountries" />
+  </wsdl:message>
+  <wsdl:message name="IFlightService_GetFlightDestinationCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlightDestinationCountriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFlightService">
+    <wsdl:operation name="GetFlightInfoByMemberID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFlightService/GetFlightInfoByMemberID" message="tns:IFlightService_GetFlightInfoByMemberID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFlightService/GetFlightInfoByMemberIDResponse" message="tns:IFlightService_GetFlightInfoByMemberID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightInfoByOrderId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFlightService/GetFlightInfoByOrderId" message="tns:IFlightService_GetFlightInfoByOrderId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFlightService/GetFlightInfoByOrderIdResponse" message="tns:IFlightService_GetFlightInfoByOrderId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightInfoByFlightNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFlightService/GetFlightInfoByFlightNo" message="tns:IFlightService_GetFlightInfoByFlightNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFlightService/GetFlightInfoByFlightNoResponse" message="tns:IFlightService_GetFlightInfoByFlightNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlightDetailsByMemberID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFlightService/UpdateFlightDetailsByMemberID" message="tns:IFlightService_UpdateFlightDetailsByMemberID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFlightService/UpdateFlightDetailsByMemberIDResponse" message="tns:IFlightService_UpdateFlightDetailsByMemberID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlightInfoByOrderId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFlightService/UpdateFlightInfoByOrderId" message="tns:IFlightService_UpdateFlightInfoByOrderId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFlightService/UpdateFlightInfoByOrderIdResponse" message="tns:IFlightService_UpdateFlightInfoByOrderId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOperationHourValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFlightService/IsOperationHourValid" message="tns:IFlightService_IsOperationHourValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFlightService/IsOperationHourValidResponse" message="tns:IFlightService_IsOperationHourValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDestinationCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFlightService/GetFlightDestinationCountries" message="tns:IFlightService_GetFlightDestinationCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFlightService/GetFlightDestinationCountriesResponse" message="tns:IFlightService_GetFlightDestinationCountries_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFlightService" type="tns:IFlightService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFlightInfoByMemberID">
+      <soap:operation soapAction="http://tempuri.org/IFlightService/GetFlightInfoByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightInfoByOrderId">
+      <soap:operation soapAction="http://tempuri.org/IFlightService/GetFlightInfoByOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightInfoByFlightNo">
+      <soap:operation soapAction="http://tempuri.org/IFlightService/GetFlightInfoByFlightNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlightDetailsByMemberID">
+      <soap:operation soapAction="http://tempuri.org/IFlightService/UpdateFlightDetailsByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlightInfoByOrderId">
+      <soap:operation soapAction="http://tempuri.org/IFlightService/UpdateFlightInfoByOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOperationHourValid">
+      <soap:operation soapAction="http://tempuri.org/IFlightService/IsOperationHourValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightDestinationCountries">
+      <soap:operation soapAction="http://tempuri.org/IFlightService/GetFlightDestinationCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FlightService">
+    <wsdl:port name="BasicHttpBinding_IFlightService" binding="tns:BasicHttpBinding_IFlightService">
+      <soap:address location="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

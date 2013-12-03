@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aae21fe5-8823-4ed3-b81b-2909b6dd7287" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/OfsService/OfsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OfsService.xsd" MetadataType="Schema" ID="93a4b604-a737-44bd-8f03-48432e6bb981" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd4" />
+    <MetadataFile FileName="OfsService1.xsd" MetadataType="Schema" ID="eadc4afc-8dc0-428f-87d1-815419a5f870" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd5" />
+    <MetadataFile FileName="OfsService2.xsd" MetadataType="Schema" ID="7e5bf067-46ce-4488-8a35-0ea1bd3a7960" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OfsService.wsdl" MetadataType="Wsdl" ID="96ebcfe4-2771-4534-952a-2ce14b9c4b65" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?wsdl" />
+    <MetadataFile FileName="OfsService3.xsd" MetadataType="Schema" ID="f7f7aaeb-0db8-451f-a546-22878de2437b" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OfsService.disco" MetadataType="Disco" ID="c4790841-e160-4162-b0e3-bcba2677c8ee" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?disco" />
+    <MetadataFile FileName="OfsService4.xsd" MetadataType="Schema" ID="1a618ce4-0f5c-43d6-bf24-d823ac9ea756" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OfsService5.xsd" MetadataType="Schema" ID="9fc7b911-7442-4e7f-918b-f0f4373c66a3" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

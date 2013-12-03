@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductGroupService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DTO" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductGroupService_GetProductGroupInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupInfo" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListByFilterWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListByFilterWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListByFilterWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListByFilterWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_SearchProductGroupListByCategoryID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_SearchProductGroupListByCategoryID" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_SearchProductGroupListByCategoryID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_SearchProductGroupListByCategoryIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetTop10ProductGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetTop10ProductGroup" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetTop10ProductGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetTop10ProductGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetGreatGiftProductGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetGreatGiftProductGroup" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetGreatGiftProductGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetGreatGiftProductGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetRecommendProductGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetRecommendProductGroups" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetRecommendProductGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetRecommendProductGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetProductGroupsFor3Steps_InputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetProductGroupsFor3Steps" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetProductGroupsFor3Steps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetProductGroupsFor3StepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetBrandBanners_InputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetBrandBanners" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_Brands_GetBrandBanners_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Brands_GetBrandBannersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListByBrandWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListByBrandWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListByBrandWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListByBrandWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupDescriptionFromSearchWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupDescriptionFromSearchWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupDescriptionFromSearchWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupDescriptionFromSearchWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListFromSearchWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListFromSearchWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListFromSearchWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListFromSearchWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupPageWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupPageWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupPageWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupPageWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetBannerProductSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBannerProductSet" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetBannerProductSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBannerProductSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_UpdateProductAttributeWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductAttributeWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_UpdateProductAttributeWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductAttributeWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetCategoryAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryAllList" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetCategoryAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetBrandEntityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandEntityList" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetBrandEntityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandEntityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListByCategoryWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListByCategoryWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupListByCategoryWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupListByCategoryWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetPromotionProductGroupListWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionProductGroupListWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetPromotionProductGroupListWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionProductGroupListWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetConcessionaireListByGroupID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConcessionaireListByGroupID" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetConcessionaireListByGroupID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConcessionaireListByGroupIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupEntityInfoByRetailer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupEntityInfoByRetailer" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetProductGroupEntityInfoByRetailer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductGroupEntityInfoByRetailerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetWishlistGroupByMemberIDWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWishlistGroupByMemberIDWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetWishlistGroupByMemberIDWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWishlistGroupByMemberIDWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetWishlistProductGroupSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWishlistProductGroupSet" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetWishlistProductGroupSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWishlistProductGroupSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetRecommendProductGroupListWithJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecommendProductGroupListWithJson" />
+  </wsdl:message>
+  <wsdl:message name="IProductGroupService_GetRecommendProductGroupListWithJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecommendProductGroupListWithJsonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProductGroupService">
+    <wsdl:operation name="GetProductGroupInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupInfo" message="tns:IProductGroupService_GetProductGroupInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupInfoResponse" message="tns:IProductGroupService_GetProductGroupInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID" message="tns:IProductGroupService_Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryIDResponse" message="tns:IProductGroupService_Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupList" message="tns:IProductGroupService_GetProductGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListResponse" message="tns:IProductGroupService_GetProductGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListByFilterWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListByFilterWithJson" message="tns:IProductGroupService_GetProductGroupListByFilterWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListByFilterWithJsonResponse" message="tns:IProductGroupService_GetProductGroupListByFilterWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Brands_SearchProductGroupListByCategoryID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/Brands_SearchProductGroupListByCategoryID" message="tns:IProductGroupService_Brands_SearchProductGroupListByCategoryID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/Brands_SearchProductGroupListByCategoryIDResponse" message="tns:IProductGroupService_Brands_SearchProductGroupListByCategoryID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetTop10ProductGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetTop10ProductGroup" message="tns:IProductGroupService_Brands_GetTop10ProductGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetTop10ProductGroupResponse" message="tns:IProductGroupService_Brands_GetTop10ProductGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetGreatGiftProductGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetGreatGiftProductGroup" message="tns:IProductGroupService_Brands_GetGreatGiftProductGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetGreatGiftProductGroupResponse" message="tns:IProductGroupService_Brands_GetGreatGiftProductGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetRecommendProductGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetRecommendProductGroups" message="tns:IProductGroupService_Brands_GetRecommendProductGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetRecommendProductGroupsResponse" message="tns:IProductGroupService_Brands_GetRecommendProductGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetProductGroupsFor3Steps">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetProductGroupsFor3Steps" message="tns:IProductGroupService_Brands_GetProductGroupsFor3Steps_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetProductGroupsFor3StepsResponse" message="tns:IProductGroupService_Brands_GetProductGroupsFor3Steps_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetBrandBanners">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetBrandBanners" message="tns:IProductGroupService_Brands_GetBrandBanners_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/Brands_GetBrandBannersResponse" message="tns:IProductGroupService_Brands_GetBrandBanners_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListByBrandWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListByBrandWithJson" message="tns:IProductGroupService_GetProductGroupListByBrandWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListByBrandWithJsonResponse" message="tns:IProductGroupService_GetProductGroupListByBrandWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupDescriptionFromSearchWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupDescriptionFromSearchWithJson" message="tns:IProductGroupService_GetProductGroupDescriptionFromSearchWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupDescriptionFromSearchWithJsonResponse" message="tns:IProductGroupService_GetProductGroupDescriptionFromSearchWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListFromSearchWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListFromSearchWithJson" message="tns:IProductGroupService_GetProductGroupListFromSearchWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListFromSearchWithJsonResponse" message="tns:IProductGroupService_GetProductGroupListFromSearchWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupWithJson" message="tns:IProductGroupService_GetProductGroupWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupWithJsonResponse" message="tns:IProductGroupService_GetProductGroupWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupPageWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupPageWithJson" message="tns:IProductGroupService_GetProductGroupPageWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupPageWithJsonResponse" message="tns:IProductGroupService_GetProductGroupPageWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBannerProductSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetBannerProductSet" message="tns:IProductGroupService_GetBannerProductSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetBannerProductSetResponse" message="tns:IProductGroupService_GetBannerProductSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductAttributeWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/UpdateProductAttributeWithJson" message="tns:IProductGroupService_UpdateProductAttributeWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/UpdateProductAttributeWithJsonResponse" message="tns:IProductGroupService_UpdateProductAttributeWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetCategoryAllList" message="tns:IProductGroupService_GetCategoryAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetCategoryAllListResponse" message="tns:IProductGroupService_GetCategoryAllList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandEntityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetBrandEntityList" message="tns:IProductGroupService_GetBrandEntityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetBrandEntityListResponse" message="tns:IProductGroupService_GetBrandEntityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListByCategoryWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListByCategoryWithJson" message="tns:IProductGroupService_GetProductGroupListByCategoryWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupListByCategoryWithJsonResponse" message="tns:IProductGroupService_GetProductGroupListByCategoryWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionProductGroupListWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetPromotionProductGroupListWithJson" message="tns:IProductGroupService_GetPromotionProductGroupListWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetPromotionProductGroupListWithJsonResponse" message="tns:IProductGroupService_GetPromotionProductGroupListWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConcessionaireListByGroupID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetConcessionaireListByGroupID" message="tns:IProductGroupService_GetConcessionaireListByGroupID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetConcessionaireListByGroupIDResponse" message="tns:IProductGroupService_GetConcessionaireListByGroupID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupEntityInfoByRetailer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupEntityInfoByRetailer" message="tns:IProductGroupService_GetProductGroupEntityInfoByRetailer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetProductGroupEntityInfoByRetailerResponse" message="tns:IProductGroupService_GetProductGroupEntityInfoByRetailer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWishlistGroupByMemberIDWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetWishlistGroupByMemberIDWithJson" message="tns:IProductGroupService_GetWishlistGroupByMemberIDWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetWishlistGroupByMemberIDWithJsonResponse" message="tns:IProductGroupService_GetWishlistGroupByMemberIDWithJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWishlistProductGroupSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetWishlistProductGroupSet" message="tns:IProductGroupService_GetWishlistProductGroupSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetWishlistProductGroupSetResponse" message="tns:IProductGroupService_GetWishlistProductGroupSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProductGroupListWithJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductGroupService/GetRecommendProductGroupListWithJson" message="tns:IProductGroupService_GetRecommendProductGroupListWithJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductGroupService/GetRecommendProductGroupListWithJsonResponse" message="tns:IProductGroupService_GetRecommendProductGroupListWithJson_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProductGroupService" type="tns:IProductGroupService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProductGroupInfo">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupList">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListByFilterWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupListByFilterWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Brands_SearchProductGroupListByCategoryID">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/Brands_SearchProductGroupListByCategoryID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetTop10ProductGroup">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/Brands_GetTop10ProductGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetGreatGiftProductGroup">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/Brands_GetGreatGiftProductGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetRecommendProductGroups">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/Brands_GetRecommendProductGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetProductGroupsFor3Steps">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/Brands_GetProductGroupsFor3Steps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Brands_GetBrandBanners">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/Brands_GetBrandBanners" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListByBrandWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupListByBrandWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupDescriptionFromSearchWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupDescriptionFromSearchWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListFromSearchWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupListFromSearchWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupPageWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupPageWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBannerProductSet">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetBannerProductSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductAttributeWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/UpdateProductAttributeWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryAllList">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetCategoryAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandEntityList">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetBrandEntityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupListByCategoryWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupListByCategoryWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionProductGroupListWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetPromotionProductGroupListWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConcessionaireListByGroupID">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetConcessionaireListByGroupID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductGroupEntityInfoByRetailer">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetProductGroupEntityInfoByRetailer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWishlistGroupByMemberIDWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetWishlistGroupByMemberIDWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWishlistProductGroupSet">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetWishlistProductGroupSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendProductGroupListWithJson">
+      <soap:operation soapAction="http://tempuri.org/IProductGroupService/GetRecommendProductGroupListWithJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductGroupService">
+    <wsdl:port name="BasicHttpBinding_IProductGroupService" binding="tns:BasicHttpBinding_IProductGroupService">
+      <soap:address location="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

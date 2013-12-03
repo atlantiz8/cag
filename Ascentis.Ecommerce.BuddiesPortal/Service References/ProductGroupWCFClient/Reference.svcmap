@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3660b794-a19d-4061-8daf-819ec4740025" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/ProductGroupService/ProductGroupService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductGroupService.disco" MetadataType="Disco" ID="39de4a51-16ed-43a7-9973-b8d77722a6d8" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?disco" />
+    <MetadataFile FileName="ProductGroupService.xsd" MetadataType="Schema" ID="185a6208-a5a9-439e-b885-851959d8e810" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProductGroupService1.xsd" MetadataType="Schema" ID="a702d0b2-9127-41b9-97be-09206d1338fa" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ProductGroupService2.xsd" MetadataType="Schema" ID="fb158231-090e-4fa6-b072-712cbe6908b3" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ProductGroupService3.xsd" MetadataType="Schema" ID="c503184e-519c-4b0e-85a2-d16df1769146" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd7" />
+    <MetadataFile FileName="ProductGroupService4.xsd" MetadataType="Schema" ID="5f859cc2-8372-4a90-83d3-c25fd74d0d4c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductGroupService5.xsd" MetadataType="Schema" ID="65ee633a-f54e-4993-9f70-61929cc72cde" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductGroupService6.xsd" MetadataType="Schema" ID="5c36b93c-3e23-44a7-b463-37dd2dfdc7e0" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductGroupService7.xsd" MetadataType="Schema" ID="8aeb7ec3-f751-4791-9701-c405e6e003c2" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProductGroupService.wsdl" MetadataType="Wsdl" ID="2efa1f11-9abe-44bf-a0ee-0efffab43e08" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

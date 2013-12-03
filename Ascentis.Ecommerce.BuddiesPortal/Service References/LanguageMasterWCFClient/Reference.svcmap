@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2a1491be-ef7e-4160-b99e-490a151524a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/LanguageMaster/LanguageMasterService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LanguageMasterService.xsd" MetadataType="Schema" ID="1e27136f-820b-4517-bf9a-f32c54658c50" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/LanguageMaster/LanguageMasterService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LanguageMasterService.wsdl" MetadataType="Wsdl" ID="5c95a97d-2501-48d2-8568-bb399abe1716" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/LanguageMaster/LanguageMasterService.svc?wsdl" />
+    <MetadataFile FileName="LanguageMasterService.disco" MetadataType="Disco" ID="0651849b-48b8-4c97-83e4-bba04bdbbd1c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/LanguageMaster/LanguageMasterService.svc?disco" />
+    <MetadataFile FileName="LanguageMasterService1.xsd" MetadataType="Schema" ID="99a269f0-b7b4-447c-839c-a64fb9033f0b" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/LanguageMaster/LanguageMasterService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LanguageMasterService2.xsd" MetadataType="Schema" ID="314f8b90-7b36-4a95-b1e2-4f27f428b6d0" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/LanguageMaster/LanguageMasterService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

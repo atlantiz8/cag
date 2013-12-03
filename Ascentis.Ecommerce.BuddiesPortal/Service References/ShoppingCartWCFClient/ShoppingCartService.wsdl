@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ShoppingCartService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartByMemberID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartByMemberID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartItemByCartAutoID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartItemByCartAutoID" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartItemByCartAutoID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartItemByCartAutoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CreateShoppingCartItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShoppingCartItem" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CreateShoppingCartItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShoppingCartItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CreateShoppingCartItem2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShoppingCartItem2" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CreateShoppingCartItem2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShoppingCartItem2Response" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CreateShoppingCartItem3_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShoppingCartItem3" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CreateShoppingCartItem3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShoppingCartItem3Response" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_UpdateShoppingCartItemQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShoppingCartItemQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_UpdateShoppingCartItemQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShoppingCartItemQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_DeleteShoppingCartItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShoppingCartItem" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_DeleteShoppingCartItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShoppingCartItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CheckoutUnpaidOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckoutUnpaidOrder" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_CheckoutUnpaidOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckoutUnpaidOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartProductAvailableStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartProductAvailableStock" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartProductAvailableStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartProductAvailableStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartValidationCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartValidationCheck" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetShoppingCartValidationCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingCartValidationCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_UpdatePaymentResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentResult" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_UpdatePaymentResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetStockInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockInformation" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetStockInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_ReserveProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReserveProduct" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_ReserveProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReserveProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetLAGLiquorMsgByAirportCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLAGLiquorMsgByAirportCode" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetLAGLiquorMsgByAirportCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLAGLiquorMsgByAirportCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetLAGLiquorMsgByCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLAGLiquorMsgByCountry" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetLAGLiquorMsgByCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLAGLiquorMsgByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetPromotionCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionCode" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetPromotionCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_ReducePromotionCodeCountdown_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReducePromotionCodeCountdown" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_ReducePromotionCodeCountdown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReducePromotionCodeCountdownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_IsProductExceedsLimitedQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsProductExceedsLimitedQty" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_IsProductExceedsLimitedQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsProductExceedsLimitedQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetPromotionCodeByMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionCodeByMember" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetPromotionCodeByMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionCodeByMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetProductJSONInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductJSONInfo" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_GetProductJSONInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductJSONInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_ReplaceShoppingCartWishlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceShoppingCartWishlist" />
+  </wsdl:message>
+  <wsdl:message name="IShoppingCartService_ReplaceShoppingCartWishlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceShoppingCartWishlistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IShoppingCartService">
+    <wsdl:operation name="GetShoppingCartByMemberID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartByMemberID" message="tns:IShoppingCartService_GetShoppingCartByMemberID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartByMemberIDResponse" message="tns:IShoppingCartService_GetShoppingCartByMemberID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCartItemByCartAutoID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartItemByCartAutoID" message="tns:IShoppingCartService_GetShoppingCartItemByCartAutoID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartItemByCartAutoIDResponse" message="tns:IShoppingCartService_GetShoppingCartItemByCartAutoID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateShoppingCartItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem" message="tns:IShoppingCartService_CreateShoppingCartItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/CreateShoppingCartItemResponse" message="tns:IShoppingCartService_CreateShoppingCartItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateShoppingCartItem2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem2" message="tns:IShoppingCartService_CreateShoppingCartItem2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem2Response" message="tns:IShoppingCartService_CreateShoppingCartItem2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateShoppingCartItem3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem3" message="tns:IShoppingCartService_CreateShoppingCartItem3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem3Response" message="tns:IShoppingCartService_CreateShoppingCartItem3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShoppingCartItemQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/UpdateShoppingCartItemQuantity" message="tns:IShoppingCartService_UpdateShoppingCartItemQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/UpdateShoppingCartItemQuantityResponse" message="tns:IShoppingCartService_UpdateShoppingCartItemQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShoppingCartItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/DeleteShoppingCartItem" message="tns:IShoppingCartService_DeleteShoppingCartItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/DeleteShoppingCartItemResponse" message="tns:IShoppingCartService_DeleteShoppingCartItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckoutUnpaidOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/CheckoutUnpaidOrder" message="tns:IShoppingCartService_CheckoutUnpaidOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/CheckoutUnpaidOrderResponse" message="tns:IShoppingCartService_CheckoutUnpaidOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCartProductAvailableStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartProductAvailableStock" message="tns:IShoppingCartService_GetShoppingCartProductAvailableStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartProductAvailableStockResponse" message="tns:IShoppingCartService_GetShoppingCartProductAvailableStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCartValidationCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartValidationCheck" message="tns:IShoppingCartService_GetShoppingCartValidationCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetShoppingCartValidationCheckResponse" message="tns:IShoppingCartService_GetShoppingCartValidationCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/UpdatePaymentResult" message="tns:IShoppingCartService_UpdatePaymentResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/UpdatePaymentResultResponse" message="tns:IShoppingCartService_UpdatePaymentResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetStockInformation" message="tns:IShoppingCartService_GetStockInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetStockInformationResponse" message="tns:IShoppingCartService_GetStockInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReserveProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/ReserveProduct" message="tns:IShoppingCartService_ReserveProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/ReserveProductResponse" message="tns:IShoppingCartService_ReserveProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLAGLiquorMsgByAirportCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetLAGLiquorMsgByAirportCode" message="tns:IShoppingCartService_GetLAGLiquorMsgByAirportCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetLAGLiquorMsgByAirportCodeResponse" message="tns:IShoppingCartService_GetLAGLiquorMsgByAirportCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLAGLiquorMsgByCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetLAGLiquorMsgByCountry" message="tns:IShoppingCartService_GetLAGLiquorMsgByCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetLAGLiquorMsgByCountryResponse" message="tns:IShoppingCartService_GetLAGLiquorMsgByCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetPromotionCode" message="tns:IShoppingCartService_GetPromotionCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetPromotionCodeResponse" message="tns:IShoppingCartService_GetPromotionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReducePromotionCodeCountdown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/ReducePromotionCodeCountdown" message="tns:IShoppingCartService_ReducePromotionCodeCountdown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/ReducePromotionCodeCountdownResponse" message="tns:IShoppingCartService_ReducePromotionCodeCountdown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsProductExceedsLimitedQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/IsProductExceedsLimitedQty" message="tns:IShoppingCartService_IsProductExceedsLimitedQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/IsProductExceedsLimitedQtyResponse" message="tns:IShoppingCartService_IsProductExceedsLimitedQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionCodeByMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetPromotionCodeByMember" message="tns:IShoppingCartService_GetPromotionCodeByMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetPromotionCodeByMemberResponse" message="tns:IShoppingCartService_GetPromotionCodeByMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductJSONInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/GetProductJSONInfo" message="tns:IShoppingCartService_GetProductJSONInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/GetProductJSONInfoResponse" message="tns:IShoppingCartService_GetProductJSONInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceShoppingCartWishlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoppingCartService/ReplaceShoppingCartWishlist" message="tns:IShoppingCartService_ReplaceShoppingCartWishlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoppingCartService/ReplaceShoppingCartWishlistResponse" message="tns:IShoppingCartService_ReplaceShoppingCartWishlist_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IShoppingCartService" type="tns:IShoppingCartService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetShoppingCartByMemberID">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetShoppingCartByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCartItemByCartAutoID">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetShoppingCartItemByCartAutoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShoppingCartItem">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShoppingCartItem2">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShoppingCartItem3">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/CreateShoppingCartItem3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShoppingCartItemQuantity">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/UpdateShoppingCartItemQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShoppingCartItem">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/DeleteShoppingCartItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckoutUnpaidOrder">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/CheckoutUnpaidOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCartProductAvailableStock">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetShoppingCartProductAvailableStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingCartValidationCheck">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetShoppingCartValidationCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentResult">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/UpdatePaymentResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInformation">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetStockInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveProduct">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/ReserveProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLAGLiquorMsgByAirportCode">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetLAGLiquorMsgByAirportCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLAGLiquorMsgByCountry">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetLAGLiquorMsgByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionCode">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetPromotionCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReducePromotionCodeCountdown">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/ReducePromotionCodeCountdown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProductExceedsLimitedQty">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/IsProductExceedsLimitedQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionCodeByMember">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetPromotionCodeByMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductJSONInfo">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/GetProductJSONInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceShoppingCartWishlist">
+      <soap:operation soapAction="http://tempuri.org/IShoppingCartService/ReplaceShoppingCartWishlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShoppingCartService">
+    <wsdl:port name="BasicHttpBinding_IShoppingCartService" binding="tns:BasicHttpBinding_IShoppingCartService">
+      <soap:address location="http://localhost/Ascentis.Ecommerce.Services/EcommService/ShoppingCartService/ShoppingCartService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

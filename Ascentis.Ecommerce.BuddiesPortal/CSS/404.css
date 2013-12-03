@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.error {text-align:center; position:relative; height:100%;}
+.error h1 {margin:50px auto 20px;}
+
+.error .content {margin-bottom:50px; color:#505050; line-height:20px}
+
+#footer {position:absolute; bottom:0;}
+
+@media screen and (max-height: 750px) {
+#footer {position:relative; margin-top:10px;}
+	
+}
+

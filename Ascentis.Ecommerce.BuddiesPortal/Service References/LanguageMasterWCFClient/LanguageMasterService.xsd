@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LanguageMasterEntity">
+    <xs:sequence>
+      <xs:element name="_DisplayName" nillable="true" type="xs:string" />
+      <xs:element name="_IsActivated" nillable="true" type="xs:boolean" />
+      <xs:element name="_LanguageCultureCode" nillable="true" type="xs:string" />
+      <xs:element name="_LanguageDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LanguageMasterEntity" nillable="true" type="tns:LanguageMasterEntity" />
+</xs:schema>

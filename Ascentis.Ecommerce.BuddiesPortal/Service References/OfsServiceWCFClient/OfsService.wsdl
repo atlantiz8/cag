@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OfsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services.EcommService.OfsService" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+      <xsd:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOfsService_CreateNewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_CreateNewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_Refunded_InputMessage">
+    <wsdl:part name="parameters" element="tns:Refunded" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_Refunded_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefundedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_CheckOrderStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_CheckOrderStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOrderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_UpdateCustInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_UpdateCustInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_CancelOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_CancelOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_SkuPluMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SkuPluMaster" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_SkuPluMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SkuPluMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_NotifyCancelOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyCancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_NotifyCancelOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyCancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_NotifyCancelOrder_ServiceFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services" name="detail" element="q1:ServiceFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_NotifyFulfillOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyFulfillOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_NotifyFulfillOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyFulfillOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_NotifyFulfillOrder_ServiceFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.Services" name="detail" element="q2:ServiceFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_GetNewOrderDetailByOrderID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewOrderDetailByOrderID" />
+  </wsdl:message>
+  <wsdl:message name="IOfsService_GetNewOrderDetailByOrderID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewOrderDetailByOrderIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOfsService">
+    <wsdl:operation name="CreateNewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/CreateNewOrder" message="tns:IOfsService_CreateNewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/CreateNewOrderResponse" message="tns:IOfsService_CreateNewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Refunded">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/Refunded" message="tns:IOfsService_Refunded_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/RefundedResponse" message="tns:IOfsService_Refunded_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOrderStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/CheckOrderStatus" message="tns:IOfsService_CheckOrderStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/CheckOrderStatusResponse" message="tns:IOfsService_CheckOrderStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/UpdateCustInfo" message="tns:IOfsService_UpdateCustInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/UpdateCustInfoResponse" message="tns:IOfsService_UpdateCustInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/CancelOrder" message="tns:IOfsService_CancelOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/CancelOrderResponse" message="tns:IOfsService_CancelOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SkuPluMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/SkuPluMaster" message="tns:IOfsService_SkuPluMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/SkuPluMasterResponse" message="tns:IOfsService_SkuPluMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCancelOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/NotifyCancelOrder" message="tns:IOfsService_NotifyCancelOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/NotifyCancelOrderResponse" message="tns:IOfsService_NotifyCancelOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfsService/NotifyCancelOrderServiceFaultContractFault" name="ServiceFaultContractFault" message="tns:IOfsService_NotifyCancelOrder_ServiceFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyFulfillOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/NotifyFulfillOrder" message="tns:IOfsService_NotifyFulfillOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/NotifyFulfillOrderResponse" message="tns:IOfsService_NotifyFulfillOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfsService/NotifyFulfillOrderServiceFaultContractFault" name="ServiceFaultContractFault" message="tns:IOfsService_NotifyFulfillOrder_ServiceFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrderDetailByOrderID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfsService/GetNewOrderDetailByOrderID" message="tns:IOfsService_GetNewOrderDetailByOrderID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfsService/GetNewOrderDetailByOrderIDResponse" message="tns:IOfsService_GetNewOrderDetailByOrderID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOfsService" type="tns:IOfsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateNewOrder">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/CreateNewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refunded">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/Refunded" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOrderStatus">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/CheckOrderStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustInfo">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/UpdateCustInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkuPluMaster">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/SkuPluMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCancelOrder">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/NotifyCancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceFaultContractFault">
+        <soap:fault use="literal" name="ServiceFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyFulfillOrder">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/NotifyFulfillOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceFaultContractFault">
+        <soap:fault use="literal" name="ServiceFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrderDetailByOrderID">
+      <soap:operation soapAction="http://tempuri.org/IOfsService/GetNewOrderDetailByOrderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OfsService">
+    <wsdl:port name="BasicHttpBinding_IOfsService" binding="tns:BasicHttpBinding_IOfsService">
+      <soap:address location="http://localhost/ascentis.ecommerce.services/EcommService/OfsService/OfsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

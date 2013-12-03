@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="FlightDetailEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FlightAirportCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FlightDepartureTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightDestination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlightTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Member_AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="Order_AutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="Passport" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightDetailEntity" nillable="true" type="tns:FlightDetailEntity" />
+</xs:schema>

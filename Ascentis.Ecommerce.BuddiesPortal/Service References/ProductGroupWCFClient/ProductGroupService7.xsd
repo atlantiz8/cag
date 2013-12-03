@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfGenericProductGroup_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GenericProductGroup_Result" nillable="true" type="tns:GenericProductGroup_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGenericProductGroup_Result" nillable="true" type="tns:ArrayOfGenericProductGroup_Result" />
+  <xs:complexType name="GenericProductGroup_Result">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BrandDetailURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CategoryAutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="CategoryHierarchy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GroupImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsBestSeller" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDisplayToHomePage" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsEditorsPick" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsExclusiveProduct" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsNewProduct" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPromotion" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSoldOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LP_BrandAutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="LP_BrandCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LP_ConcessionaireAutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="LP_ConcessionaireName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LP_Price" type="xs:double" />
+          <xs:element minOccurs="0" name="LP_ProductAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="LP_ProductSKU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductGroupAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductGroupTitle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Saving" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GenericProductGroup_Result" nillable="true" type="tns:GenericProductGroup_Result" />
+  <xs:complexType name="ArrayOfGetBannerInfoByPage_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetBannerInfoByPage_Result" nillable="true" type="tns:GetBannerInfoByPage_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetBannerInfoByPage_Result" nillable="true" type="tns:ArrayOfGetBannerInfoByPage_Result" />
+  <xs:complexType name="GetBannerInfoByPage_Result">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BannerAutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="BannerInfoTranslateAutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BannerTypeAutoID" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HTMLBody" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsPublished" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LanguageCultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowNum" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Sort" type="xs:int" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetBannerInfoByPage_Result" nillable="true" type="tns:GetBannerInfoByPage_Result" />
+  <xs:complexType name="ArrayOfGetCategoriesByProductGroupID_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetCategoriesByProductGroupID_Result" nillable="true" type="tns:GetCategoriesByProductGroupID_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetCategoriesByProductGroupID_Result" nillable="true" type="tns:ArrayOfGetCategoriesByProductGroupID_Result" />
+  <xs:complexType name="GetCategoriesByProductGroupID_Result">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryAutoID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CategoryLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CategoryParentAutoID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCategoriesByProductGroupID_Result" nillable="true" type="tns:GetCategoriesByProductGroupID_Result" />
+</xs:schema>

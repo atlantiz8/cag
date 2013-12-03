@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/TransactionReceiptService/TransactionReceiptService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfOrderDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderDetails" nillable="true" type="tns:OrderDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderDetails" nillable="true" type="tns:ArrayOfOrderDetails" />
+  <xs:complexType name="OrderDetails">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeSet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CentralStoreName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConcessionaireCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConcessionareName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DowntownPrice" type="xs:double" />
+          <xs:element minOccurs="0" name="GSTSaving" type="xs:double" />
+          <xs:element minOccurs="0" name="HasLAGItems" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ImgURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsAlcohol" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFullCancellation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLAGItem" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LineNumber" type="xs:short" />
+          <xs:element minOccurs="0" name="LineTotal" type="xs:double" />
+          <xs:element minOccurs="0" name="OrderAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="OrderDetailID" type="xs:long" />
+          <xs:element minOccurs="0" name="OrderDetailStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderDiscountAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="OrderPromotionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalLineTotal" type="xs:double" />
+          <xs:element minOccurs="0" name="OriginalQuantity" type="xs:int" />
+          <xs:element minOccurs="0" name="ProductAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductGroupAutoID" type="xs:long" />
+          <xs:element minOccurs="0" name="ProductGroup_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="RetailerID" type="xs:int" />
+          <xs:element minOccurs="0" name="SKUName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:double" />
+          <xs:element minOccurs="0" name="eCouponCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderDetails" nillable="true" type="tns:OrderDetails" />
+</xs:schema>

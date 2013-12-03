@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6fec027-20f9-4adb-b636-b0b6efcc5d78" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/BrandService/BrandService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BrandService.xsd" MetadataType="Schema" ID="04b5d31f-0047-41a3-bdb5-cd0062353c5c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd4" />
+    <MetadataFile FileName="BrandService1.xsd" MetadataType="Schema" ID="41e8cbf4-7552-4a36-8bb6-1cb8a5856708" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd5" />
+    <MetadataFile FileName="BrandService.wsdl" MetadataType="Wsdl" ID="a114ac35-ff9e-4c91-a812-5b4ce7f9113c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?wsdl" />
+    <MetadataFile FileName="BrandService2.xsd" MetadataType="Schema" ID="34b9449e-075e-4987-939d-ddcdcb541e21" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BrandService3.xsd" MetadataType="Schema" ID="468122fa-31de-45d2-bd2f-0e0e9a5b3116" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BrandService.disco" MetadataType="Disco" ID="b9936aca-3fda-44d2-91e1-de980a3bb599" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?disco" />
+    <MetadataFile FileName="BrandService4.xsd" MetadataType="Schema" ID="51184037-a8e9-44dd-86a6-f1cdcdb356f1" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BrandService5.xsd" MetadataType="Schema" ID="68f7da0d-8328-4f62-8d1b-0eba2b00649a" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/BrandService/BrandService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

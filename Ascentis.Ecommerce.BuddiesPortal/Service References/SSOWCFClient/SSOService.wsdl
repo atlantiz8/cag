@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SSOService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://sso.ascentis.com.sg/WebService/SSOSvc.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://sso.ascentis.com.sg/WebService/SSOSvc.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://sso.ascentis.com.sg/WebService/SSOSvc.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSO" />
+      <xsd:import schemaLocation="http://sso.ascentis.com.sg/WebService/SSOSvc.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://sso.ascentis.com.sg/WebService/SSOSvc.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISSOSvc_GetAdministratorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorList" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetAdministratorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetMemberList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberList" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetMemberList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetAdministratorProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorProfile" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetAdministratorProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetMemberProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfile" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetMemberProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AddAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AddAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AddMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMember" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AddMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMember" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AssignAdministratorToApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignAdministratorToApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AssignAdministratorToApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignAdministratorToApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AssignMemberToApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignMemberToApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AssignMemberToApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignMemberToApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_RemoveAdministratorAccessFromApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAdministratorAccessFromApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_RemoveAdministratorAccessFromApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAdministratorAccessFromApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_RemoveMemberAccessFromApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMemberAccessFromApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_RemoveMemberAccessFromApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMemberAccessFromApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateMemberEmailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberEmailID" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateMemberEmailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMemberEmailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetApplicationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationList" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetApplicationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetApplicationById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationById" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetApplicationById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AddApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_AddApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_DeleteApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_DeleteApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetEntityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityList" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetEntityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetEntityByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityByCode" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_GetEntityByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntity" />
+  </wsdl:message>
+  <wsdl:message name="ISSOSvc_UpdateEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntityResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISSOSvc">
+    <wsdl:operation name="GetAdministratorList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetAdministratorList" message="tns:ISSOSvc_GetAdministratorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetAdministratorListResponse" message="tns:ISSOSvc_GetAdministratorList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetMemberList" message="tns:ISSOSvc_GetMemberList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetMemberListResponse" message="tns:ISSOSvc_GetMemberList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetAdministratorProfile" message="tns:ISSOSvc_GetAdministratorProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetAdministratorProfileResponse" message="tns:ISSOSvc_GetAdministratorProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetMemberProfile" message="tns:ISSOSvc_GetMemberProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetMemberProfileResponse" message="tns:ISSOSvc_GetMemberProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/AddAdministrator" message="tns:ISSOSvc_AddAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/AddAdministratorResponse" message="tns:ISSOSvc_AddAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/AddMember" message="tns:ISSOSvc_AddMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/AddMemberResponse" message="tns:ISSOSvc_AddMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/UpdateAdministrator" message="tns:ISSOSvc_UpdateAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/UpdateAdministratorResponse" message="tns:ISSOSvc_UpdateAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/UpdateMember" message="tns:ISSOSvc_UpdateMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/UpdateMemberResponse" message="tns:ISSOSvc_UpdateMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignAdministratorToApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/AssignAdministratorToApplication" message="tns:ISSOSvc_AssignAdministratorToApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/AssignAdministratorToApplicationResponse" message="tns:ISSOSvc_AssignAdministratorToApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignMemberToApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/AssignMemberToApplication" message="tns:ISSOSvc_AssignMemberToApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/AssignMemberToApplicationResponse" message="tns:ISSOSvc_AssignMemberToApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAdministratorAccessFromApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/RemoveAdministratorAccessFromApplication" message="tns:ISSOSvc_RemoveAdministratorAccessFromApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/RemoveAdministratorAccessFromApplicationResponse" message="tns:ISSOSvc_RemoveAdministratorAccessFromApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMemberAccessFromApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/RemoveMemberAccessFromApplication" message="tns:ISSOSvc_RemoveMemberAccessFromApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/RemoveMemberAccessFromApplicationResponse" message="tns:ISSOSvc_RemoveMemberAccessFromApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberEmailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/UpdateMemberEmailID" message="tns:ISSOSvc_UpdateMemberEmailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/UpdateMemberEmailIDResponse" message="tns:ISSOSvc_UpdateMemberEmailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetApplicationList" message="tns:ISSOSvc_GetApplicationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetApplicationListResponse" message="tns:ISSOSvc_GetApplicationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetApplicationById" message="tns:ISSOSvc_GetApplicationById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetApplicationByIdResponse" message="tns:ISSOSvc_GetApplicationById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/AddApplication" message="tns:ISSOSvc_AddApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/AddApplicationResponse" message="tns:ISSOSvc_AddApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/UpdateApplication" message="tns:ISSOSvc_UpdateApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/UpdateApplicationResponse" message="tns:ISSOSvc_UpdateApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/DeleteApplication" message="tns:ISSOSvc_DeleteApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/DeleteApplicationResponse" message="tns:ISSOSvc_DeleteApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetEntityList" message="tns:ISSOSvc_GetEntityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetEntityListResponse" message="tns:ISSOSvc_GetEntityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/GetEntityByCode" message="tns:ISSOSvc_GetEntityByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/GetEntityByCodeResponse" message="tns:ISSOSvc_GetEntityByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISSOSvc/UpdateEntity" message="tns:ISSOSvc_UpdateEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISSOSvc/UpdateEntityResponse" message="tns:ISSOSvc_UpdateEntity_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISSOSvc" type="tns:ISSOSvc">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdministratorList">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetAdministratorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberList">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetMemberList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorProfile">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetAdministratorProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberProfile">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetMemberProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdministrator">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/AddAdministrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMember">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/AddMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdministrator">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/UpdateAdministrator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/UpdateMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAdministratorToApplication">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/AssignAdministratorToApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignMemberToApplication">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/AssignMemberToApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAdministratorAccessFromApplication">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/RemoveAdministratorAccessFromApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMemberAccessFromApplication">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/RemoveMemberAccessFromApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberEmailID">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/UpdateMemberEmailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationList">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetApplicationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationById">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetApplicationById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApplication">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/AddApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplication">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/UpdateApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplication">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/DeleteApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityList">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetEntityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityByCode">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/GetEntityByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntity">
+      <soap:operation soapAction="http://tempuri.org/ISSOSvc/UpdateEntity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SSOService">
+    <wsdl:port name="BasicHttpBinding_ISSOSvc" binding="tns:BasicHttpBinding_ISSOSvc">
+      <soap:address location="http://sso.ascentis.com.sg/WebService/SSOSvc.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

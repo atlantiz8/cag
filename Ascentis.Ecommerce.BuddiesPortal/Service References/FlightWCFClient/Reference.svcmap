@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed28966f-1281-48c6-b920-5369d1051f68" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/FlightService/FlightService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FlightService.xsd" MetadataType="Schema" ID="310baf87-1070-42c0-b9f1-08bea427843c" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FlightService1.xsd" MetadataType="Schema" ID="edbee956-3fed-4429-b091-68906b6ce8db" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FlightService2.xsd" MetadataType="Schema" ID="0c21e06a-c158-43d7-a00d-8b91630e3402" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FlightService3.xsd" MetadataType="Schema" ID="063c9630-31a1-458b-a48e-db381ebf07fb" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd4" />
+    <MetadataFile FileName="FlightService.disco" MetadataType="Disco" ID="d1330582-17b4-4b48-b260-8202cb226172" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?disco" />
+    <MetadataFile FileName="FlightService.wsdl" MetadataType="Wsdl" ID="fa47a3af-a03a-4355-b6f3-53d9c2c041ae" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?wsdl" />
+    <MetadataFile FileName="FlightService4.xsd" MetadataType="Schema" ID="14cf74f5-f988-4d9b-aa55-fdd85e170048" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/FlightService/FlightService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

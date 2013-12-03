@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DTO" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" />
+  <xs:import schemaLocation="http://localhost/ascentis.ecommerce.services/EcommService/ProductGroupService/ProductGroupService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" />
+  <xs:element name="GetProductGroupInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" type="xs:long" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DTO" minOccurs="0" name="GetProductGroupInfoResult" nillable="true" type="q1:ProductGroupInfoForUI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catetoryAutoID" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Brands_SearchProductGroupListWithAttributeSetAndPriceByCategoryIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetProductGroupListResult" nillable="true" type="q2:ArrayOfGenericProductGroup_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListByFilterWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categories" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="minPrice" type="xs:double" />
+        <xs:element minOccurs="0" name="maxPrice" type="xs:double" />
+        <xs:element minOccurs="0" name="filterBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterPageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListByFilterWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductGroupListByFilterWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_SearchProductGroupListByCategoryID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catetoryAutoID" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_SearchProductGroupListByCategoryIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Brands_SearchProductGroupListByCategoryIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetTop10ProductGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetTop10ProductGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Brands_GetTop10ProductGroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetGreatGiftProductGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetGreatGiftProductGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Brands_GetGreatGiftProductGroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetRecommendProductGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productGroupAutoID" type="xs:long" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetRecommendProductGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Brands_GetRecommendProductGroupsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetProductGroupsFor3Steps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetProductGroupsFor3StepsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Brands_GetProductGroupsFor3StepsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetBrandBanners">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="bannerType" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Brands_GetBrandBannersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Brands_GetBrandBannersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListByBrandWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brandID" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListByBrandWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductGroupListByBrandWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupDescriptionFromSearchWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupDescriptionFromSearchWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductGroupDescriptionFromSearchWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListFromSearchWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="sortBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListFromSearchWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductGroupListFromSearchWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" type="xs:long" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="concessionaireAutoID" type="xs:int" />
+        <xs:element minOccurs="0" name="conut" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductGroupWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupPageWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageSizeProduct" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSizeBanner" type="xs:int" />
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="gids" nillable="true" type="q3:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupPageWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductGroupPageWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBannerProductSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bannerTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBannerProductSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.DataEntity" minOccurs="0" name="GetBannerProductSetResult" nillable="true" type="q4:ArrayOfGetBannerInfoByPage_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProductAttributeWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" type="xs:long" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailer" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="values" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProductAttributeWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateProductAttributeWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryAllList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryAllListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.AdminEntity" minOccurs="0" name="GetCategoryAllListResult" nillable="true" type="q6:ArrayOfCategoryLangsEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandEntityList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandEntityListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetBrandEntityListResult" nillable="true" type="q7:ArrayOfBrandLangEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListByCategoryWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupListByCategoryWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProductGroupListByCategoryWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionProductGroupListWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currentPageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionProductGroupListWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPromotionProductGroupListWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConcessionaireListByGroupID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" type="xs:long" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConcessionaireListByGroupIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetConcessionaireListByGroupIDResult" nillable="true" type="q8:ArrayOfConcessionaireEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupEntityInfoByRetailer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupID" type="xs:long" />
+        <xs:element minOccurs="0" name="concessionaireAutoID" type="xs:int" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductGroupEntityInfoByRetailerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Ascentis.Ecommerce.DataEntity.WebUIEntity" minOccurs="0" name="GetProductGroupEntityInfoByRetailerResult" nillable="true" type="q9:ProductGroupEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWishlistGroupByMemberIDWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberID" type="xs:long" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWishlistGroupByMemberIDWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetWishlistGroupByMemberIDWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWishlistProductGroupSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="memberID" type="xs:long" />
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="reload" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWishlistProductGroupSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetWishlistProductGroupSetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecommendProductGroupListWithJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="langType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departmentID" type="xs:int" />
+        <xs:element minOccurs="0" name="groupID" type="xs:long" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecommendProductGroupListWithJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRecommendProductGroupListWithJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

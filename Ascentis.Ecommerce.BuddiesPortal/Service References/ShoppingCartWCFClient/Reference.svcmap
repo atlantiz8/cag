@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d31c4e14-99d9-43d1-b75e-d88781fb71eb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Ascentis.Ecommerce.Services/EcommService/ShoppingCartService/ShoppingCartService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ShoppingCartService.disco" MetadataType="Disco" ID="fce4b161-963f-4d88-8aed-7981ce58b3d4" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?disco" />
+    <MetadataFile FileName="ShoppingCartService.wsdl" MetadataType="Wsdl" ID="19ea6f65-5ea5-4eb0-84e8-684f903717a6" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?wsdl" />
+    <MetadataFile FileName="ShoppingCartService.xsd" MetadataType="Schema" ID="4b5e4e12-c03d-4613-bad6-dd8622b6abef" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ShoppingCartService1.xsd" MetadataType="Schema" ID="826eaf29-156c-470d-a91f-85853b5ad721" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ShoppingCartService2.xsd" MetadataType="Schema" ID="bcec56de-a980-4af2-85a8-49853ef5b427" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ShoppingCartService3.xsd" MetadataType="Schema" ID="2406a97e-1e3c-4942-a5df-f146bf4a2a65" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ShoppingCartService4.xsd" MetadataType="Schema" ID="ad5cfd9d-769b-4219-80be-997efe7582c8" SourceId="1" SourceUrl="http://localhost/ascentis.ecommerce.services/EcommService/ShoppingCartService/ShoppingCartService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

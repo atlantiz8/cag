@@ -1,0 +1,57 @@
+/*#footer, #nav, #sidenav, .print, .search, .breadcrumb, .noprint 
+{display: none;
+ 
+ } /* Items from your page you DO NOT want to print */
+
+@media print {
+
+
+/*#container, #container2, #contentwide, #contentwide_tpsub, #contentwide_tp, #contentwide_open
+ {width: 100%; margin: 0; float: none;} */
+ /* Clear widths to ensure all text is printed */
+
+
+
+@page  
+{ 
+    size: auto;  
+    /* margin: 10mm 25mm 25mm 25mm;  */
+} 
+
+
+#hideinprint
+{
+      display:none;
+}
+
+ #printlogo
+   {
+    background: url("../img/nav/main/logo.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 33px;
+   /* margin: -70px 0px 0px 0px;*/
+     top:30px;
+    width: 96px;
+   }
+   #nav-left a > #printlogo
+   {
+    background: url("../img/nav/main/logo.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 33px;
+    margin: 39px 0px 0px -120px;
+    width: 96px;
+   }
+   
+  .mapprint
+  {
+    display:block;
+  } 
+   
+ 
+   .logo
+   {
+       display:none;
+   }
+}
