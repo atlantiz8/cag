@@ -1630,6 +1630,10 @@ namespace Ascentis.Ecommerce.BuddiesPortal.WSHub
             return result;
         }
 
+        [WebMethod(EnableSession = true)]
+        public string HasFacebookID() { 
+        }
+
         private string HashPassword(string password)
         {
             string hash = Sha256Hex(password);

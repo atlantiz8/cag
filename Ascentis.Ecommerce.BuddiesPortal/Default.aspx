@@ -8,8 +8,8 @@
 
 <div id="userDetail"></div>
 
-<div id="friendsUsingAppPreview" onclick="$('#friendsUsingApp').dialog('open');" style="border:1px solid #ffffff; margin: 20px; width:400px;">
-<div style="background:#605143;height: 21px;color:white">Friends using this app.</div>
+<div id="friendsUsingAppPreview" onclick="$('#friendsUsingApp').dialog('open');" style="border:1px solid #000000; margin: 20px; width:400px;">
+<div style="height: 21px;">Friends using this app.</div>
 </div>
 
 <div id="friendsUsingApp">

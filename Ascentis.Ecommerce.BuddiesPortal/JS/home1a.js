@@ -3,142 +3,135 @@
 	/* General methods/references: */
 	
 	// TOUCH hover/toggle methods/vars/references
-		var CUR_HOVER;
-		var _htmlBody = $("html, body");
+	var CUR_HOVER;
+	var _htmlBody = $("html, body");
+	
+	function is_touch_device() {
+	  return !!('ontouchstart' in window);
+	}
+	var IS_TOUCH = is_touch_device();
+	//	IS_TOUCH = true;
 		
-			function is_touch_device() {
-			  return !!('ontouchstart' in window);
+	function touchHoverHandler(e) {
+			var tarHover = $(this);
+			if (CUR_HOVER) CUR_HOVER.removeClass("hover");
+			if (CUR_HOVER && CUR_HOVER[0] ===  tarHover[0]) {
+				if (CUR_HOVER.hasClass("toggle")) {
+					
+					return;
+				}
 			}
-			var IS_TOUCH = is_touch_device();
-		//	IS_TOUCH = true;
-			
-			function touchHoverHandler(e) {
-					var tarHover = $(this);
-					if (CUR_HOVER) CUR_HOVER.removeClass("hover");
-					if (CUR_HOVER && CUR_HOVER[0] ===  tarHover[0]) {
-						if (CUR_HOVER.hasClass("toggle")) {
-							
-							return;
-						}
-					}
-					CUR_HOVER = tarHover;
-						
-					CUR_HOVER.addClass("hover");
-					_htmlBody.bind("mousedown", function(e) { $(e.currentTarget).unbind("mousedown"); CUR_HOVER.removeClass("hover"); CUR_HOVER = null;  } );
-					e.stopPropagation();
+			CUR_HOVER = tarHover;
 				
-			};			
+			CUR_HOVER.addClass("hover");
+			_htmlBody.bind("mousedown", function(e) { $(e.currentTarget).unbind("mousedown"); CUR_HOVER.removeClass("hover"); CUR_HOVER = null;  } );
+			e.stopPropagation();
+		
+	};			
 			
-			
-	// -- UI initialization
-		$(document).ready( function() {  // STARt ready
-			
+		
+
+	// ----------------------------------------
+		
+	/**
+	MASONARY LAYOUT LOGIC for Homepage
+	*/
+	var columnW = 250;
+	var container;
+	var items;
+	var imgs = null;
+	var lastAvailColumns = 0;
+	var _window = $(window);
+	
+	//----------------------- CHANGI BUDDIES Functions ---------------------//
 	
 		
-			// TOUCH hover replacement
-			if (IS_TOUCH) {
-				var elems = $(".notouch");
-				elems.removeClass("notouch");
-				elems.bind("mousedown", touchHoverHandler);
-			}
-	        
-            // ------------------ removed by ascentis Sandy 12/3/2013. -----start------------------------
-			// FILTER BAR scroll locking
-			///*
-			//$("#filter").each( function() {
-			//	var me = $(this);
-			//	var topper = me.position().top;
-			//	me.scrollToFixed({ marginTop: 0, limit: -topper});
-			//});
-			//*/
-
-			// Slider price range
-			//$( "#SliderPriceRange" ).slider({
-            //range: true,
-            //min: 1,
-            //max: 500,
-            //values: [ 60, 330 ],
-            //slide: function( event, ui ) {
-            //    $( "#SliderPriceRangeAmount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-			//	 $( "#SliderPriceRangeInput" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-            //}
-			//});
-			
-			
-			//$( "#SliderPriceRangeInput" ).val( "$" + $( "#SliderPriceRange" ).slider( "values", 0 ) +
-			//	" - $" + $( "#SliderPriceRange" ).slider( "values", 1 ) );
-			//$( "#SliderPriceRangeAmount" ).html( "$" + $( "#SliderPriceRange" ).slider( "values", 0 ) +
-			//	" - $" + $( "#SliderPriceRange" ).slider( "values", 1 ) );
-			// ---------------------------removed by ascentis Sandy,12/3/2012---end------------------------------
-			
-		});		// eND READY
-		
-
-		// ----------------------------------------
-			
-		/**
-		MASONARY LAYOUT LOGIC for Homepage
-		*/
-		var columnW = 250;
-		var container;
-		var items;
-		var imgs = null;
-		var lastAvailColumns = 0;
-		var _window = $(window);
+	$(document).ready( function() {   // STARt ready layout
 	
+		// TOUCH hover replacement -- UI Utilization
+		if (IS_TOUCH) {
+			var elems = $(".notouch");
+			elems.removeClass("notouch");
+			elems.bind("mousedown", touchHoverHandler);
+		}
+	
+		var rng = new ParkMiller();
+		rng.seed( Math.round(Math.random()*2147483647) );
+	
+		container =  $('.container');
+				// hide container initially until masonary is up
+		$(".container").css("display", "none");
 		
-		$(document).ready( function() {   // STARt ready layout
-			
-			var rng = new ParkMiller();
-			rng.seed( Math.round(Math.random()*2147483647) );
-		
-			container =  $('#container');
-					// hide container initially until masonary is up
-			$("#container").css("display", "none");
-			
-			items =  container.children(".item");
-			imgs = items.find("img.pimg");
+		items =  container.children(".item");
+		imgs = items.find("img.pimg");
 
-			items.filter( function() { return $(this).hasClass("closable")} ).children(".btn-close").click( function() {
-				$(this).parent().remove();
-				container.masonry("reload");
-			});
-			
-			var dimensions = [
-			[240,240],  // square
-			[240,160],  // portrait
-			[240,329]  // landscape
-			]
-			//
-			imgs.each( function() {
-				var randIndex = Math.floor( rng.uniform()*3 );
-				//$(this).width( randIndex
-				var imgElem = $(this);
-				var src = imgElem.attr("src");
-				src = src.split("_");
-				var srcDim = dimensions[randIndex];
-				imgElem.data("id", src[0] );
-				imgElem.data("width", srcDim[0]);
-				imgElem.data("height", srcDim[1]);
-				imgElem.parent().append($('<img class="loader" src="img/ajax-loader.gif"></img>'));
-			});
-			
-		
-			container.masonry({
-			  itemSelector: '.item:visible',
-			  columnWidth: columnW,
-			  gutterWidth: 0,
-			  isResizable:false,
-			  isFitWidth: false
-			 
-			});
-			container.css("display", "block");
-			_window.trigger("resize");
+		items.filter( function() { return $(this).hasClass("closable")} ).children(".btn-close").click( function() {
+			$(this).parent().remove();
+			container.masonry("reload");
 		});
 		
+		var dimensions = [
+		[240,240],  // square
+		[240,160],  // portrait
+		[240,329]  // landscape
+		]
+		//
+		imgs.each( function() {
+			var randIndex = Math.floor( rng.uniform()*3 );
+			//$(this).width( randIndex
+			var imgElem = $(this);
+			var src = imgElem.attr("src");
+			src = src.split("_");
+			var srcDim = dimensions[randIndex];
+			imgElem.data("id", src[0] );
+			imgElem.data("width", srcDim[0]);
+			imgElem.data("height", srcDim[1]);
+			imgElem.parent().append($('<img class="loader" src="../img/ajax-loader.gif"></img>'));
+		});
 		
-		 // Adjust sizing logic upon window resize
-		var adjustSizing = function() { 
+	
+		container.masonry({
+		  itemSelector: '.item:visible',
+		  columnWidth: columnW,
+		  gutterWidth: 0,
+		  isResizable:false,
+		  isFitWidth: false
+		 
+		});
+		container.css("display", "block");
+		_window.trigger("resize");
+		
+		
+		/************************************************ For changi buddies **************************************/
+		var filename = location.pathname.substr(location.pathname.lastIndexOf("/")+1,location.pathname.length);
+		console.log(filename);
+		$('li.topnavitem a').removeClass('active');
+		var test = $('li.topnavitem a').filter(function(){ return $(this).html().toUpperCase() === "ABOUT"});
+		console.log(test);
+		switch(filename.toLowerCase()){
+			case 'about.aspx': $('li.topnavitem a').filter(function(){ return $(this).html().toUpperCase() === "ABOUT"}).addClass('active'); break;
+			case 'mywishlist.aspx': $('li.topnavitem a').filter(function(){ return $(this).html().toUpperCase() === "MY WISHLIST"}).addClass('active'); break;
+			case 'friendwishlist.aspx': $('li.topnavitem a').filter(function(){ return $(this).html().toUpperCase() === "FRIENDS' WISHLISTS"}).addClass('active'); break;
+			default: $('li.topnavitem a').filter(function(){ return $(this).html().toUpperCase() === "ABOUT"}).addClass('active'); break;
+		}
+		
+		$.ajax({
+		    type: "POST",
+		    url: wsHubPath + "WSHub/wsShoppingCart.asmx/GetCurrentMemberDetails",
+		    contentType: "application/json; charset=utf-8",
+		    dataType: "json",
+		    success: function (data) {
+		        //data = $.parseJSON(data.d);
+				console.log(data);
+		    }
+		});
+	});
+		
+	/******** END DOCUMENT READY *********/
+	
+	
+	 // Adjust sizing logic upon window resize
+	var adjustSizing = function() { 
 			var rng = new ParkMiller();
 			rng.seed( Math.round(Math.random()*2147483647) );
 			
@@ -218,7 +211,8 @@
 			lastAvailColumns = availableColumns;
 			
 		};
-		_window.resize( adjustSizing);
+	_window.resize( adjustSizing);
+		
 		
 })();
 		

@@ -338,15 +338,17 @@
         var rng = new ParkMiller();
         rng.seed(Math.round(Math.random() * 2147483647));
 
-        container = $('#container');
+        container = $('.container');
         // hide container initially until masonary is up
-        $("#container").css("display", "none");
+        $(".container").css("display", "none");
         //setupProductContainer(container);
 
 
         promoItems = container.find(".promotag");
         items = container.children(".item");
         imgs = items.find("img.pimg");
+		console.log(items);
+		console.log(imgs);
 
         items.filter(function () { return $(this).hasClass("closable") }).children(".btn-close").click(function () {
             $(this).parent().remove();
@@ -356,11 +358,14 @@
         var setupImages = function () {
 
             var randIndex = Math.floor(rng.uniform() * 3);
+			console.log(randIndex);
             //$(this).width( randIndex
             var imgElem = $(this);
+			console.log(imgElem);
             var src = imgElem.attr("src");
             src = src.split("_");
             var srcDim = dimensions[randIndex];
+			console.log(srcDim);
             imgElem.data("id", src[0]);
             imgElem.data("width", srcDim[0]);
             imgElem.data("height", srcDim[1]);
@@ -387,7 +392,7 @@
             var sizeBanner = 2;  
             var languageType = $.cookie('Language');
 
-            var gcont = $("div#container").find("div.buttons");
+            var gcont = $("div.container").find("div.buttons");
             var gids = "";
             $.each(gcont, function (item) {
                 if ($(this).attr("data-group"))
@@ -431,7 +436,7 @@
 			[190, 190],  // square
 			[190, 260],  // portrait
 			[390, 260]  // landscape
-			]
+		];
         imgs.each(setupImages);
 
 
@@ -543,7 +548,7 @@
 
             imgData.each(setupImages);
 
-            $("#container").append(cont);
+            $(".container").append(cont);
 
 
             adjustSizing(null, imgData);

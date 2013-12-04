@@ -526,12 +526,12 @@ $(document).ready(function () {
         });
 
         var $boxes = $(str);
-        $("#container2 ul.recommended-items").empty().append($boxes); //.masonry('appended', $boxes).masonry('reload');
+        $(".container2 ul.recommended-items").empty().append($boxes); //.masonry('appended', $boxes).masonry('reload');
         $extrasPanel = new ExtrasPanel();
         $extrasPanel.init();
 
         initProductInfo("container2");
-        if (IS_TOUCH) { InitNoTouchCont($('#container2')); }
+        if (IS_TOUCH) { InitNoTouchCont($('.container2')); }
     }
 
     function LoadRecently(group) {
@@ -613,11 +613,11 @@ $(document).ready(function () {
             str += "<div class=\"clear\"></div>";
         }
         var $boxes = $(str);
-        $("#container2 ul.recent-items").empty().append($boxes); //.masonry('appended', $boxes).masonry('reload');
+        $(".container2 ul.recent-items").empty().append($boxes); //.masonry('appended', $boxes).masonry('reload');
         initProductInfo("container2");
 
         initProductInfo("container2");
-        if (IS_TOUCH) { InitNoTouchCont($('#container2')); }
+        if (IS_TOUCH) { InitNoTouchCont($('.container2')); }
     }
 
     new ProductSlideshow($("#product-slideshow"), $("#product-slideshow .img-container"), $("#ProductSlideshowHolder .controls>a"));

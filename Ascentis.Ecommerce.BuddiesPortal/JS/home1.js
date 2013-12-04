@@ -148,9 +148,9 @@
 		
 		$(document).ready( function() {   // STARt ready layout
 		
-			container =  $('#container');
+			container =  $('.container');
 					// hide container initially until masonary is up
-			$("#container").css("display", "none");
+			$(".container").css("display", "none");
 			
 			promoItems = container.find(".promotag");
 			items =  container.children(".item");

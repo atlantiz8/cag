@@ -13,9 +13,15 @@
         </asp:ContentPlaceHolder>
     </title>
     <asp:ContentPlaceHolder ID="_ContentPlaceHolder004_" runat="server">
-        
-        <link rel="stylesheet" href="../CSS/main.css" />
-        <link rel="stylesheet" href="../CSS/home.css" />
+
+        <!-- styles taken from design V9 -->
+        <link rel="stylesheet" type="text/css" href="../css/960.css" />
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/productlistings.css" />
+        <link rel="stylesheet" href="../css/product.css" />
+
+        <%--<link rel="stylesheet" href="../CSS/main.css" />
+        <link rel="stylesheet" href="../CSS/home.css" />--%>
         <link href="../CSS/print.css" rel="stylesheet" type="text/css"  media="print"/>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/css/jquery-ui.css") %>" />
         <link href="<%=ResolveClientUrl("~/CSS/jselectBox/jquery.selectbox.css") %>" rel="stylesheet" type="text/css" />
@@ -63,7 +69,7 @@
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/APIservice.js")%>"></script>
         <script src="<%=ResolveClientUrl("~/JS/ascentis/LanguageEN_US.js")%>" type="text/javascript"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/overlay.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/home.js")%>"></script>
+        <%--<script type="text/javascript" src="<%=ResolveClientUrl("~/JS/home.js")%>"></script>--%>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/products.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/cartpanel.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/wishlist.js")%>"></script>
@@ -74,6 +80,10 @@
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/ParamService.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/CartService.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/WishlistService.js")%>"></script>
+        
+        <!-- scripts added from design V9 -->
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/home1a.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/JS/script.js")%>"></script>
 
         <script>
             $(function () {
@@ -117,36 +127,13 @@
 <body>
     
     <div id="fb-root"></div>
-     <!--<asp:ContentPlaceHolder ID="FBInit" runat="server">
-     <script>
-         window.fbAsyncInit = function () {
-             // init the FB JS SDK
-             FB.init({
-                 appId: GetFBAppID(), //GetFBAppID(),                        
-             });
-         };
 
-         // Load the SDK asynchronously
-         (function (d, s, id) {
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) { return; }
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/all.js";
-             fjs.parentNode.insertBefore(js, fjs);
-         } (document, 'script', 'facebook-jssdk'));
-    </script>
-    </asp:ContentPlaceHolder>-->
-
-    <form id="form1" runat="server">
+    <%--<form id="form1" runat="server">
     <input id="hdEmail" type="text" runat="server" style="display: none" />
     <input id="hdPwd" type="text" runat="server" style="display: none" />
     <input id="hdRemember" type="text" runat="server" style="display: none" />
     <input id="hdReplaceCart" type="text" runat="server" style="display: none" /> 
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+    
     
     <div id="overlay-container">
         <div class="quicklook">
@@ -567,7 +554,160 @@
         </div>
     </div>
     
-    </form>
+    </form>--%>
+    <div class="logo">
+		<img width="760" height="107" src="../img/top_banner.jpg">
+	</div>
+	<!-- End Logo -->
+	<div class="top-menu">
+		<div class="top-menuinner">
+		  		<div id="filter" style="z-index: 1000;">
+		   		<nav>
+					<ul>
+						<li class="topnavitem"><a class="active" href="<%=ResolveClientUrl("~/About.aspx")%>">ABOUT</a></li>
+						<li><div class="divider"></div></li>
+						<li class="topnavitem"><a href="#">BROWSE PRODUCTS</a>
+							<ul>
+								<li>
+									<div class="dropdownproduct">
+										<div class="brandsdropdown">
+											<h1><a href="#">BEAUTY</a></h1>
+											<h1><a href="#">CHOCOLATES & DELICATESEEN</a></h1>
+											<h1><a href="#">IT & ELECTRONICS</a></h1>
+											<h1><a href="#">TIMEPIECES</a></h1>
+											<h1><a href="#">WINE & SPIRIRTS</a></h1>
+										</div>
+										<div class="menudivider">       
+											<div class="white"></div>       
+											<div class="black"></div>   
+										</div>
+										<div class="categorydropdown">
+											<h2>BRANDS</h2>
+											<div class="brandholder">
+								 				<ul> 
+													<li><a href="#">Anna Sui</a>
+    												<li><a href="#">Body Shop</a>
+    												<li><a href="#">Britney Speaars</a>
+    												<li><a href="#">Calvin Klein</a>
+    												<li><a href="#">Carolina Herrea</a>
+    												<li><a href="#">Clarins</a>
+												</ul></div>
+											<div class="brandholder">
+								 				<ul> 
+													<li><a href="#">Anna Sui</a>
+    												<li><a href="#">Body Shop</a>
+    												<li><a href="#">Britney Speaars</a>
+    												<li><a href="#">Calvin Klein</a>
+    												<li><a href="#">Carolina Herrea</a>
+    												<li><a href="#">Clarins</a>
+												</ul></div>
+											<div class="brandholder">
+								 				<ul> 
+													<li><a href="#">Anna Sui</a>
+    												<li><a href="#">Body Shop</a>
+    												<li><a href="#">Britney Speaars</a>
+    												<li><a href="#">Calvin Klein</a>
+    												<li><a href="#">Carolina Herrea</a>
+    												<li><a href="#">Clarins</a>
+												</ul></div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li><div class="divider"></div></li>
+						<li class="topnavitem"><a href="<%=ResolveClientUrl("~/Wishlist/MyWishlist.aspx")%>">MY WISHLIST</a></li>
+						<li><div class="divider"></div></li>
+						<li class="topnavitem"><a href="<%=ResolveClientUrl("~/Wishlist/FriendWishlist.aspx")%>">FRIENDS' WISHLISTS</a></li>
+						<li><div class="divider"></div></li>
+						<li class="mycart"><div class="cartcount">(99)</div>
+							<ul>
+								<li>
+									<div class="cartdropdown">
+										<div class="smallcartdetails">
+											<div class="smallcartcontainer">
+												<div class="smallcartheader"><h1>BASKET OF WISHES</h1></div><div class="smallcartqty"><h2>QTY</h2></div>
+											</div>
+											<div class="smallcartcontainer">
+												<div class="smallcartimg"><img src="../img/thumbnails/lipstic1.jpg"></div>
+												<div class="smallcarttitle"><p>ANNA SUI SECRET WISH EDT</p></div>
+												<div class="smallcartnum"><p>1</p></div>
+											</div>
+											<div class="smallcartcontainer">
+												<div class="smallcartimg"><img src="../img/thumbnails/lipstic1.jpg"></div>
+												<div class="smallcarttitle"><p>ANNA SUI SECRET WISH EDT</p></div>
+												<div class="smallcartnum"><p>1</p></div>
+											</div>
+											<div class="smallcartbutton">
+													<div class="smallsummary">
+														<div class="clear"></div>
+														<div class="buttons">
+															<a href="#" class="button summary">
+											
+															</a>
+														</div>
+													</div>
+											</div>
+
+										</div>
+									</div>
+								</li>
+						
+							</ul>
+						</li>
+					</ul>
+				</nav> 	  		
+		   	</div>
+		</div>
+	</div>
+	<!-- End Top Menu-->
+
+    <div id="content">
+        
+    </div>
+
+    <div class="contentwrapper">
+		<div class="searchwrapper"> 
+			<div class="counter">
+				<div class="counterimg1"><img src="../img/searchbar/ticker-0.png"></img></div>
+				<div class="counterimg2"><img src="../img/searchbar/ticker-1.png"></img></div>
+				<div class="counterimg3"><img src="../img/searchbar/ticker-2.png"></img></div>
+				<div class="countermsg">Wishes fulfilled</div>
+			</div>
+			<div class="counters">
+				<div class="dividers"></div>
+				<div class="counterbtn"><a href="#"></a></div>
+			</div>
+			<div class="spacer"></div>
+		</div>
+		<!-- End Search Wrapper-->
+			
+		<div id="Div1">
+      	    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+ 		</div>
+ 		<!-- End Wrapper -->
+ 			
+	</div>
+	<!--End Contentwrapper-->
+
+    <div class="footerwrapper" id="footer">
+		<div class="content">
+			<a href="#" class="footer-link">Terms and Conditions</a>
+            <span style="color:#aba39e;">&nbsp; | &nbsp;</span>
+            <a href="#" class="footer-link">Privacy Policy</a>
+
+        </div>
+		<div class="content right">
+            <div style="color:#aba39e;" class="text">
+            	&copy; 2013 Changi Airport Group. All Rights Reserved.
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!-- End Footer -->
+
     <div id="wrapper">
         <!-- @ASC: item fixed splashholder -->
         <asp:ContentPlaceHolder ID="ItemFixedSplashholer" runat="Server">
@@ -580,108 +720,9 @@
         </asp:ContentPlaceHolder>
     </div>
     <!-- end wrapper -->
-    <!--<div id="filter">
-        
-        <div class="divider">
-        </div>
-        <div class="right">
-            <div class="button">
-                <div class="holder cart-btn">
-                    <div class="link">
-                        <a href="#">
-                            <div class="text">
-                                <asp:ContentPlaceHolder ID="_ContentPlaceHolder031_" runat="server">
-                                    <img class="icon" src="<%=ResolveClientUrl("~/img/icon/cart.png")%>" />
-                                </asp:ContentPlaceHolder>
-                                (&nbsp;<div class="count">0</div>&nbsp;)</div>
-                            <div class="loader">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="dropdown">
-                        <ul class="headers">
-                            <li class="item">
-                                <asp:ContentPlaceHolder ID="_ContentPlaceHolder032_" runat="server">
-                                    <asp:Localize ID="lclItemsInCart" runat="server" Text="<%$Resources:lang,ItemsInCart %>"></asp:Localize>
-                                </asp:ContentPlaceHolder>
-                            </li>
-                            <li class="qty">
-                                <asp:ContentPlaceHolder ID="_ContentPlaceHolder033_" runat="server">
-                                    <asp:Localize ID="lclQty" runat="server" Text="<%$Resources:lang,Qty %>"></asp:Localize>
-                                </asp:ContentPlaceHolder>
-                            </li>
-                            <div class="clear">
-                            </div>
-                        </ul>
-                        <div class="items">
-                        </div>
-                        <div class="template">
-                            <ul class="item">
-                                <a href="#">
-                                    <li class="item">
-                                        <img height="40px" width="40px;" src=""><span class="name"></span></li>
-                                    <li class="qty"></li>
-                                    <div class="clear">
-                                    </div>
-                                </a>
-                                <div class="clear">
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="clear">
-                        </div>
-                        <div class="buttons">
-                            <a href="#" class="button white left close closing" style="display: none">
-                                <div class="text closing">
-                                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder034_" runat="server">
-                                        <asp:Localize ID="lclContineShopp" runat="server" Text="<%$Resources:lang,ContinueShopping %>"></asp:Localize>
-                                    </asp:ContentPlaceHolder>
-                                </div>
-                            </a><a class="button brown right view">
-                                <div class="text">
-                                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder035_" runat="server">
-                                        <asp:Localize ID="lclViewA" runat="server" Text="<%$Resources:lang,ViewAll %>"></asp:Localize>(<span
-                                            class="quantity">0</span>)
-                                    </asp:ContentPlaceHolder>
-                                </div>
-                                <div class="loader">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="clear">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    <div id="footer">
-        <div class="content">
-            <ul class="payment">
-                <li class="header">Secured Payment</li>
-                <li>
-                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder039_" runat="server">
-                        <img src="<%= ResolveClientUrl("~/IMG/footer/master.jpg") %>" style="width: 35px;height: 26px;padding-right:10px" />
-                        <img src="<%= ResolveClientUrl("~/IMG/footer/visa.jpg") %>" style="width: 35px;height: 26px;" />
-                    </asp:ContentPlaceHolder>
-                    <div class="clear"></div>
-                </li>
-                <div class="clear"></div>
-                    <asp:ContentPlaceHolder ID="_ContentPlaceHolder040_" runat="server">
-<%--                <li class="header" style="margin-bottom:15px; margin-top:15px">Security</li>
-                <li><img src="<%= ResolveClientUrl("~/IMG/footer/entrust_site_seal.png") %>" style="width: 35px;height: 26px;" /></li>--%>
-                    </asp:ContentPlaceHolder>
+    
 
-            </ul>
-        </div>
-        <div class="right">
-            <div class="text" style="color:#aba39e;font-size:11px">
-                &copy; 2013 Changi Airport Group. All Rights Reserved.<br />
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-    </div>
+    
     <!-- TEMPLATES -->
     <!-- @basic template per item. Please see comments on possible variations -->
     <div class="item product notouch" data-id="1234asd123" style="display: none" id="ProductTemplate">
@@ -770,6 +811,7 @@
 
     </script>
     </asp:ContentPlaceHolder>
+    
     <asp:ContentPlaceHolder ID="_GetFBAppID_" runat="server">
     <script type="text/javascript">
         function GetFBAppID() {

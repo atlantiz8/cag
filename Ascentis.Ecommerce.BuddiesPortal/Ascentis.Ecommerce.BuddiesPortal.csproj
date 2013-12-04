@@ -70,6 +70,7 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
@@ -90,6 +91,7 @@
     <Content Include="error.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="IMG\ajax-loader.gif" />
+    <Content Include="IMG\buddies\top_banner.jpg" />
     <Content Include="IMG\footer\entrust_site_seal.png" />
     <Content Include="IMG\footer\logo.png" />
     <Content Include="IMG\footer\master.jpg" />
@@ -558,6 +560,8 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Redirect.aspx" />
+    <Content Include="Wishlist\FriendWishlist.aspx" />
+    <Content Include="Wishlist\MyWishlist.aspx" />
     <Content Include="WSHub\nwCategory.asmx" />
     <Content Include="WSHub\wsBanner.asmx" />
     <Content Include="WSHub\wsFlight.asmx" />
@@ -629,6 +633,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -828,6 +839,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Wishlist\FriendWishlist.aspx.cs">
+      <DependentUpon>FriendWishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wishlist\FriendWishlist.aspx.designer.cs">
+      <DependentUpon>FriendWishlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wishlist\MyWishlist.aspx.cs">
+      <DependentUpon>MyWishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wishlist\MyWishlist.aspx.designer.cs">
+      <DependentUpon>MyWishlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="Wishlist\Wish.aspx.cs">
       <DependentUpon>Wish.aspx</DependentUpon>

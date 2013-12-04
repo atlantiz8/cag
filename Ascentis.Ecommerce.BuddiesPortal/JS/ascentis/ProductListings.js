@@ -113,7 +113,7 @@ function QueryProductGroupByCategory(n) {
 
 function initProductInfo() {
     var n = new Products;
-    n.init(), ChangiProducts = n, $(currentPageSizeHolder).parent().find("div.ploader").css("visibility", "hidden"), IS_TOUCH && InitNoTouchCont($("#container"))
+    n.init(), ChangiProducts = n, $(currentPageSizeHolder).parent().find("div.ploader").css("visibility", "hidden"), IS_TOUCH && InitNoTouchCont($(".container"))
 }
 
 function QueryPromotionProductGroup() {
@@ -262,7 +262,7 @@ $(document).ready(function () {
         } else { allCount = 0; }
 
         if (allCount == undefined || allCount == 0) {
-            allCount = 0, e = $(".searchresults"), i = "", i += '<span>Sorry but<\/span>&nbsp;<span class="bold"><\/span>', i += '&nbsp;returns&nbsp;<span class="bold">0<\/span>&nbsp;<span>results.<\/span>', o = $(i), e.empty().append(o), $("#pagination").hide(), $("#container").empty().css({ height: "0px" });
+            allCount = 0, e = $(".searchresults"), i = "", i += '<span>Sorry but<\/span>&nbsp;<span class="bold"><\/span>', i += '&nbsp;returns&nbsp;<span class="bold">0<\/span>&nbsp;<span>results.<\/span>', o = $(i), e.empty().append(o), $("#pagination").hide(), $(".container").empty().css({ height: "0px" });
             return
         }
 
@@ -398,7 +398,7 @@ $(document).ready(function () {
                 //t.IsBestSeller ? i += '<div class="badge bestseller"><\/div>' : t.IsEditorsPick && (i += '<div class="badge editorpick"><\/div>'),
                 //i += "<\/div>"
                 i += '<div class="badge ' + badge + '"><\/div>', i += "<\/div>"
-            }), f = $(i), $("#container").empty().append(f).masonry("appended", f).masonry("reload"), t == "" || t == undefined) {
+            }), f = $(i), $(".container").empty().append(f).masonry("appended", f).masonry("reload"), t == "" || t == undefined) {
             for (s = InitPage($.cookie("pageSize")), i = "", i += '<div class="holder">', i += '            \t<div class="arrows">', i += '                \t<a href="#"><div class="prev"><\/div><\/a>', i += '                 <a href="#" class="right"><div class="next"><\/div><\/a>', i += "             <\/div>", i += '             <div class="holder">', i += '                \t<ul class="panel">', i += pageIndex == 1 ? '<li><a href="javascript:;" data-index="1" class="active">1<\/a><\/li>' : '<li><a href="javascript:;" data-index="1">1<\/a><\/li>', r = 1; r < s; r++) i += pageIndex == r + 1 ? '<li><a href="javascript:;" class="active">' + (r + 1) + "<\/a><\/li>" : '<li><a href="javascript:;"  data-index="' + (r + 1) + '" >' + (r + 1) + "<\/a><\/li>";
             i += "                \t<\/ul>", i += "              <\/div>", i += '<div class="clear"><\/div>', i += "<\/div>", f = $(i), $("#pagination").empty().append(f), $initiateBottomPagination = new initiateBottomPagination, $initiateBottomPagination.updateArrowVis()
         }
